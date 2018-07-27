@@ -1,0 +1,190 @@
+﻿@model Elga_Xizmat.Models.Adses
+ 
+
+<link rel="stylesheet" href="assets/css/plugins.css">
+<link rel="stylesheet" href="assets/css/main.css">
+<link rel="stylesheet" href="assets/css/themes.css">
+<div class="container">
+    <br /><br /><br />
+    <div class="col-md-4 text-left"><a href="~/Home/ProductList" class="btn btn-success"><span class="fa fa-list"> E'lonlar ro`yxati</span></a></div>
+    <div class="col-md-4 text-center"><a href="~/Home/Add" class="btn btn-info"><span class="fa fa-plus-circle"> E'lon qo`shish</span></a></div>
+    <div class="col-md-4 text-right"><a href="~/Home/Exit" class="btn btn-danger"><span class="fa fa-sign-out">  Chiqish</span></a></div>
+    <br /><br />
+    <hr />
+    <form class="form-horizontal form-box" enctype="multipart/form-data">
+        <div class="form-box-content">
+            <div class="form-group">
+                <label class="control-label col-md-2" for="example-input-tooltip">Sarlavha</label>
+                <div class="col-md-4">
+                    <input type="text" maxlength="70" id="example-input-tooltip" name="Title" value="@Model.Title" class="form-control" data-toggle="tooltip" data-placement="right" title="E‘tiborni  jalb qilish uchun e‘longa tushunarli va to‘liq  sarlavha bering." placeholder="70 ta belgi">
+                </div>
+
+            </div>
+        </div>
+        <!-- END Validation States -->
+        <!-- Selects menyu -->
+        <div class="form-group">
+            @Html.LabelFor(m => m.Rubric_Id, new { @class = "control-label col-md-2" })
+            <div class="col-md-4">
+                @Html.DropDownListFor(m => m.Rubric_Id,
+                  new SelectList(ViewBag.RubricList, "Id", "Name_Uz"),
+                  "Ruknni tanlang",
+                  new { @class = "form-control", @onchange = "FillRubric()" })
+                @Html.ValidationMessageFor(m => m.Rubric_Id, "", new { @class = "text-danger" })
+            </div>
+        </div>
+        <!-- END Selects menyu -->
+        <img src="~/Content/HTML.com/assets/img/turlar2.png">
+        <!-- Selects -->
+        <div class="form-group">
+            @Html.LabelFor(m => m.TypeProduct_Id, new { @class = "control-label col-md-2" })
+            <div class="col-md-4">
+                @Html.DropDownListFor(m => m.TypeProduct_Id,
+           new SelectList(Enumerable.Empty<SelectListItem>(), "Id", "Name_Uz"),
+                  "Mahsulot turini tanlang",
+                  new { @class = "form-control" })
+                @Html.ValidationMessageFor(m => m.TypeProduct_Id, "", new { @class = "text-danger" })
+            </div>
+        </div>
+        <!-- END Selects -->
+
+        <div class="form-box-content">
+            <div class="form-group">
+                <label class="control-label col-md-2" for="example-input-tooltip">Narx</label>
+                <div class="col-md-4">
+                    <input type="text" id="example-input-tooltip" name="Price" value="@Model.Price" class="form-control" data-toggle="tooltip" data-placement="right" title="">
+                </div>
+
+            </div>
+
+
+
+        </div>
+
+
+        <!-- Textareas -->
+
+        <div class="form-box-content">
+
+            <div class="form-group">
+                <label class="control-label col-md-2" for="example-textarea-elastic">Tavsif</label>
+                <div class="col-md-4">
+                    <textarea id="example-textarea-elastic" autofocus maxlength="140" name="Short_Text" placeholder="@Model.Short_text" class="form-control textarea-elastic" rows="3" data-toggle="tooltip" data-placement="right" title="E‘loningiz tavsifini harakatga undaydigan qilib tuzing. Mahsulotingiz yoki xizmat ustunliklarini ko‘rsating. Iloji boricha batafsil  ma‘lumot bering. Behato va to‘g‘ri yozishga harakat qilingi. Beadab so‘zlarni ishlatmang. KATTA XARFLAR bilan yoziladigan so'zlardan saqlaning."></textarea>
+
+                </div>
+            </div>
+
+        </div>
+        <!-- END Textareas -->
+
+        <div class="form-group">
+            @Html.LabelFor(m => m.Region_Id, new { @class = "control-label col-md-2" })
+            <div class="col-md-4">
+                @Html.DropDownListFor(m => m.Region_Id,
+                  new SelectList(ViewBag.StateList, "Id", "Name"),
+                  "Viloyatni tanlang",
+                  new { @class = "form-control", @onchange = "FillCity()" })
+                @Html.ValidationMessageFor(m => m.Region_Id, "", new { @class = "text-danger" })
+            </div>
+        </div>
+        <div class="form-group">
+            @Html.LabelFor(m => m.Area_Id, new { @class = "control-label col-md-2" })
+            <div class="col-md-4">
+                @Html.DropDownListFor(m => m.Area_Id,
+           new SelectList(Enumerable.Empty<SelectListItem>(), "Id", "AreaNameUzb"),
+                  "Tumanni tanlang",
+                  new { @class = "form-control" })
+                @Html.ValidationMessageFor(m => m.Area_Id, "", new { @class = "text-danger" })
+            </div>
+        </div>
+        <h4 class="">Mahsulotingiz suratini joylashtiring</h4>
+        <div class="form-box-content">
+
+
+            <div class="form-group">
+                <label for="middle-name" class="control-label col-md-3 col-sm-3 col-xs-12">
+                    Изображение продукта
+                    <span class="required">*</span>
+                </label>
+                <div class="col-md-6 col-sm-6 col-xs-12">
+                    <div>
+                        <img id="user_img"
+                             height="160"
+                             width="210"
+                             style="border:solid" />
+                    </div>
+                    <br />
+
+                    <input type="file" class="profile_img" id="file" name="file" onchange="show(this)" />
+
+                </div>
+
+
+            </div>
+            <script type="text/javascript">
+   function show(input) {
+      if (input.files && input.files[0]) {
+      var filerdr = new FileReader();
+      filerdr.onload = function (e) {
+         $('#user_img').attr('src', e.target.result);
+      }
+      filerdr.readAsDataURL(input.files[0]);
+   }
+}
+            </script>
+
+        </div>
+
+
+        <br /><br /><br />
+        <div class="form-group form-actions">
+            <div class="col-md-12">
+                <div class="col-md-4 text-right">
+                    @Html.ActionLink("O`zgartirish", "ProductEdit", new { id = Model.Id }, new { @class = "btn btn-success" })
+                </div>
+                <div class="col-md-4 text-left">
+                    @Html.ActionLink("O`chirish", "ProductDelete", new { id = Model.Id }, new { @class = "btn btn-danger" })
+                </div>
+                </div>
+        </div><br /><br /><br />
+       
+    </form>
+</div>
+@section Scripts {
+    <script>
+  function FillCity() {
+      var regionId = $('#Region_Id').val();
+    $.ajax({
+        url: '/Home/FillCity',
+        type: "GET",
+        dataType: "JSON",
+        data: { Region_Id: regionId },
+        success: function (areas) {
+            $("#Area_Id").html(""); // clear before appending new list
+            $.each(areas, function (i, area) {
+                $("#Area_Id").append(
+                    $('<option></option>').val(area.Id).html(area.AreaNameUzb));
+            });
+        }
+    });
+  }
+    </script>
+    <script>
+    function FillRubric() {
+      var rubricId = $('#Rubric_Id').val();
+    $.ajax({
+        url: '/Home/FillRubric',
+        type: "GET",
+        dataType: "JSON",
+        data: { Rubric_Id: rubricId },
+        success: function (typeProducts) {
+            $("#TypeProduct_Id").html(""); // clear before appending new list
+            $.each(typeProducts, function (i, typeProduct) {
+                $("#TypeProduct_Id").append(
+                    $('<option></option>').val(typeProduct.Id).html(typeProduct.Name_Uz));
+            });
+        }
+    });
+  }
+    </script>
+} 

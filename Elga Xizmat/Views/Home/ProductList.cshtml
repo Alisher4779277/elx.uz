@@ -1,0 +1,74 @@
+﻿@model IEnumerable<Elga_Xizmat.Models.Adses>
+@{
+    Elga_Xizmat.Models.ELX_DBEntities db = new Elga_Xizmat.Models.ELX_DBEntities();
+    ViewBag.Title = "Личный кабинет";
+    ViewBag.mobilbor = "UySavdosi.uz";
+}
+
+    <style type="text/css">
+        .even {
+            background-color: #3c87c7;
+        }
+
+        .block {
+            background-color: #f64848;
+        }
+
+        .waiting {
+            background-color: #4aea52;
+        }
+
+        .finish {
+            background-color: #fbf608;
+        }
+    </style>
+<br /><br /><br />
+    <div class="container">
+        <div class="col-md-4 text-left"><a href="~/Home/ProductList" class="btn btn-success"><span class="fa fa-list"> E'lonlar ro`yxati</span></a></div>
+        <div class="col-md-4 text-center"><a href="~/Home/Add" class="btn btn-info"><span class="fa fa-plus-circle"> E'lon qo`shish</span></a></div>
+        <div class="col-md-4 text-right"><a href="~/Home/Index" class="btn btn-danger"><span class="fa fa-sign-out">  Chiqish</span></a></div>
+        <br />
+        <hr />
+        <div class="panel-body" style="padding-top:0px; padding-bottom:8em; padding-left:80px; padding-right:80px;">
+            <table id="datatable" class="table" style="padding-bottom:0em; margin-bottom:0px;">
+                <tr>
+                    <th>Sarlavha</th>
+                    <th>Rukn</th>
+                    <th>Mahsulot turi</th>
+                    <th>Narxi</th>
+                    <th>Sanasi</th>
+                    <th>Holati</th>
+                    <th></th>
+                </tr>
+                @foreach(var item in Model) { 
+                    <tr>
+                        <td>
+                            @item.Title
+                        </td>
+                        <td>
+                           @db.Rubric.FirstOrDefault(x=>x.Id==item.Rubric_Id).Name_Uz
+                        </td>
+                        <td>
+                            @db.Type_Product.FirstOrDefault(x => x.Id == item.TypeProduct_Id).Name_Uz
+                        </td>
+                        <td>
+                          @item.Price
+                        </td>
+                        <td>
+                            @item.Date
+                        </td>
+                        <td>
+                          @db.StateProduct.FirstOrDefault(x=>x.ID==item.State_ID).Name
+                        </td>
+                        <td>
+                            @Html.ActionLink(" ", "ProductEditorDelete", new { id = item.Id,  }, new { @class = "fa fa-pencil", @style = "color:blue" })&nbsp;&nbsp;
+                            @Html.ActionLink(" ", "ProductEditorDelete", new { id = item.Id }, new { @class = "fa fa-times", @style = "color:red" })
+                        </td>
+                    </tr>}
+            </table>
+            <br />
+            <div style="text-align:center;">
+            </div>
+        </div>
+    </div>
+@*class="block"*@

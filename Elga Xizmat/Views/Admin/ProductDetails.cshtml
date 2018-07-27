@@ -1,0 +1,125 @@
+﻿@model Elga_Xizmat.Models.Adses
+
+@{
+    Elga_Xizmat.Models.ELX_DBEntities db = new Elga_Xizmat.Models.ELX_DBEntities();
+    Elga_Xizmat.Models.Adses ad;
+    int ID = ViewBag.ID;
+    Layout = "~/Views/Shared/Layout_Admin.cshtml";
+    ViewBag.Title = "ProductEdit";
+}
+
+@{ad = db.Adses.FirstOrDefault(m => m.Id == ID); }
+<div class="page-wrapper">
+    <div class="row page-titles">
+        <div class="col-md-5 align-self-center">
+            <h3 class="text-primary">Ma'lumot</h3>
+        </div>
+    </div>
+
+    <div class="col-md-6">
+        <table class="table table-bordered table-striped" style="padding-bottom:0em; margin-bottom:0px;">
+            <tr>
+                <th>
+                    @Html.DisplayName("Sarlavha")
+                </th>
+                <td>
+                    @ad.Title
+                </td>
+            </tr>
+            <tr>
+                <th>
+                    @Html.DisplayName("Rubrika")
+                </th>
+                <td>
+                    @db.Rubric.FirstOrDefault(m => m.Id == ad.Rubric_Id).Name_Uz
+                </td>
+            </tr>
+            <tr>
+                <th>
+                    @Html.DisplayName("Tovar turi")
+                </th>
+                <td>
+                    @db.Type_Product.FirstOrDefault(m => m.Id == ad.TypeProduct_Id).Name_Uz
+                </td>
+            </tr>
+            <tr>
+                <th>
+                    @Html.DisplayName("Narxi")
+                </th>
+                <td>
+                    @ad.Price
+                </td>
+            </tr>
+            <tr>
+                <th>
+                    @Html.DisplayName("Viloyat")
+                </th>
+                <td>
+                    @db.Regions.FirstOrDefault(m => m.Id == ad.Region_Id).Name
+                </td>
+            </tr>
+            <tr>
+                <th>
+                    @Html.DisplayName("Tuman")
+                </th>
+                <td>
+                    @db.Areas.FirstOrDefault(m => m.Id == ad.Area_Id).AreaNameUzb
+                </td>
+            </tr>
+            <tr>
+                <th>
+                    @Html.DisplayName("Rasm")
+                </th>
+                <td>
+                    <img src="@ad.Picture" style="width: 400px; height: 400px;"/> 
+                </td>
+            </tr>
+            <tr>
+                <th>
+                    @Html.DisplayName("Tavsif")
+                </th>
+                <td>
+                    @ad.Short_text
+                </td>
+            </tr>
+        </table>
+    </div>
+</div>
+@section Scripts {
+    <script>
+  function FillCity() {
+      var regionId = $('#Region_Id').val();
+    $.ajax({
+        url: '/Admin/FillCity',
+        type: "GET",
+        dataType: "JSON",
+        data: { Region_Id: regionId },
+        success: function (areas) {
+            $("#Area_Id").html(""); // clear before appending new list
+            $.each(areas, function (i, area) {
+                $("#Area_Id").append(
+                    $('<option></option>').val(area.Id).html(area.AreaNameUzb));
+            });
+        }
+    });
+  }
+    </script>
+    <script>
+    function FillRubric() {
+      var rubricId = $('#Rubric_Id').val();
+    $.ajax({
+        url: '/Admin/FillRubric',
+        type: "GET",
+        dataType: "JSON",
+        data: { Rubric_Id: rubricId },
+        success: function (typeProducts) {
+            $("#TypeProduct_Id").html(""); // clear before appending new list
+            $.each(typeProducts, function (i, typeProduct) {
+                $("#TypeProduct_Id").append(
+                    $('<option></option>').val(typeProduct.Id).html(typeProduct.Name_Uz));
+            });
+        }
+    });
+  }
+    </script>
+} 

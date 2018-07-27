@@ -1,0 +1,166 @@
+﻿@model Elga_Xizmat.Models.Adses
+
+@{
+    Layout = "~/Views/Shared/Layout_Admin.cshtml";
+    ViewBag.Title = "ProductDelete";
+}
+
+<div class="page-wrapper">
+    <!-- Bread crumb -->
+    <div class="row page-titles">
+        <div class="col-md-5 align-self-center">
+            <h3 class="text-primary">O`zgartirish</h3>
+        </div>
+        <div class="col-md-7 align-self-center">
+            <ol class="breadcrumb">
+                <li class="breadcrumb-item"><a href="javascript:void(0)">Home</a></li>
+                <li class="breadcrumb-item active">Dashboard</li>
+            </ol>
+        </div>
+    </div>
+
+    <div class="col-lg-12">
+        <div class="card">
+            <div class="card-body">
+                <div class="basic-elements">
+                    <form method="post" enctype="multipart/form-data">
+                        <div class="row">
+                            <div class="col-lg-6">
+                                <div class="form-group">
+                                    <label>Sarlavha</label>
+                                    <input type="text" class="form-control" name="Title" value="@Model.Title" placeholder="70 ta so`z">
+                                </div>
+                                <div class="form-group">
+                                    @Html.LabelFor(m => m.Rubric_Id, new { @class = "control-label col-md-4" })
+                                    <div class="col-md-12">
+                                        @Html.DropDownListFor(m => m.Rubric_Id,
+                                          new SelectList(ViewBag.RubricList, "Id", "Name_Uz"),
+                                          "Ruknni tanlang",
+                                          new { @class = "form-control", @onchange = "FillRubric()" })
+                                        @Html.ValidationMessageFor(m => m.Rubric_Id, "", new { @class = "text-danger" })
+                                    </div>
+                                </div>
+                                <div class="form-group">
+                                    @Html.LabelFor(m => m.TypeProduct_Id, new { @class = "control-label col-md-4" })
+                                    <div class="col-md-12">
+                                        @Html.DropDownListFor(m => m.TypeProduct_Id,
+                                           new SelectList(Enumerable.Empty<SelectListItem>(), "Id", "Name_Uz"),
+                                                  "Mahsulot turini tanlang",
+                                                  new { @class = "form-control" })
+                                        @Html.ValidationMessageFor(m => m.TypeProduct_Id, "", new { @class = "text-danger" })
+                                    </div>
+                                </div>
+                                <div class="form-group">
+                                    <label>Narxi</label>
+                                    <textarea class="form-control" rows="3" name="Price" value="@Model.Price" placeholder="100.000"></textarea>
+                                </div>
+                                <div class="form-group">
+                                    <label>Tavsif</label>
+                                    <textarea class="form-control" name="Short_Text" rows="10" value="@Model.Short_text" placeholder="Tovar haqida qisqacha ma'lumot'"></textarea>
+                                </div>
+
+                            </div>
+                            <div class="col-lg-6">
+                                <div class="form-group">
+                                    @Html.LabelFor(m => m.Region_Id, new { @class = "control-label col-md-2" })
+                                    <div class="col-md-10">
+                                        @Html.DropDownListFor(m => m.Region_Id,
+                                              new SelectList(ViewBag.StateList, "Id", "Name"),
+                                              "Viloyatni tanlang",
+                                              new { @class = "form-control", @onchange = "FillCity()" })
+                                        @Html.ValidationMessageFor(m => m.Region_Id, "", new { @class = "text-danger" })
+                                    </div>
+                                </div>
+                                <div class="form-group">
+                                    @Html.LabelFor(m => m.Area_Id, new { @class = "control-label col-md-2" })
+                                    <div class="col-md-10">
+                                        @Html.DropDownListFor(m => m.Area_Id,
+                                           new SelectList(Enumerable.Empty<SelectListItem>(), "Id", "AreaNameUzb"),
+                                                  "Tumanni tanlang",
+                                                  new { @class = "form-control" })
+                                        @Html.ValidationMessageFor(m => m.Area_Id, "", new { @class = "text-danger" })
+                                    </div>
+                                </div>
+
+                                <div class="form-group">
+                                    <label for="middle-name" class="control-label col-md-3 col-sm-3 col-xs-12">
+                                        Изображение продукта
+                                        <span class="required">*</span>
+                                    </label>
+                                    <div class="col-md-6 col-sm-6 col-xs-12">
+                                        <div>
+                                            <img id="user_img"
+                                                 height="160"
+                                                 width="210"
+                                                 style="border:solid" />
+                                        </div>
+                                        <br />
+
+                                        <input type="file" class="profile_img" id="file" value="@Model.Picture" name="file" onchange="show(this)" />
+
+                                    </div>
+
+
+                                </div>
+                                <script type="text/javascript">
+                                   function show(input) {
+                                      if (input.files && input.files[0]) {
+                                      var filerdr = new FileReader();
+                                      filerdr.onload = function (e) {
+                                         $('#user_img').attr('src', e.target.result);
+                                      }
+                                      filerdr.readAsDataURL(input.files[0]);
+                                   }
+                                }
+                                </script>
+
+                            </div>
+
+                            <div class="sweetalert m-t-15">
+                                <button class="btn btn-success btn sweet-success">O`zgartirish</button>
+                            </div>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+@section Scripts {
+    <script>
+  function FillCity() {
+      var regionId = $('#Region_Id').val();
+    $.ajax({
+        url: '/Admin/FillCity',
+        type: "GET",
+        dataType: "JSON",
+        data: { Region_Id: regionId },
+        success: function (areas) {
+            $("#Area_Id").html(""); // clear before appending new list
+            $.each(areas, function (i, area) {
+                $("#Area_Id").append(
+                    $('<option></option>').val(area.Id).html(area.AreaNameUzb));
+            });
+        }
+    });
+  }
+    </script>
+    <script>
+    function FillRubric() {
+      var rubricId = $('#Rubric_Id').val();
+    $.ajax({
+        url: '/Admin/FillRubric',
+        type: "GET",
+        dataType: "JSON",
+        data: { Rubric_Id: rubricId },
+        success: function (typeProducts) {
+            $("#TypeProduct_Id").html(""); // clear before appending new list
+            $.each(typeProducts, function (i, typeProduct) {
+                $("#TypeProduct_Id").append(
+                    $('<option></option>').val(typeProduct.Id).html(typeProduct.Name_Uz));
+            });
+        }
+    });
+  }
+    </script>
+} 

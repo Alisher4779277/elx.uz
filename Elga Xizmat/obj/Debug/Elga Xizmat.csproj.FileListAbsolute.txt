@@ -1,0 +1,176 @@
+C:\Users\Alisher\Desktop\C# Lessons\Elga Xizmat\Elga Xizmat\bin\roslyn\csc.exe
+C:\Users\Alisher\Desktop\C# Lessons\Elga Xizmat\Elga Xizmat\bin\roslyn\Microsoft.Build.Tasks.CodeAnalysis.dll
+C:\Users\Alisher\Desktop\C# Lessons\Elga Xizmat\Elga Xizmat\bin\roslyn\Microsoft.CodeAnalysis.CSharp.dll
+C:\Users\Alisher\Desktop\C# Lessons\Elga Xizmat\Elga Xizmat\bin\roslyn\Microsoft.CodeAnalysis.dll
+C:\Users\Alisher\Desktop\C# Lessons\Elga Xizmat\Elga Xizmat\bin\roslyn\Microsoft.CodeAnalysis.VisualBasic.dll
+C:\Users\Alisher\Desktop\C# Lessons\Elga Xizmat\Elga Xizmat\bin\roslyn\Microsoft.CSharp.Core.targets
+C:\Users\Alisher\Desktop\C# Lessons\Elga Xizmat\Elga Xizmat\bin\roslyn\Microsoft.VisualBasic.Core.targets
+C:\Users\Alisher\Desktop\C# Lessons\Elga Xizmat\Elga Xizmat\bin\roslyn\System.Collections.Immutable.dll
+C:\Users\Alisher\Desktop\C# Lessons\Elga Xizmat\Elga Xizmat\bin\roslyn\System.Reflection.Metadata.dll
+C:\Users\Alisher\Desktop\C# Lessons\Elga Xizmat\Elga Xizmat\bin\roslyn\vbc.exe
+C:\Users\Alisher\Desktop\C# Lessons\Elga Xizmat\Elga Xizmat\bin\roslyn\VBCSCompiler.exe
+C:\Users\Alisher\Desktop\C# Lessons\Elga Xizmat\Elga Xizmat\bin\roslyn\VBCSCompiler.exe.config
+C:\Users\Alisher\Desktop\C# Lessons\Elga Xizmat\Elga Xizmat\bin\Elga Xizmat.dll.config
+C:\Users\Alisher\Desktop\C# Lessons\Elga Xizmat\Elga Xizmat\bin\Elga Xizmat.dll
+C:\Users\Alisher\Desktop\C# Lessons\Elga Xizmat\Elga Xizmat\bin\Elga Xizmat.pdb
+C:\Users\Alisher\Desktop\C# Lessons\Elga Xizmat\Elga Xizmat\bin\Antlr3.Runtime.dll
+C:\Users\Alisher\Desktop\C# Lessons\Elga Xizmat\Elga Xizmat\bin\EntityFramework.dll
+C:\Users\Alisher\Desktop\C# Lessons\Elga Xizmat\Elga Xizmat\bin\EntityFramework.SqlServer.dll
+C:\Users\Alisher\Desktop\C# Lessons\Elga Xizmat\Elga Xizmat\bin\Microsoft.AspNet.Identity.Core.dll
+C:\Users\Alisher\Desktop\C# Lessons\Elga Xizmat\Elga Xizmat\bin\Microsoft.AspNet.Identity.EntityFramework.dll
+C:\Users\Alisher\Desktop\C# Lessons\Elga Xizmat\Elga Xizmat\bin\Microsoft.AspNet.Identity.Owin.dll
+C:\Users\Alisher\Desktop\C# Lessons\Elga Xizmat\Elga Xizmat\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.dll
+C:\Users\Alisher\Desktop\C# Lessons\Elga Xizmat\Elga Xizmat\bin\Microsoft.Owin.dll
+C:\Users\Alisher\Desktop\C# Lessons\Elga Xizmat\Elga Xizmat\bin\Microsoft.Owin.Host.SystemWeb.dll
+C:\Users\Alisher\Desktop\C# Lessons\Elga Xizmat\Elga Xizmat\bin\Microsoft.Owin.Security.Cookies.dll
+C:\Users\Alisher\Desktop\C# Lessons\Elga Xizmat\Elga Xizmat\bin\Microsoft.Owin.Security.dll
+C:\Users\Alisher\Desktop\C# Lessons\Elga Xizmat\Elga Xizmat\bin\Microsoft.Owin.Security.Facebook.dll
+C:\Users\Alisher\Desktop\C# Lessons\Elga Xizmat\Elga Xizmat\bin\Microsoft.Owin.Security.Google.dll
+C:\Users\Alisher\Desktop\C# Lessons\Elga Xizmat\Elga Xizmat\bin\Microsoft.Owin.Security.MicrosoftAccount.dll
+C:\Users\Alisher\Desktop\C# Lessons\Elga Xizmat\Elga Xizmat\bin\Microsoft.Owin.Security.OAuth.dll
+C:\Users\Alisher\Desktop\C# Lessons\Elga Xizmat\Elga Xizmat\bin\Microsoft.Owin.Security.Twitter.dll
+C:\Users\Alisher\Desktop\C# Lessons\Elga Xizmat\Elga Xizmat\bin\Microsoft.Web.Infrastructure.dll
+C:\Users\Alisher\Desktop\C# Lessons\Elga Xizmat\Elga Xizmat\bin\Newtonsoft.Json.dll
+C:\Users\Alisher\Desktop\C# Lessons\Elga Xizmat\Elga Xizmat\bin\Owin.dll
+C:\Users\Alisher\Desktop\C# Lessons\Elga Xizmat\Elga Xizmat\bin\System.Web.Helpers.dll
+C:\Users\Alisher\Desktop\C# Lessons\Elga Xizmat\Elga Xizmat\bin\System.Web.Mvc.dll
+C:\Users\Alisher\Desktop\C# Lessons\Elga Xizmat\Elga Xizmat\bin\System.Web.Optimization.dll
+C:\Users\Alisher\Desktop\C# Lessons\Elga Xizmat\Elga Xizmat\bin\System.Web.Razor.dll
+C:\Users\Alisher\Desktop\C# Lessons\Elga Xizmat\Elga Xizmat\bin\System.Web.WebPages.Deployment.dll
+C:\Users\Alisher\Desktop\C# Lessons\Elga Xizmat\Elga Xizmat\bin\System.Web.WebPages.dll
+C:\Users\Alisher\Desktop\C# Lessons\Elga Xizmat\Elga Xizmat\bin\System.Web.WebPages.Razor.dll
+C:\Users\Alisher\Desktop\C# Lessons\Elga Xizmat\Elga Xizmat\bin\WebGrease.dll
+C:\Users\Alisher\Desktop\C# Lessons\Elga Xizmat\Elga Xizmat\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.xml
+C:\Users\Alisher\Desktop\C# Lessons\Elga Xizmat\Elga Xizmat\bin\System.Web.Helpers.xml
+C:\Users\Alisher\Desktop\C# Lessons\Elga Xizmat\Elga Xizmat\bin\System.Web.Mvc.xml
+C:\Users\Alisher\Desktop\C# Lessons\Elga Xizmat\Elga Xizmat\bin\System.Web.Optimization.xml
+C:\Users\Alisher\Desktop\C# Lessons\Elga Xizmat\Elga Xizmat\bin\System.Web.Razor.xml
+C:\Users\Alisher\Desktop\C# Lessons\Elga Xizmat\Elga Xizmat\bin\System.Web.WebPages.xml
+C:\Users\Alisher\Desktop\C# Lessons\Elga Xizmat\Elga Xizmat\bin\System.Web.WebPages.Deployment.xml
+C:\Users\Alisher\Desktop\C# Lessons\Elga Xizmat\Elga Xizmat\bin\System.Web.WebPages.Razor.xml
+C:\Users\Alisher\Desktop\C# Lessons\Elga Xizmat\Elga Xizmat\bin\Antlr3.Runtime.pdb
+C:\Users\Alisher\Desktop\C# Lessons\Elga Xizmat\Elga Xizmat\bin\Newtonsoft.Json.xml
+C:\Users\Alisher\Desktop\C# Lessons\Elga Xizmat\Elga Xizmat\bin\EntityFramework.xml
+C:\Users\Alisher\Desktop\C# Lessons\Elga Xizmat\Elga Xizmat\bin\EntityFramework.SqlServer.xml
+C:\Users\Alisher\Desktop\C# Lessons\Elga Xizmat\Elga Xizmat\bin\Microsoft.AspNet.Identity.Core.xml
+C:\Users\Alisher\Desktop\C# Lessons\Elga Xizmat\Elga Xizmat\bin\Microsoft.AspNet.Identity.Owin.xml
+C:\Users\Alisher\Desktop\C# Lessons\Elga Xizmat\Elga Xizmat\bin\Microsoft.AspNet.Identity.EntityFramework.xml
+C:\Users\Alisher\Desktop\C# Lessons\Elga Xizmat\Elga Xizmat\bin\Microsoft.Owin.xml
+C:\Users\Alisher\Desktop\C# Lessons\Elga Xizmat\Elga Xizmat\bin\Microsoft.Owin.Host.SystemWeb.xml
+C:\Users\Alisher\Desktop\C# Lessons\Elga Xizmat\Elga Xizmat\bin\Microsoft.Owin.Security.xml
+C:\Users\Alisher\Desktop\C# Lessons\Elga Xizmat\Elga Xizmat\bin\Microsoft.Owin.Security.Facebook.xml
+C:\Users\Alisher\Desktop\C# Lessons\Elga Xizmat\Elga Xizmat\bin\Microsoft.Owin.Security.Cookies.xml
+C:\Users\Alisher\Desktop\C# Lessons\Elga Xizmat\Elga Xizmat\bin\Microsoft.Owin.Security.OAuth.xml
+C:\Users\Alisher\Desktop\C# Lessons\Elga Xizmat\Elga Xizmat\bin\Microsoft.Owin.Security.Google.xml
+C:\Users\Alisher\Desktop\C# Lessons\Elga Xizmat\Elga Xizmat\bin\Microsoft.Owin.Security.Twitter.xml
+C:\Users\Alisher\Desktop\C# Lessons\Elga Xizmat\Elga Xizmat\bin\Microsoft.Owin.Security.MicrosoftAccount.xml
+C:\Users\Alisher\Desktop\C# Lessons\Elga Xizmat\Elga Xizmat\bin\ru\System.Web.Helpers.resources.dll
+C:\Users\Alisher\Desktop\C# Lessons\Elga Xizmat\Elga Xizmat\bin\ru\System.Web.Mvc.resources.dll
+C:\Users\Alisher\Desktop\C# Lessons\Elga Xizmat\Elga Xizmat\bin\ru\System.Web.Optimization.resources.dll
+C:\Users\Alisher\Desktop\C# Lessons\Elga Xizmat\Elga Xizmat\bin\ru\System.Web.Razor.resources.dll
+C:\Users\Alisher\Desktop\C# Lessons\Elga Xizmat\Elga Xizmat\bin\ru\System.Web.WebPages.resources.dll
+C:\Users\Alisher\Desktop\C# Lessons\Elga Xizmat\Elga Xizmat\bin\ru\System.Web.WebPages.Deployment.resources.dll
+C:\Users\Alisher\Desktop\C# Lessons\Elga Xizmat\Elga Xizmat\bin\ru\System.Web.WebPages.Razor.resources.dll
+C:\Users\Alisher\Desktop\C# Lessons\Elga Xizmat\Elga Xizmat\bin\ru\EntityFramework.resources.dll
+C:\Users\Alisher\Desktop\C# Lessons\Elga Xizmat\Elga Xizmat\bin\ru\EntityFramework.SqlServer.resources.dll
+C:\Users\Alisher\Desktop\C# Lessons\Elga Xizmat\Elga Xizmat\bin\ru\Microsoft.AspNet.Identity.Core.resources.dll
+C:\Users\Alisher\Desktop\C# Lessons\Elga Xizmat\Elga Xizmat\bin\ru\Microsoft.AspNet.Identity.Owin.resources.dll
+C:\Users\Alisher\Desktop\C# Lessons\Elga Xizmat\Elga Xizmat\bin\ru\Microsoft.AspNet.Identity.EntityFramework.resources.dll
+C:\Users\Alisher\Desktop\C# Lessons\Elga Xizmat\Elga Xizmat\bin\ru\Microsoft.Owin.resources.dll
+C:\Users\Alisher\Desktop\C# Lessons\Elga Xizmat\Elga Xizmat\bin\ru\Microsoft.Owin.Host.SystemWeb.resources.dll
+C:\Users\Alisher\Desktop\C# Lessons\Elga Xizmat\Elga Xizmat\bin\ru\Microsoft.Owin.Security.resources.dll
+C:\Users\Alisher\Desktop\C# Lessons\Elga Xizmat\Elga Xizmat\bin\ru\Microsoft.Owin.Security.Facebook.resources.dll
+C:\Users\Alisher\Desktop\C# Lessons\Elga Xizmat\Elga Xizmat\bin\ru\Microsoft.Owin.Security.Google.resources.dll
+C:\Users\Alisher\Desktop\C# Lessons\Elga Xizmat\Elga Xizmat\bin\ru\Microsoft.Owin.Security.Twitter.resources.dll
+C:\Users\Alisher\Desktop\C# Lessons\Elga Xizmat\Elga Xizmat\bin\ru\Microsoft.Owin.Security.MicrosoftAccount.resources.dll
+C:\Users\Alisher\Desktop\C# Lessons\Elga Xizmat\Elga Xizmat\obj\Debug\Elga Xizmat.csprojResolveAssemblyReference.cache
+C:\Users\Alisher\Desktop\C# Lessons\Elga Xizmat\Elga Xizmat\obj\Debug\Elga Xizmat.dll
+C:\Users\Alisher\Desktop\C# Lessons\Elga Xizmat\Elga Xizmat\obj\Debug\Elga Xizmat.pdb
+C:\Users\Alisher\Desktop\My work\C# Lessons\Elga Xizmat\Elga Xizmat\bin\roslyn\csc.exe
+C:\Users\Alisher\Desktop\My work\C# Lessons\Elga Xizmat\Elga Xizmat\bin\roslyn\Microsoft.Build.Tasks.CodeAnalysis.dll
+C:\Users\Alisher\Desktop\My work\C# Lessons\Elga Xizmat\Elga Xizmat\bin\roslyn\Microsoft.CodeAnalysis.CSharp.dll
+C:\Users\Alisher\Desktop\My work\C# Lessons\Elga Xizmat\Elga Xizmat\bin\roslyn\Microsoft.CodeAnalysis.dll
+C:\Users\Alisher\Desktop\My work\C# Lessons\Elga Xizmat\Elga Xizmat\bin\roslyn\Microsoft.CodeAnalysis.VisualBasic.dll
+C:\Users\Alisher\Desktop\My work\C# Lessons\Elga Xizmat\Elga Xizmat\bin\roslyn\Microsoft.CSharp.Core.targets
+C:\Users\Alisher\Desktop\My work\C# Lessons\Elga Xizmat\Elga Xizmat\bin\roslyn\Microsoft.VisualBasic.Core.targets
+C:\Users\Alisher\Desktop\My work\C# Lessons\Elga Xizmat\Elga Xizmat\bin\roslyn\System.Collections.Immutable.dll
+C:\Users\Alisher\Desktop\My work\C# Lessons\Elga Xizmat\Elga Xizmat\bin\roslyn\System.Reflection.Metadata.dll
+C:\Users\Alisher\Desktop\My work\C# Lessons\Elga Xizmat\Elga Xizmat\bin\roslyn\vbc.exe
+C:\Users\Alisher\Desktop\My work\C# Lessons\Elga Xizmat\Elga Xizmat\bin\roslyn\VBCSCompiler.exe
+C:\Users\Alisher\Desktop\My work\C# Lessons\Elga Xizmat\Elga Xizmat\bin\roslyn\VBCSCompiler.exe.config
+C:\Users\Alisher\Desktop\My work\C# Lessons\Elga Xizmat\Elga Xizmat\bin\Elga Xizmat.dll.config
+C:\Users\Alisher\Desktop\My work\C# Lessons\Elga Xizmat\Elga Xizmat\bin\Elga Xizmat.dll
+C:\Users\Alisher\Desktop\My work\C# Lessons\Elga Xizmat\Elga Xizmat\bin\Elga Xizmat.pdb
+C:\Users\Alisher\Desktop\My work\C# Lessons\Elga Xizmat\Elga Xizmat\bin\Antlr3.Runtime.dll
+C:\Users\Alisher\Desktop\My work\C# Lessons\Elga Xizmat\Elga Xizmat\bin\EntityFramework.dll
+C:\Users\Alisher\Desktop\My work\C# Lessons\Elga Xizmat\Elga Xizmat\bin\EntityFramework.SqlServer.dll
+C:\Users\Alisher\Desktop\My work\C# Lessons\Elga Xizmat\Elga Xizmat\bin\Microsoft.AspNet.Identity.Core.dll
+C:\Users\Alisher\Desktop\My work\C# Lessons\Elga Xizmat\Elga Xizmat\bin\Microsoft.AspNet.Identity.EntityFramework.dll
+C:\Users\Alisher\Desktop\My work\C# Lessons\Elga Xizmat\Elga Xizmat\bin\Microsoft.AspNet.Identity.Owin.dll
+C:\Users\Alisher\Desktop\My work\C# Lessons\Elga Xizmat\Elga Xizmat\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.dll
+C:\Users\Alisher\Desktop\My work\C# Lessons\Elga Xizmat\Elga Xizmat\bin\Microsoft.Owin.dll
+C:\Users\Alisher\Desktop\My work\C# Lessons\Elga Xizmat\Elga Xizmat\bin\Microsoft.Owin.Host.SystemWeb.dll
+C:\Users\Alisher\Desktop\My work\C# Lessons\Elga Xizmat\Elga Xizmat\bin\Microsoft.Owin.Security.Cookies.dll
+C:\Users\Alisher\Desktop\My work\C# Lessons\Elga Xizmat\Elga Xizmat\bin\Microsoft.Owin.Security.dll
+C:\Users\Alisher\Desktop\My work\C# Lessons\Elga Xizmat\Elga Xizmat\bin\Microsoft.Owin.Security.Facebook.dll
+C:\Users\Alisher\Desktop\My work\C# Lessons\Elga Xizmat\Elga Xizmat\bin\Microsoft.Owin.Security.Google.dll
+C:\Users\Alisher\Desktop\My work\C# Lessons\Elga Xizmat\Elga Xizmat\bin\Microsoft.Owin.Security.MicrosoftAccount.dll
+C:\Users\Alisher\Desktop\My work\C# Lessons\Elga Xizmat\Elga Xizmat\bin\Microsoft.Owin.Security.OAuth.dll
+C:\Users\Alisher\Desktop\My work\C# Lessons\Elga Xizmat\Elga Xizmat\bin\Microsoft.Owin.Security.Twitter.dll
+C:\Users\Alisher\Desktop\My work\C# Lessons\Elga Xizmat\Elga Xizmat\bin\Microsoft.Web.Infrastructure.dll
+C:\Users\Alisher\Desktop\My work\C# Lessons\Elga Xizmat\Elga Xizmat\bin\Newtonsoft.Json.dll
+C:\Users\Alisher\Desktop\My work\C# Lessons\Elga Xizmat\Elga Xizmat\bin\Owin.dll
+C:\Users\Alisher\Desktop\My work\C# Lessons\Elga Xizmat\Elga Xizmat\bin\System.Web.Helpers.dll
+C:\Users\Alisher\Desktop\My work\C# Lessons\Elga Xizmat\Elga Xizmat\bin\System.Web.Mvc.dll
+C:\Users\Alisher\Desktop\My work\C# Lessons\Elga Xizmat\Elga Xizmat\bin\System.Web.Optimization.dll
+C:\Users\Alisher\Desktop\My work\C# Lessons\Elga Xizmat\Elga Xizmat\bin\System.Web.Razor.dll
+C:\Users\Alisher\Desktop\My work\C# Lessons\Elga Xizmat\Elga Xizmat\bin\System.Web.WebPages.Deployment.dll
+C:\Users\Alisher\Desktop\My work\C# Lessons\Elga Xizmat\Elga Xizmat\bin\System.Web.WebPages.dll
+C:\Users\Alisher\Desktop\My work\C# Lessons\Elga Xizmat\Elga Xizmat\bin\System.Web.WebPages.Razor.dll
+C:\Users\Alisher\Desktop\My work\C# Lessons\Elga Xizmat\Elga Xizmat\bin\WebGrease.dll
+C:\Users\Alisher\Desktop\My work\C# Lessons\Elga Xizmat\Elga Xizmat\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.xml
+C:\Users\Alisher\Desktop\My work\C# Lessons\Elga Xizmat\Elga Xizmat\bin\System.Web.Helpers.xml
+C:\Users\Alisher\Desktop\My work\C# Lessons\Elga Xizmat\Elga Xizmat\bin\System.Web.Mvc.xml
+C:\Users\Alisher\Desktop\My work\C# Lessons\Elga Xizmat\Elga Xizmat\bin\System.Web.Optimization.xml
+C:\Users\Alisher\Desktop\My work\C# Lessons\Elga Xizmat\Elga Xizmat\bin\System.Web.Razor.xml
+C:\Users\Alisher\Desktop\My work\C# Lessons\Elga Xizmat\Elga Xizmat\bin\System.Web.WebPages.xml
+C:\Users\Alisher\Desktop\My work\C# Lessons\Elga Xizmat\Elga Xizmat\bin\System.Web.WebPages.Deployment.xml
+C:\Users\Alisher\Desktop\My work\C# Lessons\Elga Xizmat\Elga Xizmat\bin\System.Web.WebPages.Razor.xml
+C:\Users\Alisher\Desktop\My work\C# Lessons\Elga Xizmat\Elga Xizmat\bin\Antlr3.Runtime.pdb
+C:\Users\Alisher\Desktop\My work\C# Lessons\Elga Xizmat\Elga Xizmat\bin\Newtonsoft.Json.xml
+C:\Users\Alisher\Desktop\My work\C# Lessons\Elga Xizmat\Elga Xizmat\bin\EntityFramework.xml
+C:\Users\Alisher\Desktop\My work\C# Lessons\Elga Xizmat\Elga Xizmat\bin\EntityFramework.SqlServer.xml
+C:\Users\Alisher\Desktop\My work\C# Lessons\Elga Xizmat\Elga Xizmat\bin\Microsoft.AspNet.Identity.Core.xml
+C:\Users\Alisher\Desktop\My work\C# Lessons\Elga Xizmat\Elga Xizmat\bin\Microsoft.AspNet.Identity.Owin.xml
+C:\Users\Alisher\Desktop\My work\C# Lessons\Elga Xizmat\Elga Xizmat\bin\Microsoft.AspNet.Identity.EntityFramework.xml
+C:\Users\Alisher\Desktop\My work\C# Lessons\Elga Xizmat\Elga Xizmat\bin\Microsoft.Owin.xml
+C:\Users\Alisher\Desktop\My work\C# Lessons\Elga Xizmat\Elga Xizmat\bin\Microsoft.Owin.Host.SystemWeb.xml
+C:\Users\Alisher\Desktop\My work\C# Lessons\Elga Xizmat\Elga Xizmat\bin\Microsoft.Owin.Security.xml
+C:\Users\Alisher\Desktop\My work\C# Lessons\Elga Xizmat\Elga Xizmat\bin\Microsoft.Owin.Security.Facebook.xml
+C:\Users\Alisher\Desktop\My work\C# Lessons\Elga Xizmat\Elga Xizmat\bin\Microsoft.Owin.Security.Cookies.xml
+C:\Users\Alisher\Desktop\My work\C# Lessons\Elga Xizmat\Elga Xizmat\bin\Microsoft.Owin.Security.OAuth.xml
+C:\Users\Alisher\Desktop\My work\C# Lessons\Elga Xizmat\Elga Xizmat\bin\Microsoft.Owin.Security.Google.xml
+C:\Users\Alisher\Desktop\My work\C# Lessons\Elga Xizmat\Elga Xizmat\bin\Microsoft.Owin.Security.Twitter.xml
+C:\Users\Alisher\Desktop\My work\C# Lessons\Elga Xizmat\Elga Xizmat\bin\Microsoft.Owin.Security.MicrosoftAccount.xml
+C:\Users\Alisher\Desktop\My work\C# Lessons\Elga Xizmat\Elga Xizmat\bin\ru\System.Web.Helpers.resources.dll
+C:\Users\Alisher\Desktop\My work\C# Lessons\Elga Xizmat\Elga Xizmat\bin\ru\System.Web.Mvc.resources.dll
+C:\Users\Alisher\Desktop\My work\C# Lessons\Elga Xizmat\Elga Xizmat\bin\ru\System.Web.Optimization.resources.dll
+C:\Users\Alisher\Desktop\My work\C# Lessons\Elga Xizmat\Elga Xizmat\bin\ru\System.Web.Razor.resources.dll
+C:\Users\Alisher\Desktop\My work\C# Lessons\Elga Xizmat\Elga Xizmat\bin\ru\System.Web.WebPages.resources.dll
+C:\Users\Alisher\Desktop\My work\C# Lessons\Elga Xizmat\Elga Xizmat\bin\ru\System.Web.WebPages.Deployment.resources.dll
+C:\Users\Alisher\Desktop\My work\C# Lessons\Elga Xizmat\Elga Xizmat\bin\ru\System.Web.WebPages.Razor.resources.dll
+C:\Users\Alisher\Desktop\My work\C# Lessons\Elga Xizmat\Elga Xizmat\bin\ru\EntityFramework.resources.dll
+C:\Users\Alisher\Desktop\My work\C# Lessons\Elga Xizmat\Elga Xizmat\bin\ru\EntityFramework.SqlServer.resources.dll
+C:\Users\Alisher\Desktop\My work\C# Lessons\Elga Xizmat\Elga Xizmat\bin\ru\Microsoft.AspNet.Identity.Core.resources.dll
+C:\Users\Alisher\Desktop\My work\C# Lessons\Elga Xizmat\Elga Xizmat\bin\ru\Microsoft.AspNet.Identity.Owin.resources.dll
+C:\Users\Alisher\Desktop\My work\C# Lessons\Elga Xizmat\Elga Xizmat\bin\ru\Microsoft.AspNet.Identity.EntityFramework.resources.dll
+C:\Users\Alisher\Desktop\My work\C# Lessons\Elga Xizmat\Elga Xizmat\bin\ru\Microsoft.Owin.resources.dll
+C:\Users\Alisher\Desktop\My work\C# Lessons\Elga Xizmat\Elga Xizmat\bin\ru\Microsoft.Owin.Host.SystemWeb.resources.dll
+C:\Users\Alisher\Desktop\My work\C# Lessons\Elga Xizmat\Elga Xizmat\bin\ru\Microsoft.Owin.Security.resources.dll
+C:\Users\Alisher\Desktop\My work\C# Lessons\Elga Xizmat\Elga Xizmat\bin\ru\Microsoft.Owin.Security.Facebook.resources.dll
+C:\Users\Alisher\Desktop\My work\C# Lessons\Elga Xizmat\Elga Xizmat\bin\ru\Microsoft.Owin.Security.Google.resources.dll
+C:\Users\Alisher\Desktop\My work\C# Lessons\Elga Xizmat\Elga Xizmat\bin\ru\Microsoft.Owin.Security.Twitter.resources.dll
+C:\Users\Alisher\Desktop\My work\C# Lessons\Elga Xizmat\Elga Xizmat\bin\ru\Microsoft.Owin.Security.MicrosoftAccount.resources.dll
+C:\Users\Alisher\Desktop\My work\C# Lessons\Elga Xizmat\Elga Xizmat\obj\Debug\Elga Xizmat.csprojResolveAssemblyReference.cache
+C:\Users\Alisher\Desktop\My work\C# Lessons\Elga Xizmat\Elga Xizmat\obj\Debug\Elga Xizmat.dll
+C:\Users\Alisher\Desktop\My work\C# Lessons\Elga Xizmat\Elga Xizmat\obj\Debug\Elga Xizmat.pdb

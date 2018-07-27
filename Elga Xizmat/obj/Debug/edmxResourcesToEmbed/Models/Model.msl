@@ -1,0 +1,102 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
+  <EntityContainerMapping StorageEntityContainer="Хранилище ELX_DBModelContainer" CdmEntityContainer="ELX_DBEntities">
+    <EntitySetMapping Name="Users">
+      <EntityTypeMapping TypeName="ELX_DBModel.Users">
+        <MappingFragment StoreEntitySet="Users">
+          <ScalarProperty Name="ID" ColumnName="ID" />
+          <ScalarProperty Name="User_Name" ColumnName="User_Name" />
+          <ScalarProperty Name="Phone_number" ColumnName="Phone_number" />
+          <ScalarProperty Name="Email" ColumnName="Email" />
+          <ScalarProperty Name="Password" ColumnName="Password" />
+          <ScalarProperty Name="Type" ColumnName="Type" />
+          <ScalarProperty Name="State" ColumnName="State" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Adses">
+      <EntityTypeMapping TypeName="ELX_DBModel.Adses">
+        <MappingFragment StoreEntitySet="Adses">
+          <ScalarProperty Name="TypeAdses" ColumnName="TypeAdses" />
+          <ScalarProperty Name="CountView" ColumnName="CountView" />
+          <ScalarProperty Name="Date" ColumnName="Date" />
+          <ScalarProperty Name="State_ID" ColumnName="State_ID" />
+          <ScalarProperty Name="User_ID" ColumnName="User_ID" />
+          <ScalarProperty Name="Picture" ColumnName="Picture" />
+          <ScalarProperty Name="Area_Id" ColumnName="Area_Id" />
+          <ScalarProperty Name="Region_Id" ColumnName="Region_Id" />
+          <ScalarProperty Name="Short_text" ColumnName="Short_text" />
+          <ScalarProperty Name="Price" ColumnName="Price" />
+          <ScalarProperty Name="TypeProduct_Id" ColumnName="TypeProduct_Id" />
+          <ScalarProperty Name="Rubric_Id" ColumnName="Rubric_Id" />
+          <ScalarProperty Name="Title" ColumnName="Title" />
+          <ScalarProperty Name="Id" ColumnName="Id" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Areas">
+      <EntityTypeMapping TypeName="ELX_DBModel.Areas">
+        <MappingFragment StoreEntitySet="Areas">
+          <ScalarProperty Name="AreaNameRu" ColumnName="AreaNameRu" />
+          <ScalarProperty Name="AreaNameUzb" ColumnName="AreaNameUzb" />
+          <ScalarProperty Name="Region_Id" ColumnName="Region_Id" />
+          <ScalarProperty Name="Id" ColumnName="Id" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Regions">
+      <EntityTypeMapping TypeName="ELX_DBModel.Regions">
+        <MappingFragment StoreEntitySet="Regions">
+          <ScalarProperty Name="Name" ColumnName="Name" />
+          <ScalarProperty Name="Id" ColumnName="Id" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Rubric">
+      <EntityTypeMapping TypeName="ELX_DBModel.Rubric">
+        <MappingFragment StoreEntitySet="Rubric">
+          <ScalarProperty Name="Name_Ru" ColumnName="Name_Ru" />
+          <ScalarProperty Name="Name_Uz" ColumnName="Name_Uz" />
+          <ScalarProperty Name="Id" ColumnName="Id" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Type_Product">
+      <EntityTypeMapping TypeName="ELX_DBModel.Type_Product">
+        <MappingFragment StoreEntitySet="Type_Product">
+          <ScalarProperty Name="Rubric_Id" ColumnName="Rubric_Id" />
+          <ScalarProperty Name="Name_Ru" ColumnName="Name_Ru" />
+          <ScalarProperty Name="Name_Uz" ColumnName="Name_Uz" />
+          <ScalarProperty Name="Id" ColumnName="Id" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="StateProduct">
+      <EntityTypeMapping TypeName="ELX_DBModel.StateProduct">
+        <MappingFragment StoreEntitySet="StateProduct">
+          <ScalarProperty Name="Name" ColumnName="Name" />
+          <ScalarProperty Name="ID" ColumnName="ID" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Message">
+      <EntityTypeMapping TypeName="ELX_DBModel.Message">
+        <MappingFragment StoreEntitySet="Message">
+          <ScalarProperty Name="User_ID" ColumnName="User_ID" />
+          <ScalarProperty Name="Type_Message" ColumnName="Type_Message" />
+          <ScalarProperty Name="Message1" ColumnName="Message" />
+          <ScalarProperty Name="ID" ColumnName="ID" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="TypeAdses">
+      <EntityTypeMapping TypeName="ELX_DBModel.TypeAdses">
+        <MappingFragment StoreEntitySet="TypeAdses">
+          <ScalarProperty Name="TypeAdsesRu" ColumnName="TypeAdsesRu" />
+          <ScalarProperty Name="TypeAdsesUz" ColumnName="TypeAdsesUz" />
+          <ScalarProperty Name="ID" ColumnName="ID" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+  </EntityContainerMapping>
+</Mapping>

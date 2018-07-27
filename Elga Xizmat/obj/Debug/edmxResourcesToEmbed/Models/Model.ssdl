@@ -1,0 +1,102 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="Хранилище ELX_DBModel" Provider="System.Data.SqlClient" ProviderManifestToken="2012" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+  <EntityType Name="Adses">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="Title" Type="nvarchar" MaxLength="150" />
+    <Property Name="Rubric_Id" Type="int" />
+    <Property Name="TypeProduct_Id" Type="int" />
+    <Property Name="Price" Type="money" />
+    <Property Name="Short_text" Type="nvarchar" MaxLength="500" />
+    <Property Name="Region_Id" Type="int" />
+    <Property Name="Area_Id" Type="int" />
+    <Property Name="Picture" Type="nvarchar" MaxLength="500" />
+    <Property Name="User_ID" Type="int" />
+    <Property Name="State_ID" Type="int" />
+    <Property Name="Date" Type="datetime" />
+    <Property Name="CountView" Type="int" />
+    <Property Name="TypeAdses" Type="int" />
+  </EntityType>
+  <EntityType Name="Areas">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="Region_Id" Type="int" />
+    <Property Name="AreaNameUzb" Type="nvarchar" MaxLength="150" />
+    <Property Name="AreaNameRu" Type="nvarchar" MaxLength="150" />
+  </EntityType>
+  <EntityType Name="Message">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="Message" Type="nvarchar" MaxLength="1500" />
+    <Property Name="Type_Message" Type="int" />
+    <Property Name="User_ID" Type="int" />
+  </EntityType>
+  <EntityType Name="Regions">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="Name" Type="nvarchar" MaxLength="50" />
+  </EntityType>
+  <EntityType Name="Rubric">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="Name_Uz" Type="nvarchar" MaxLength="150" />
+    <Property Name="Name_Ru" Type="nvarchar" MaxLength="150" />
+  </EntityType>
+  <EntityType Name="StateProduct">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="Name" Type="nvarchar" MaxLength="50" />
+  </EntityType>
+  <EntityType Name="Type_Product">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="Name_Uz" Type="nvarchar" MaxLength="150" />
+    <Property Name="Name_Ru" Type="nvarchar" MaxLength="150" />
+    <Property Name="Rubric_Id" Type="int" />
+  </EntityType>
+  <EntityType Name="TypeAdses">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="TypeAdsesUz" Type="nvarchar" MaxLength="50" />
+    <Property Name="TypeAdsesRu" Type="nvarchar" MaxLength="50" />
+  </EntityType>
+  <EntityType Name="Users">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="User_Name" Type="nvarchar" MaxLength="50" />
+    <Property Name="Phone_number" Type="numeric" Precision="18" Scale="0" />
+    <Property Name="Email" Type="nvarchar" MaxLength="50" />
+    <Property Name="Password" Type="nvarchar" MaxLength="250" />
+    <Property Name="Type" Type="int" />
+    <Property Name="State" Type="int" />
+  </EntityType>
+  <EntityContainer Name="Хранилище ELX_DBModelContainer">
+    <EntitySet Name="Adses" EntityType="Self.Adses" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="Areas" EntityType="Self.Areas" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="Message" EntityType="Self.Message" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="Regions" EntityType="Self.Regions" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="Rubric" EntityType="Self.Rubric" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="StateProduct" EntityType="Self.StateProduct" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="Type_Product" EntityType="Self.Type_Product" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="TypeAdses" EntityType="Self.TypeAdses" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="Users" EntityType="Self.Users" Schema="dbo" store:Type="Tables" />
+  </EntityContainer>
+</Schema>

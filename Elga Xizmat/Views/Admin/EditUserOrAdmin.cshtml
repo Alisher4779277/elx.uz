@@ -1,0 +1,54 @@
+﻿@model Elga_Xizmat.Models.Users
+
+@{
+    Layout = "~/Views/Shared/Layout_Admin.cshtml";
+}
+<div class="page-wrapper">
+    <!-- Bread crumb -->
+    <div class="row page-titles">
+        <div class="col-md-5 align-self-center">
+            <h3 class="text-primary">O`zgartirish</h3>
+        </div>
+        <div class="col-md-7 align-self-center">
+            <ol class="breadcrumb">
+                <li class="breadcrumb-item"><a href="javascript:void(0)">Home</a></li>
+                <li class="breadcrumb-item active">Dashboard</li>
+            </ol>
+        </div>
+    </div>
+
+    <div class="col-lg-12">
+        <div class="card">
+            <div class="card-body">
+                <div class="basic-elements">
+                    <form method="post">
+                        <div class="row">
+                            <div class="col-lg-6">
+                                <div class="form-group">
+                                    <label>FIO</label>
+                                    <input type="text" class="form-control" name="User_Name" placeholder="70 ta so`z" value="@Model.User_Name">
+                                </div>
+                                <div class="form-group">
+                                    <label>Telefon nomer</label>
+                                    <input type="text" class="form-control" name="Phone_number" placeholder="70 ta so`z" value="@Model.Phone_number">
+                                </div>
+                                <div class="form-group">
+                                    <label>Login</label>
+                                    <input type="text" class="form-control" name="Email" placeholder="70 ta so`z" value="@Model.Email">
+                                </div>
+                                <div class="form-group">
+                                    <label>Parol</label>
+                                    <input type="text" class="form-control" name="Password" placeholder="70 ta so`z" value="@Model.Password">
+                                </div>
+                                <div class="sweetalert m-t-15">
+                                    <button class="btn btn-success btn sweet-success" type="submit">O`zgartirish</button>
+                                </div>
+                            </div>
+                          </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+

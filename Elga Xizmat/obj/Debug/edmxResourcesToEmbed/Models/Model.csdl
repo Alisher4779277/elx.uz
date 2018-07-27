@@ -1,0 +1,102 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="ELX_DBModel" Alias="Self" annotation:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
+  <EntityType Name="Users">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="User_Name" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="Phone_number" Type="Decimal" Precision="18" Scale="0" />
+    <Property Name="Email" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="Password" Type="String" MaxLength="250" FixedLength="false" Unicode="true" />
+    <Property Name="Type" Type="Int32" />
+    <Property Name="State" Type="Int32" />
+  </EntityType>
+  <EntityContainer Name="ELX_DBEntities" annotation:LazyLoadingEnabled="true">
+    <EntitySet Name="Users" EntityType="Self.Users" />
+    <EntitySet Name="Adses" EntityType="ELX_DBModel.Adses" />
+    <EntitySet Name="Areas" EntityType="ELX_DBModel.Areas" />
+    <EntitySet Name="Regions" EntityType="ELX_DBModel.Regions" />
+    <EntitySet Name="Rubric" EntityType="ELX_DBModel.Rubric" />
+    <EntitySet Name="Type_Product" EntityType="ELX_DBModel.Type_Product" />
+    <EntitySet Name="StateProduct" EntityType="ELX_DBModel.StateProduct" />
+    <EntitySet Name="Message" EntityType="ELX_DBModel.Message" />
+    <EntitySet Name="TypeAdses" EntityType="ELX_DBModel.TypeAdses" />
+  </EntityContainer>
+  <EntityType Name="Adses">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="Title" Type="String" MaxLength="150" FixedLength="false" Unicode="true" />
+    <Property Name="Rubric_Id" Type="Int32" />
+    <Property Name="TypeProduct_Id" Type="Int32" />
+    <Property Name="Price" Type="Decimal" Precision="19" Scale="4" />
+    <Property Name="Short_text" Type="String" MaxLength="500" FixedLength="false" Unicode="true" />
+    <Property Name="Region_Id" Type="Int32" />
+    <Property Name="Area_Id" Type="Int32" />
+    <Property Name="Picture" Type="String" MaxLength="500" FixedLength="false" Unicode="true" />
+    <Property Name="User_ID" Type="Int32" />
+    <Property Name="State_ID" Type="Int32" />
+    <Property Name="Date" Type="DateTime" Precision="3" />
+    <Property Name="CountView" Type="Int32" />
+    <Property Name="TypeAdses" Type="Int32" />
+  </EntityType>
+  <EntityType Name="Areas">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="Region_Id" Type="Int32" />
+    <Property Name="AreaNameUzb" Type="String" MaxLength="150" FixedLength="false" Unicode="true" />
+    <Property Name="AreaNameRu" Type="String" MaxLength="150" FixedLength="false" Unicode="true" />
+  </EntityType>
+  <EntityType Name="Regions">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="Name" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+  </EntityType>
+  <EntityType Name="Rubric">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="Name_Uz" Type="String" MaxLength="150" FixedLength="false" Unicode="true" />
+    <Property Name="Name_Ru" Type="String" MaxLength="150" FixedLength="false" Unicode="true" />
+  </EntityType>
+  <EntityType Name="Type_Product">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="Name_Uz" Type="String" MaxLength="150" FixedLength="false" Unicode="true" />
+    <Property Name="Name_Ru" Type="String" MaxLength="150" FixedLength="false" Unicode="true" />
+    <Property Name="Rubric_Id" Type="Int32" />
+  </EntityType>
+  <EntityType Name="StateProduct">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="Name" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+  </EntityType>
+  <EntityType Name="Message">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="Message1" Type="String" MaxLength="1500" FixedLength="false" Unicode="true" />
+    <Property Name="Type_Message" Type="Int32" />
+    <Property Name="User_ID" Type="Int32" />
+  </EntityType>
+  <EntityType Name="TypeAdses">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="TypeAdsesUz" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="TypeAdsesRu" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+  </EntityType>
+</Schema>

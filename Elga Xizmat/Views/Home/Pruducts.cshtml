@@ -1,0 +1,69 @@
+﻿@model IEnumerable<Elga_Xizmat.Models.Adses>
+@{
+
+}
+<div id="main-wrapper">
+    <div id="main">
+        <div id="main-inner">
+            <!-- MAP -->
+            <div class="container">
+                <!-- SLOGAN -->
+                <div class="block-content background-primary background-map block-content-small-padding fullwidth">
+
+                </div><!-- /.block-content-->                <!-- ISOTOPE GRID -->
+                <div class="block-content block-content-small-padding">
+                    <div class="block-content-inner">
+
+                        <ul class="properties-filter">
+                            <li class="selected"><a href="#" data-filter="*"><span><b>Premium Elonlar</b></span></a></li>
+
+                        </ul>
+                        <!-- /.property-filter -->
+                        <div class="properties-items">
+                            <div class="row">
+                                @foreach (var item in Model)
+                                {
+                                    <div class="property-item property-featured col-sm-6 col-md-3">
+                                        <div class="agent-box">
+                                            <div class="row">
+                                                <div class="agent-box-picture col-sm-12">
+
+                                                    <div class="">
+                                                        <a href="property-detail.html" class="agent-box-picture-target">
+                                                            <img src="@item.Picture" style="width:254px; height:300px;" alt="">
+                                                        </a><!-- /.agent-row-picture-target -->
+                                                    </div><!-- /.agent-row-picture-inner -->
+                                                </div><!-- /.agent-row-picture -->
+                                                <div class="agent-box-content col-sm-12">
+                                                    <h3 class="agent-box-title"><a href="property-detail.html">@item.Title</a></h3><!-- /.agent-row-title -->
+                                                    <h4 class="agent-box-subtitle"><a href="property-detail.html">E'lonning menyudagi joyi  </a></h4><!-- /.agent-row-subtitle -->
+                                                    <h4 class="agent-box-subtitle"><a href="property-detail.html">E'lonning manzili (toshkent)  </a></h4><!-- /.agent-row-subtitle -->
+                                                    <h4 class="agent-box-subtitle"><a href="">sana (bugun) ertasiga chislo  </a></h4><!-- /.agent-row-subtitle -->
+                                                    <div class="property-row-price">145000000 so’m</div>
+                                                </div><!-- /.agent-row-content -->
+                                            </div><!-- /.row -->
+                                        </div>
+                                        <!-- /.property-box -->
+                                    </div>
+                                }
+                            </div>
+                        </div>
+                        <div class="block-content background-primary background-map block-content-small-padding fullwidth">
+
+                        </div><!-- /.block-content-->
+                        <div class="center">
+                            <ul class="pagination">
+
+                                <li><a href="premium.html">Ҳаммасини кўриш</a></li>
+
+                            </ul>
+                        </div>
+                        <!-- /.properties-items -->
+                    </div>
+                    <!-- /.block-content-inner -->
+                </div><!-- /.block-content -->
+                <!-- CAROUSEL -->
+            </div><!-- /.container -->
+        </div><!-- /#main-inner -->
+    </div><!-- /#main -->
+</div><!-- /#main-wrapper -->

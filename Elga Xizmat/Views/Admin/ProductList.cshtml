@@ -1,0 +1,152 @@
+﻿@model IEnumerable<Elga_Xizmat.Models.Adses>
+@{
+    Elga_Xizmat.Models.ELX_DBEntities db = new Elga_Xizmat.Models.ELX_DBEntities();
+
+    Layout = "~/Views/Shared/Layout_Admin.cshtml";
+}
+
+<div class="page-wrapper">
+    <!-- Bread crumb -->
+    <div class="row page-titles">
+        <div class="col-md-5 align-self-center">
+            <h3 class="text-primary">Dashboard</h3>
+        </div>
+        <div class="col-md-7 align-self-center">
+            <ol class="breadcrumb">
+                <li class="breadcrumb-item"><a href="javascript:void(0)">Home</a></li>
+                <li class="breadcrumb-item active">Dashboard</li>
+            </ol>
+        </div>
+    </div>
+    <!-- End Bread crumb -->
+    <!-- Container fluid  -->
+    <div class="container-fluid">
+        <!-- Start Page Content -->
+        <div class="row">
+            <div class="col-12">
+                <div class="card">
+                    <div class="card-body">
+                        <div class="table-responsive m-t-40">
+                            <div class="row">
+                                @using (Html.BeginForm("ProductList", "Admin"))
+                                {
+                                    <div class="btn-toolbar">
+                                        <div class="btn-group">
+                                            <button class="btn btn-dribbble" value="0" name="stateProduct" type="submit">&nbsp;&nbsp;&nbsp; Все</button>
+                                            @foreach (var item in db.StateProduct)
+                                            {
+                                                <button class="btn btn-dribbble" value="@item.ID" name="stateProduct" type="submit">@item.Name</button>
+                                            }
+                                        </div>
+                                    </div>
+                                }
+                                <hr />
+                                @using (Html.BeginForm("ProductList", "Admin"))
+                                {
+                                    <div class="btn-toolbar">
+                                        <div class="btn-group">
+                                            <button class="btn btn-success" value="0" name="product_rubric" type="submit">&nbsp;&nbsp;&nbsp; Все</button>
+                                            @foreach (var item in db.Rubric)
+                                            {
+                                                <button class="btn btn-success" value="@item.Id" name="product_rubric" type="submit">@item.Name_Uz</button>
+                                            }
+                                        </div>
+                                    </div>
+                                }
+                            </div>
+                            <table id="example23" class="display nowrap table table-hover table-striped table-bordered" cellspacing="0" width="100%">
+                                <thead>
+                                    <tr>
+                                        <th>Sarlavha</th>
+                                        <th>Rukn</th>
+                                        <th>Mahsulot turi</th>
+                                        <th>Narxi</th>
+                                        <th>Sanasi</th>
+                                        <th>Kim tomonidan</th>
+                                        <th>Holati</th>
+                                        <th>Harakat</th>
+                                        <th></th>
+                                        <th></th>
+                                        <th></th>
+                                    </tr>
+                                </thead>
+                                <tfoot>
+                                    <tr>
+                                        <th>Sarlavha</th>
+                                        <th>Rukn</th>
+                                        <th>Mahsulot turi</th>
+                                        <th>Narxi</th>
+                                        <th>Sanasi</th>
+                                        <th>Kim tomonidan</th>
+                                        <th>Holati</th>
+                                        <th>Harakat</th>
+                                        <th></th>
+                                        <th></th>
+                                        <th></th>
+                                    </tr>
+                                </tfoot>
+                                <tbody>
+                                    @foreach (var item in Model.OrderBy(x => x.Date))
+                                    {
+                                        <tr>
+                                            <td>@Html.ActionLink(item.Title, "ProductDetails", new { id = item.Id })</td>
+                                            <td>@db.Rubric.FirstOrDefault(x => x.Id == item.Rubric_Id).Name_Uz</td>
+                                            <td>@db.Type_Product.FirstOrDefault(x => x.Id == item.TypeProduct_Id).Name_Uz</td>
+                                            <td>@item.Price</td>
+                                            <td>@item.Date</td>
+                                            <td>@db.Users.FirstOrDefault(x => x.ID == item.User_ID).User_Name</td>
+                                            <td>@db.StateProduct.FirstOrDefault(x => x.ID == item.State_ID).Name</td>
+                                            @if (item.Id != 1 && item.State_ID == 1)
+                                            {
+                                                <td>@Html.ActionLink("Sotildi", "Buy", new { id = item.Id })</td>
+                                                <td></td>
+                                            }
+                                            else if (item.State_ID == 2)
+                                            {
+                                                <td>@Html.ActionLink("Aktivlashtirish", "Actived", new { id = item.Id })</td>
+                                                <td>@Html.ActionLink("Rad etish", "Rejection", new { id = item.Id })</td>
+                                            }
+                                            else if (item.State_ID == 3)
+                                            {
+                                                <td>@Html.ActionLink("Aktivlashtirish", "Actived", new { id = item.Id })</td>
+                                                <td>@Html.ActionLink("Sotildi", "Buy", new { id = item.Id })</td>
+                                            }
+                                            else if (item.Id != 1 && item.State_ID == 4)
+                                            {
+                                                <td></td>
+                                                <td></td>
+                                            }
+                                            else
+                                            {
+                                                <td></td>
+                                                <td></td>
+                                            }
+
+                                            @if (item.State_ID != 4)
+                                            {
+                                                <td>
+                                                    @Html.ActionLink(" ", "ProductEdit", new { id = item.Id }, new { @class = "fa fa-pencil", @style = "color:blue" })&nbsp;&nbsp;
+                                                </td>
+                                                <td>
+                                                    @Html.ActionLink(" ", "ProductDelete", new { id = item.Id }, new { @class = "fa fa-trash", @style = "color:red" })
+                                                </td>}
+                                            else
+                                            {
+                                                <td></td>
+                                                <td></td>
+                                            }
+                                        </tr>
+                                    }
+                                </tbody>
+                            </table>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- End PAge Content -->
+    </div>
+    <!-- End Container fluid  -->
+    <!-- footer -->
+    <!-- End footer -->
+</div>

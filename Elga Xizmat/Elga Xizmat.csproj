@@ -1,0 +1,1693 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="14.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="..\packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.1.0.0\build\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.props" Condition="Exists('..\packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.1.0.0\build\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.props')" />
+  <Import Project="..\packages\Microsoft.Net.Compilers.1.0.0\build\Microsoft.Net.Compilers.props" Condition="Exists('..\packages\Microsoft.Net.Compilers.1.0.0\build\Microsoft.Net.Compilers.props')" />
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>
+    </ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{6089D6C0-559B-40D6-B254-960A7CE3F19C}</ProjectGuid>
+    <ProjectTypeGuids>{349c5851-65df-11da-9384-00065b846f21};{fae04ec0-301f-11d3-bf4b-00c04f79efbc}</ProjectTypeGuids>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>Elga_Xizmat</RootNamespace>
+    <AssemblyName>Elga Xizmat</AssemblyName>
+    <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
+    <MvcBuildViews>false</MvcBuildViews>
+    <UseIISExpress>true</UseIISExpress>
+    <IISExpressSSLPort />
+    <IISExpressAnonymousAuthentication />
+    <IISExpressWindowsAuthentication />
+    <IISExpressUseClassicPipelineMode />
+    <UseGlobalApplicationHostFile />
+    <NuGetPackageImportStamp>
+    </NuGetPackageImportStamp>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="Microsoft.CodeDom.Providers.DotNetCompilerPlatform, Version=1.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.1.0.0\lib\net45\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Runtime.Serialization" />
+    <Reference Include="System.Security" />
+    <Reference Include="System.Web.DynamicData" />
+    <Reference Include="System.Web.Entity" />
+    <Reference Include="System.Web.ApplicationServices" />
+    <Reference Include="System.ComponentModel.DataAnnotations" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Web" />
+    <Reference Include="System.Web.Extensions" />
+    <Reference Include="System.Web.Abstractions" />
+    <Reference Include="System.Web.Routing" />
+    <Reference Include="System.Xml" />
+    <Reference Include="System.Configuration" />
+    <Reference Include="System.Web.Services" />
+    <Reference Include="System.EnterpriseServices" />
+    <Reference Include="Microsoft.Web.Infrastructure, Version=1.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <Private>True</Private>
+      <HintPath>..\packages\Microsoft.Web.Infrastructure.1.0.0.0\lib\net40\Microsoft.Web.Infrastructure.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Net.Http">
+    </Reference>
+    <Reference Include="System.Net.Http.WebRequest">
+    </Reference>
+    <Reference Include="System.Web.Helpers, Version=3.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <Private>True</Private>
+      <HintPath>..\packages\Microsoft.AspNet.WebPages.3.2.3\lib\net45\System.Web.Helpers.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Web.Mvc, Version=5.2.3.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <Private>True</Private>
+      <HintPath>..\packages\Microsoft.AspNet.Mvc.5.2.3\lib\net45\System.Web.Mvc.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Web.Optimization">
+      <HintPath>..\packages\Microsoft.AspNet.Web.Optimization.1.1.3\lib\net40\System.Web.Optimization.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Web.Razor, Version=3.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <Private>True</Private>
+      <HintPath>..\packages\Microsoft.AspNet.Razor.3.2.3\lib\net45\System.Web.Razor.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Web.WebPages, Version=3.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <Private>True</Private>
+      <HintPath>..\packages\Microsoft.AspNet.WebPages.3.2.3\lib\net45\System.Web.WebPages.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Web.WebPages.Deployment, Version=3.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <Private>True</Private>
+      <HintPath>..\packages\Microsoft.AspNet.WebPages.3.2.3\lib\net45\System.Web.WebPages.Deployment.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Web.WebPages.Razor, Version=3.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <Private>True</Private>
+      <HintPath>..\packages\Microsoft.AspNet.WebPages.3.2.3\lib\net45\System.Web.WebPages.Razor.dll</HintPath>
+    </Reference>
+    <Reference Include="WebGrease">
+      <Private>True</Private>
+      <HintPath>..\packages\WebGrease.1.5.2\lib\WebGrease.dll</HintPath>
+    </Reference>
+    <Reference Include="Antlr3.Runtime">
+      <Private>True</Private>
+      <HintPath>..\packages\Antlr.3.4.1.9004\lib\Antlr3.Runtime.dll</HintPath>
+    </Reference>
+  </ItemGroup>
+  <ItemGroup>
+    <Reference Include="Newtonsoft.Json">
+      <HintPath>..\packages\Newtonsoft.Json.6.0.4\lib\net45\Newtonsoft.Json.dll</HintPath>
+    </Reference>
+    <Reference Include="EntityFramework">
+      <HintPath>..\packages\EntityFramework.6.1.3\lib\net45\EntityFramework.dll</HintPath>
+    </Reference>
+    <Reference Include="EntityFramework.SqlServer">
+      <HintPath>..\packages\EntityFramework.6.1.3\lib\net45\EntityFramework.SqlServer.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.AspNet.Identity.Core">
+      <HintPath>..\packages\Microsoft.AspNet.Identity.Core.2.2.1\lib\net45\Microsoft.AspNet.Identity.Core.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.AspNet.Identity.Owin">
+      <HintPath>..\packages\Microsoft.AspNet.Identity.Owin.2.2.1\lib\net45\Microsoft.AspNet.Identity.Owin.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.AspNet.Identity.EntityFramework">
+      <HintPath>..\packages\Microsoft.AspNet.Identity.EntityFramework.2.2.1\lib\net45\Microsoft.AspNet.Identity.EntityFramework.dll</HintPath>
+    </Reference>
+    <Reference Include="Owin">
+      <HintPath>..\packages\Owin.1.0\lib\net40\Owin.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Owin">
+      <HintPath>..\packages\Microsoft.Owin.3.0.1\lib\net45\Microsoft.Owin.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Owin.Host.SystemWeb">
+      <HintPath>..\packages\Microsoft.Owin.Host.SystemWeb.3.0.1\lib\net45\Microsoft.Owin.Host.SystemWeb.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Owin.Security">
+      <HintPath>..\packages\Microsoft.Owin.Security.3.0.1\lib\net45\Microsoft.Owin.Security.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Owin.Security.Facebook">
+      <HintPath>..\packages\Microsoft.Owin.Security.Facebook.3.0.1\lib\net45\Microsoft.Owin.Security.Facebook.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Owin.Security.Cookies">
+      <HintPath>..\packages\Microsoft.Owin.Security.Cookies.3.0.1\lib\net45\Microsoft.Owin.Security.Cookies.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Owin.Security.OAuth">
+      <HintPath>..\packages\Microsoft.Owin.Security.OAuth.3.0.1\lib\net45\Microsoft.Owin.Security.OAuth.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Owin.Security.Google">
+      <HintPath>..\packages\Microsoft.Owin.Security.Google.3.0.1\lib\net45\Microsoft.Owin.Security.Google.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Owin.Security.Twitter">
+      <HintPath>..\packages\Microsoft.Owin.Security.Twitter.3.0.1\lib\net45\Microsoft.Owin.Security.Twitter.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Owin.Security.MicrosoftAccount">
+      <HintPath>..\packages\Microsoft.Owin.Security.MicrosoftAccount.3.0.1\lib\net45\Microsoft.Owin.Security.MicrosoftAccount.dll</HintPath>
+    </Reference>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="App_Start\BundleConfig.cs" />
+    <Compile Include="App_Start\FilterConfig.cs" />
+    <Compile Include="App_Start\IdentityConfig.cs" />
+    <Compile Include="App_Start\RouteConfig.cs" />
+    <Compile Include="App_Start\Startup.Auth.cs" />
+    <Compile Include="Controllers\AccountController.cs" />
+    <Compile Include="Controllers\AdminController.cs" />
+    <Compile Include="Controllers\HomeController.cs" />
+    <Compile Include="Controllers\ManageController.cs" />
+    <Compile Include="Global.asax.cs">
+      <DependentUpon>Global.asax</DependentUpon>
+    </Compile>
+    <Compile Include="Models\AccountViewModels.cs" />
+    <Compile Include="Models\Adses.cs">
+      <DependentUpon>Model.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\Areas.cs">
+      <DependentUpon>Model.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\Class\RubricVsTypeProduct.cs" />
+    <Compile Include="Models\Class\SelectLists.cs" />
+    <Compile Include="Models\IdentityModels.cs" />
+    <Compile Include="Models\ManageViewModels.cs" />
+    <Compile Include="Models\Message.cs">
+      <DependentUpon>Model.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\Model.Context.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Model.Context.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\Model.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Model.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\Model.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Model.edmx</DependentUpon>
+    </Compile>
+    <Compile Include="Models\Regions.cs">
+      <DependentUpon>Model.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\Rubric.cs">
+      <DependentUpon>Model.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\StateProduct.cs">
+      <DependentUpon>Model.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\TypeAdses.cs">
+      <DependentUpon>Model.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\Type_Product.cs">
+      <DependentUpon>Model.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\Users.cs">
+      <DependentUpon>Model.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Startup.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Content\bootstrap.css" />
+    <Content Include="Content\bootstrap.min.css" />
+    <Content Include="Content\cat.png" />
+    <Content Include="Content\ElaAdmin-master\ElaAdmin-master\css\animate.css" />
+    <Content Include="Content\ElaAdmin-master\ElaAdmin-master\css\helper.css" />
+    <Content Include="Content\ElaAdmin-master\ElaAdmin-master\css\lib\amchart\export.css" />
+    <Content Include="Content\ElaAdmin-master\ElaAdmin-master\css\lib\barRating\barRating.css" />
+    <Content Include="Content\ElaAdmin-master\ElaAdmin-master\css\lib\bootstrap\bootstrap.min.css" />
+    <Content Include="Content\ElaAdmin-master\ElaAdmin-master\css\lib\c3\c3.min.css" />
+    <Content Include="Content\ElaAdmin-master\ElaAdmin-master\css\lib\calendar2\pignose.calendar.min.css" />
+    <Content Include="Content\ElaAdmin-master\ElaAdmin-master\css\lib\calendar2\semantic.ui.min.css" />
+    <Content Include="Content\ElaAdmin-master\ElaAdmin-master\css\lib\calendar\fullcalendar.css" />
+    <Content Include="Content\ElaAdmin-master\ElaAdmin-master\css\lib\chartist\chartist.min.css" />
+    <Content Include="Content\ElaAdmin-master\ElaAdmin-master\css\lib\data-table\buttons.bootstrap.min.css" />
+    <Content Include="Content\ElaAdmin-master\ElaAdmin-master\css\lib\data-table\buttons.dataTables.min.css" />
+    <Content Include="Content\ElaAdmin-master\ElaAdmin-master\css\lib\data-table\dataTables.bootstrap.min.css" />
+    <Content Include="Content\ElaAdmin-master\ElaAdmin-master\css\lib\datepicker\bootstrap-datepicker3.min.css" />
+    <Content Include="Content\ElaAdmin-master\ElaAdmin-master\css\lib\dropzone\dropzone.css" />
+    <Content Include="Content\ElaAdmin-master\ElaAdmin-master\css\lib\html5-editor\bootstrap-wysihtml5.css" />
+    <Content Include="Content\ElaAdmin-master\ElaAdmin-master\css\lib\jsgrid\jsgrid-theme.min.css" />
+    <Content Include="Content\ElaAdmin-master\ElaAdmin-master\css\lib\jsgrid\jsgrid.min.css" />
+    <Content Include="Content\ElaAdmin-master\ElaAdmin-master\css\lib\line-progress\jquery.lineProgressbar.css" />
+    <Content Include="Content\ElaAdmin-master\ElaAdmin-master\css\lib\lobi-panel\lobipanel.min.css" />
+    <Content Include="Content\ElaAdmin-master\ElaAdmin-master\css\lib\menubar\sidebar.css" />
+    <Content Include="Content\ElaAdmin-master\ElaAdmin-master\css\lib\metismenu\menu.css" />
+    <Content Include="Content\ElaAdmin-master\ElaAdmin-master\css\lib\nestable\nestable.css" />
+    <Content Include="Content\ElaAdmin-master\ElaAdmin-master\css\lib\owl.carousel.min.css" />
+    <Content Include="Content\ElaAdmin-master\ElaAdmin-master\css\lib\owl.theme.default.min.css" />
+    <Content Include="Content\ElaAdmin-master\ElaAdmin-master\css\lib\preloader\pace.css" />
+    <Content Include="Content\ElaAdmin-master\ElaAdmin-master\css\lib\rangSlider\ion.rangeSlider.css" />
+    <Content Include="Content\ElaAdmin-master\ElaAdmin-master\css\lib\rangSlider\ion.rangeSlider.skinFlat.css" />
+    <Content Include="Content\ElaAdmin-master\ElaAdmin-master\css\lib\rangSlider\ion.rangeSlider.skinHTML5.css" />
+    <Content Include="Content\ElaAdmin-master\ElaAdmin-master\css\lib\rangSlider\ion.rangeSlider.skinModern.css" />
+    <Content Include="Content\ElaAdmin-master\ElaAdmin-master\css\lib\rangSlider\ion.rangeSlider.skinNice.css" />
+    <Content Include="Content\ElaAdmin-master\ElaAdmin-master\css\lib\rangSlider\ion.rangeSlider.skinSimple.css" />
+    <Content Include="Content\ElaAdmin-master\ElaAdmin-master\css\lib\rangSlider\normalize.css" />
+    <Content Include="Content\ElaAdmin-master\ElaAdmin-master\css\lib\rickshaw-chart\rickshaw.min.css" />
+    <Content Include="Content\ElaAdmin-master\ElaAdmin-master\css\lib\scrollable\scrollable.min.css" />
+    <Content Include="Content\ElaAdmin-master\ElaAdmin-master\css\lib\select2\select2.min.css" />
+    <Content Include="Content\ElaAdmin-master\ElaAdmin-master\css\lib\sweetalert\sweetalert.css" />
+    <Content Include="Content\ElaAdmin-master\ElaAdmin-master\css\lib\toastr\toastr.min.css" />
+    <Content Include="Content\ElaAdmin-master\ElaAdmin-master\css\lib\vector-map\jqvmap.min.css" />
+    <Content Include="Content\ElaAdmin-master\ElaAdmin-master\css\spinners.css" />
+    <Content Include="Content\ElaAdmin-master\ElaAdmin-master\css\style.css" />
+    <Content Include="Content\ElaAdmin-master\ElaAdmin-master\icons\flag-icon-css\flag-icon.min.css" />
+    <Content Include="Content\ElaAdmin-master\ElaAdmin-master\icons\flag-icon-css\flags\ad.svg" />
+    <Content Include="Content\ElaAdmin-master\ElaAdmin-master\icons\flag-icon-css\flags\ae.svg" />
+    <Content Include="Content\ElaAdmin-master\ElaAdmin-master\icons\flag-icon-css\flags\af.svg" />
+    <Content Include="Content\ElaAdmin-master\ElaAdmin-master\icons\flag-icon-css\flags\ag.svg" />
+    <Content Include="Content\ElaAdmin-master\ElaAdmin-master\icons\flag-icon-css\flags\ai.svg" />
+    <Content Include="Content\ElaAdmin-master\ElaAdmin-master\icons\flag-icon-css\flags\al.svg" />
+    <Content Include="Content\ElaAdmin-master\ElaAdmin-master\icons\flag-icon-css\flags\am.svg" />
+    <Content Include="Content\ElaAdmin-master\ElaAdmin-master\icons\flag-icon-css\flags\ao.svg" />
+    <Content Include="Content\ElaAdmin-master\ElaAdmin-master\icons\flag-icon-css\flags\aq.svg" />
+    <Content Include="Content\ElaAdmin-master\ElaAdmin-master\icons\flag-icon-css\flags\ar.svg" />
+    <Content Include="Content\ElaAdmin-master\ElaAdmin-master\icons\flag-icon-css\flags\as.svg" />
+    <Content Include="Content\ElaAdmin-master\ElaAdmin-master\icons\flag-icon-css\flags\at.svg" />
+    <Content Include="Content\ElaAdmin-master\ElaAdmin-master\icons\flag-icon-css\flags\au.svg" />
+    <Content Include="Content\ElaAdmin-master\ElaAdmin-master\icons\flag-icon-css\flags\aw.svg" />
+    <Content Include="Content\ElaAdmin-master\ElaAdmin-master\icons\flag-icon-css\flags\ax.svg" />
+    <Content Include="Content\ElaAdmin-master\ElaAdmin-master\icons\flag-icon-css\flags\az.svg" />
+    <Content Include="Content\ElaAdmin-master\ElaAdmin-master\icons\flag-icon-css\flags\ba.svg" />
+    <Content Include="Content\ElaAdmin-master\ElaAdmin-master\icons\flag-icon-css\flags\bb.svg" />
+    <Content Include="Content\ElaAdmin-master\ElaAdmin-master\icons\flag-icon-css\flags\bd.svg" />
+    <Content Include="Content\ElaAdmin-master\ElaAdmin-master\icons\flag-icon-css\flags\be.svg" />
+    <Content Include="Content\ElaAdmin-master\ElaAdmin-master\icons\flag-icon-css\flags\bf.svg" />
+    <Content Include="Content\ElaAdmin-master\ElaAdmin-master\icons\flag-icon-css\flags\bg.svg" />
+    <Content Include="Content\ElaAdmin-master\ElaAdmin-master\icons\flag-icon-css\flags\bh.svg" />
+    <Content Include="Content\ElaAdmin-master\ElaAdmin-master\icons\flag-icon-css\flags\bi.svg" />
+    <Content Include="Content\ElaAdmin-master\ElaAdmin-master\icons\flag-icon-css\flags\bj.svg" />
+    <Content Include="Content\ElaAdmin-master\ElaAdmin-master\icons\flag-icon-css\flags\bl.svg" />
+    <Content Include="Content\ElaAdmin-master\ElaAdmin-master\icons\flag-icon-css\flags\bm.svg" />
+    <Content Include="Content\ElaAdmin-master\ElaAdmin-master\icons\flag-icon-css\flags\bn.svg" />
+    <Content Include="Content\ElaAdmin-master\ElaAdmin-master\icons\flag-icon-css\flags\bo.svg" />
+    <Content Include="Content\ElaAdmin-master\ElaAdmin-master\icons\flag-icon-css\flags\bq.svg" />
+    <Content Include="Content\ElaAdmin-master\ElaAdmin-master\icons\flag-icon-css\flags\br.svg" />
+    <Content Include="Content\ElaAdmin-master\ElaAdmin-master\icons\flag-icon-css\flags\bs.svg" />
+    <Content Include="Content\ElaAdmin-master\ElaAdmin-master\icons\flag-icon-css\flags\bt.svg" />
+    <Content Include="Content\ElaAdmin-master\ElaAdmin-master\icons\flag-icon-css\flags\bv.svg" />
+    <Content Include="Content\ElaAdmin-master\ElaAdmin-master\icons\flag-icon-css\flags\bw.svg" />
+    <Content Include="Content\ElaAdmin-master\ElaAdmin-master\icons\flag-icon-css\flags\by.svg" />
+    <Content Include="Content\ElaAdmin-master\ElaAdmin-master\icons\flag-icon-css\flags\bz.svg" />
+    <Content Include="Content\ElaAdmin-master\ElaAdmin-master\icons\flag-icon-css\flags\ca.svg" />
+    <Content Include="Content\ElaAdmin-master\ElaAdmin-master\icons\flag-icon-css\flags\cc.svg" />
+    <Content Include="Content\ElaAdmin-master\ElaAdmin-master\icons\flag-icon-css\flags\cd.svg" />
+    <Content Include="Content\ElaAdmin-master\ElaAdmin-master\icons\flag-icon-css\flags\cf.svg" />
+    <Content Include="Content\ElaAdmin-master\ElaAdmin-master\icons\flag-icon-css\flags\cg.svg" />
+    <Content Include="Content\ElaAdmin-master\ElaAdmin-master\icons\flag-icon-css\flags\ch.svg" />
+    <Content Include="Content\ElaAdmin-master\ElaAdmin-master\icons\flag-icon-css\flags\ci.svg" />
+    <Content Include="Content\ElaAdmin-master\ElaAdmin-master\icons\flag-icon-css\flags\ck.svg" />
+    <Content Include="Content\ElaAdmin-master\ElaAdmin-master\icons\flag-icon-css\flags\cl.svg" />
+    <Content Include="Content\ElaAdmin-master\ElaAdmin-master\icons\flag-icon-css\flags\cm.svg" />
+    <Content Include="Content\ElaAdmin-master\ElaAdmin-master\icons\flag-icon-css\flags\cn.svg" />
+    <Content Include="Content\ElaAdmin-master\ElaAdmin-master\icons\flag-icon-css\flags\co.svg" />
+    <Content Include="Content\ElaAdmin-master\ElaAdmin-master\icons\flag-icon-css\flags\cr.svg" />
+    <Content Include="Content\ElaAdmin-master\ElaAdmin-master\icons\flag-icon-css\flags\cu.svg" />
+    <Content Include="Content\ElaAdmin-master\ElaAdmin-master\icons\flag-icon-css\flags\cv.svg" />
+    <Content Include="Content\ElaAdmin-master\ElaAdmin-master\icons\flag-icon-css\flags\cw.svg" />
+    <Content Include="Content\ElaAdmin-master\ElaAdmin-master\icons\flag-icon-css\flags\cx.svg" />
+    <Content Include="Content\ElaAdmin-master\ElaAdmin-master\icons\flag-icon-css\flags\cy.svg" />
+    <Content Include="Content\ElaAdmin-master\ElaAdmin-master\icons\flag-icon-css\flags\cz.svg" />
+    <Content Include="Content\ElaAdmin-master\ElaAdmin-master\icons\flag-icon-css\flags\de.svg" />
+    <Content Include="Content\ElaAdmin-master\ElaAdmin-master\icons\flag-icon-css\flags\dj.svg" />
+    <Content Include="Content\ElaAdmin-master\ElaAdmin-master\icons\flag-icon-css\flags\dk.svg" />
+    <Content Include="Content\ElaAdmin-master\ElaAdmin-master\icons\flag-icon-css\flags\dm.svg" />
+    <Content Include="Content\ElaAdmin-master\ElaAdmin-master\icons\flag-icon-css\flags\do.svg" />
+    <Content Include="Content\ElaAdmin-master\ElaAdmin-master\icons\flag-icon-css\flags\dz.svg" />
+    <Content Include="Content\ElaAdmin-master\ElaAdmin-master\icons\flag-icon-css\flags\ec.svg" />
+    <Content Include="Content\ElaAdmin-master\ElaAdmin-master\icons\flag-icon-css\flags\ee.svg" />
+    <Content Include="Content\ElaAdmin-master\ElaAdmin-master\icons\flag-icon-css\flags\eg.svg" />
+    <Content Include="Content\ElaAdmin-master\ElaAdmin-master\icons\flag-icon-css\flags\eh.svg" />
+    <Content Include="Content\ElaAdmin-master\ElaAdmin-master\icons\flag-icon-css\flags\er.svg" />
+    <Content Include="Content\ElaAdmin-master\ElaAdmin-master\icons\flag-icon-css\flags\es.svg" />
+    <Content Include="Content\ElaAdmin-master\ElaAdmin-master\icons\flag-icon-css\flags\et.svg" />
+    <Content Include="Content\ElaAdmin-master\ElaAdmin-master\icons\flag-icon-css\flags\fi.svg" />
+    <Content Include="Content\ElaAdmin-master\ElaAdmin-master\icons\flag-icon-css\flags\fj.svg" />
+    <Content Include="Content\ElaAdmin-master\ElaAdmin-master\icons\flag-icon-css\flags\fk.svg" />
+    <Content Include="Content\ElaAdmin-master\ElaAdmin-master\icons\flag-icon-css\flags\fm.svg" />
+    <Content Include="Content\ElaAdmin-master\ElaAdmin-master\icons\flag-icon-css\flags\fo.svg" />
+    <Content Include="Content\ElaAdmin-master\ElaAdmin-master\icons\flag-icon-css\flags\fr.svg" />
+    <Content Include="Content\ElaAdmin-master\ElaAdmin-master\icons\flag-icon-css\flags\ga.svg" />
+    <Content Include="Content\ElaAdmin-master\ElaAdmin-master\icons\flag-icon-css\flags\gb.svg" />
+    <Content Include="Content\ElaAdmin-master\ElaAdmin-master\icons\flag-icon-css\flags\gd.svg" />
+    <Content Include="Content\ElaAdmin-master\ElaAdmin-master\icons\flag-icon-css\flags\ge.svg" />
+    <Content Include="Content\ElaAdmin-master\ElaAdmin-master\icons\flag-icon-css\flags\gf.svg" />
+    <Content Include="Content\ElaAdmin-master\ElaAdmin-master\icons\flag-icon-css\flags\gg.svg" />
+    <Content Include="Content\ElaAdmin-master\ElaAdmin-master\icons\flag-icon-css\flags\gh.svg" />
+    <Content Include="Content\ElaAdmin-master\ElaAdmin-master\icons\flag-icon-css\flags\gi.svg" />
+    <Content Include="Content\ElaAdmin-master\ElaAdmin-master\icons\flag-icon-css\flags\gl.svg" />
+    <Content Include="Content\ElaAdmin-master\ElaAdmin-master\icons\flag-icon-css\flags\gm.svg" />
+    <Content Include="Content\ElaAdmin-master\ElaAdmin-master\icons\flag-icon-css\flags\gn.svg" />
+    <Content Include="Content\ElaAdmin-master\ElaAdmin-master\icons\flag-icon-css\flags\gp.svg" />
+    <Content Include="Content\ElaAdmin-master\ElaAdmin-master\icons\flag-icon-css\flags\gq.svg" />
+    <Content Include="Content\ElaAdmin-master\ElaAdmin-master\icons\flag-icon-css\flags\gr.svg" />
+    <Content Include="Content\ElaAdmin-master\ElaAdmin-master\icons\flag-icon-css\flags\gs.svg" />
+    <Content Include="Content\ElaAdmin-master\ElaAdmin-master\icons\flag-icon-css\flags\gt.svg" />
+    <Content Include="Content\ElaAdmin-master\ElaAdmin-master\icons\flag-icon-css\flags\gu.svg" />
+    <Content Include="Content\ElaAdmin-master\ElaAdmin-master\icons\flag-icon-css\flags\gw.svg" />
+    <Content Include="Content\ElaAdmin-master\ElaAdmin-master\icons\flag-icon-css\flags\gy.svg" />
+    <Content Include="Content\ElaAdmin-master\ElaAdmin-master\icons\flag-icon-css\flags\hk.svg" />
+    <Content Include="Content\ElaAdmin-master\ElaAdmin-master\icons\flag-icon-css\flags\hm.svg" />
+    <Content Include="Content\ElaAdmin-master\ElaAdmin-master\icons\flag-icon-css\flags\hn.svg" />
+    <Content Include="Content\ElaAdmin-master\ElaAdmin-master\icons\flag-icon-css\flags\hr.svg" />
+    <Content Include="Content\ElaAdmin-master\ElaAdmin-master\icons\flag-icon-css\flags\ht.svg" />
+    <Content Include="Content\ElaAdmin-master\ElaAdmin-master\icons\flag-icon-css\flags\hu.svg" />
+    <Content Include="Content\ElaAdmin-master\ElaAdmin-master\icons\flag-icon-css\flags\id.svg" />
+    <Content Include="Content\ElaAdmin-master\ElaAdmin-master\icons\flag-icon-css\flags\ie.svg" />
+    <Content Include="Content\ElaAdmin-master\ElaAdmin-master\icons\flag-icon-css\flags\il.svg" />
+    <Content Include="Content\ElaAdmin-master\ElaAdmin-master\icons\flag-icon-css\flags\im.svg" />
+    <Content Include="Content\ElaAdmin-master\ElaAdmin-master\icons\flag-icon-css\flags\in.svg" />
+    <Content Include="Content\ElaAdmin-master\ElaAdmin-master\icons\flag-icon-css\flags\io.svg" />
+    <Content Include="Content\ElaAdmin-master\ElaAdmin-master\icons\flag-icon-css\flags\iq.svg" />
+    <Content Include="Content\ElaAdmin-master\ElaAdmin-master\icons\flag-icon-css\flags\ir.svg" />
+    <Content Include="Content\ElaAdmin-master\ElaAdmin-master\icons\flag-icon-css\flags\is.svg" />
+    <Content Include="Content\ElaAdmin-master\ElaAdmin-master\icons\flag-icon-css\flags\it.svg" />
+    <Content Include="Content\ElaAdmin-master\ElaAdmin-master\icons\flag-icon-css\flags\je.svg" />
+    <Content Include="Content\ElaAdmin-master\ElaAdmin-master\icons\flag-icon-css\flags\jm.svg" />
+    <Content Include="Content\ElaAdmin-master\ElaAdmin-master\icons\flag-icon-css\flags\jo.svg" />
+    <Content Include="Content\ElaAdmin-master\ElaAdmin-master\icons\flag-icon-css\flags\jp.svg" />
+    <Content Include="Content\ElaAdmin-master\ElaAdmin-master\icons\flag-icon-css\flags\ke.svg" />
+    <Content Include="Content\ElaAdmin-master\ElaAdmin-master\icons\flag-icon-css\flags\kg.svg" />
+    <Content Include="Content\ElaAdmin-master\ElaAdmin-master\icons\flag-icon-css\flags\kh.svg" />
+    <Content Include="Content\ElaAdmin-master\ElaAdmin-master\icons\flag-icon-css\flags\ki.svg" />
+    <Content Include="Content\ElaAdmin-master\ElaAdmin-master\icons\flag-icon-css\flags\km.svg" />
+    <Content Include="Content\ElaAdmin-master\ElaAdmin-master\icons\flag-icon-css\flags\kn.svg" />
+    <Content Include="Content\ElaAdmin-master\ElaAdmin-master\icons\flag-icon-css\flags\kp.svg" />
+    <Content Include="Content\ElaAdmin-master\ElaAdmin-master\icons\flag-icon-css\flags\kr.svg" />
+    <Content Include="Content\ElaAdmin-master\ElaAdmin-master\icons\flag-icon-css\flags\kw.svg" />
+    <Content Include="Content\ElaAdmin-master\ElaAdmin-master\icons\flag-icon-css\flags\ky.svg" />
+    <Content Include="Content\ElaAdmin-master\ElaAdmin-master\icons\flag-icon-css\flags\kz.svg" />
+    <Content Include="Content\ElaAdmin-master\ElaAdmin-master\icons\flag-icon-css\flags\la.svg" />
+    <Content Include="Content\ElaAdmin-master\ElaAdmin-master\icons\flag-icon-css\flags\lb.svg" />
+    <Content Include="Content\ElaAdmin-master\ElaAdmin-master\icons\flag-icon-css\flags\lc.svg" />
+    <Content Include="Content\ElaAdmin-master\ElaAdmin-master\icons\flag-icon-css\flags\li.svg" />
+    <Content Include="Content\ElaAdmin-master\ElaAdmin-master\icons\flag-icon-css\flags\lk.svg" />
+    <Content Include="Content\ElaAdmin-master\ElaAdmin-master\icons\flag-icon-css\flags\lr.svg" />
+    <Content Include="Content\ElaAdmin-master\ElaAdmin-master\icons\flag-icon-css\flags\ls.svg" />
+    <Content Include="Content\ElaAdmin-master\ElaAdmin-master\icons\flag-icon-css\flags\lt.svg" />
+    <Content Include="Content\ElaAdmin-master\ElaAdmin-master\icons\flag-icon-css\flags\lu.svg" />
+    <Content Include="Content\ElaAdmin-master\ElaAdmin-master\icons\flag-icon-css\flags\lv.svg" />
+    <Content Include="Content\ElaAdmin-master\ElaAdmin-master\icons\flag-icon-css\flags\ly.svg" />
+    <Content Include="Content\ElaAdmin-master\ElaAdmin-master\icons\flag-icon-css\flags\ma.svg" />
+    <Content Include="Content\ElaAdmin-master\ElaAdmin-master\icons\flag-icon-css\flags\mc.svg" />
+    <Content Include="Content\ElaAdmin-master\ElaAdmin-master\icons\flag-icon-css\flags\md.svg" />
+    <Content Include="Content\ElaAdmin-master\ElaAdmin-master\icons\flag-icon-css\flags\me.svg" />
+    <Content Include="Content\ElaAdmin-master\ElaAdmin-master\icons\flag-icon-css\flags\mf.svg" />
+    <Content Include="Content\ElaAdmin-master\ElaAdmin-master\icons\flag-icon-css\flags\mg.svg" />
+    <Content Include="Content\ElaAdmin-master\ElaAdmin-master\icons\flag-icon-css\flags\mh.svg" />
+    <Content Include="Content\ElaAdmin-master\ElaAdmin-master\icons\flag-icon-css\flags\mk.svg" />
+    <Content Include="Content\ElaAdmin-master\ElaAdmin-master\icons\flag-icon-css\flags\ml.svg" />
+    <Content Include="Content\ElaAdmin-master\ElaAdmin-master\icons\flag-icon-css\flags\mm.svg" />
+    <Content Include="Content\ElaAdmin-master\ElaAdmin-master\icons\flag-icon-css\flags\mn.svg" />
+    <Content Include="Content\ElaAdmin-master\ElaAdmin-master\icons\flag-icon-css\flags\mo.svg" />
+    <Content Include="Content\ElaAdmin-master\ElaAdmin-master\icons\flag-icon-css\flags\mp.svg" />
+    <Content Include="Content\ElaAdmin-master\ElaAdmin-master\icons\flag-icon-css\flags\mq.svg" />
+    <Content Include="Content\ElaAdmin-master\ElaAdmin-master\icons\flag-icon-css\flags\mr.svg" />
+    <Content Include="Content\ElaAdmin-master\ElaAdmin-master\icons\flag-icon-css\flags\ms.svg" />
+    <Content Include="Content\ElaAdmin-master\ElaAdmin-master\icons\flag-icon-css\flags\mt.svg" />
+    <Content Include="Content\ElaAdmin-master\ElaAdmin-master\icons\flag-icon-css\flags\mu.svg" />
+    <Content Include="Content\ElaAdmin-master\ElaAdmin-master\icons\flag-icon-css\flags\mv.svg" />
+    <Content Include="Content\ElaAdmin-master\ElaAdmin-master\icons\flag-icon-css\flags\mw.svg" />
+    <Content Include="Content\ElaAdmin-master\ElaAdmin-master\icons\flag-icon-css\flags\mx.svg" />
+    <Content Include="Content\ElaAdmin-master\ElaAdmin-master\icons\flag-icon-css\flags\my.svg" />
+    <Content Include="Content\ElaAdmin-master\ElaAdmin-master\icons\flag-icon-css\flags\mz.svg" />
+    <Content Include="Content\ElaAdmin-master\ElaAdmin-master\icons\flag-icon-css\flags\na.svg" />
+    <Content Include="Content\ElaAdmin-master\ElaAdmin-master\icons\flag-icon-css\flags\nc.svg" />
+    <Content Include="Content\ElaAdmin-master\ElaAdmin-master\icons\flag-icon-css\flags\ne.svg" />
+    <Content Include="Content\ElaAdmin-master\ElaAdmin-master\icons\flag-icon-css\flags\nf.svg" />
+    <Content Include="Content\ElaAdmin-master\ElaAdmin-master\icons\flag-icon-css\flags\ng.svg" />
+    <Content Include="Content\ElaAdmin-master\ElaAdmin-master\icons\flag-icon-css\flags\ni.svg" />
+    <Content Include="Content\ElaAdmin-master\ElaAdmin-master\icons\flag-icon-css\flags\nl.svg" />
+    <Content Include="Content\ElaAdmin-master\ElaAdmin-master\icons\flag-icon-css\flags\no.svg" />
+    <Content Include="Content\ElaAdmin-master\ElaAdmin-master\icons\flag-icon-css\flags\np.svg" />
+    <Content Include="Content\ElaAdmin-master\ElaAdmin-master\icons\flag-icon-css\flags\nr.svg" />
+    <Content Include="Content\ElaAdmin-master\ElaAdmin-master\icons\flag-icon-css\flags\nu.svg" />
+    <Content Include="Content\ElaAdmin-master\ElaAdmin-master\icons\flag-icon-css\flags\nz.svg" />
+    <Content Include="Content\ElaAdmin-master\ElaAdmin-master\icons\flag-icon-css\flags\om.svg" />
+    <Content Include="Content\ElaAdmin-master\ElaAdmin-master\icons\flag-icon-css\flags\pa.svg" />
+    <Content Include="Content\ElaAdmin-master\ElaAdmin-master\icons\flag-icon-css\flags\pe.svg" />
+    <Content Include="Content\ElaAdmin-master\ElaAdmin-master\icons\flag-icon-css\flags\pf.svg" />
+    <Content Include="Content\ElaAdmin-master\ElaAdmin-master\icons\flag-icon-css\flags\pg.svg" />
+    <Content Include="Content\ElaAdmin-master\ElaAdmin-master\icons\flag-icon-css\flags\ph.svg" />
+    <Content Include="Content\ElaAdmin-master\ElaAdmin-master\icons\flag-icon-css\flags\pk.svg" />
+    <Content Include="Content\ElaAdmin-master\ElaAdmin-master\icons\flag-icon-css\flags\pl.svg" />
+    <Content Include="Content\ElaAdmin-master\ElaAdmin-master\icons\flag-icon-css\flags\pm.svg" />
+    <Content Include="Content\ElaAdmin-master\ElaAdmin-master\icons\flag-icon-css\flags\pn.svg" />
+    <Content Include="Content\ElaAdmin-master\ElaAdmin-master\icons\flag-icon-css\flags\pr.svg" />
+    <Content Include="Content\ElaAdmin-master\ElaAdmin-master\icons\flag-icon-css\flags\ps.svg" />
+    <Content Include="Content\ElaAdmin-master\ElaAdmin-master\icons\flag-icon-css\flags\pt.svg" />
+    <Content Include="Content\ElaAdmin-master\ElaAdmin-master\icons\flag-icon-css\flags\pw.svg" />
+    <Content Include="Content\ElaAdmin-master\ElaAdmin-master\icons\flag-icon-css\flags\py.svg" />
+    <Content Include="Content\ElaAdmin-master\ElaAdmin-master\icons\flag-icon-css\flags\qa.svg" />
+    <Content Include="Content\ElaAdmin-master\ElaAdmin-master\icons\flag-icon-css\flags\re.svg" />
+    <Content Include="Content\ElaAdmin-master\ElaAdmin-master\icons\flag-icon-css\flags\ro.svg" />
+    <Content Include="Content\ElaAdmin-master\ElaAdmin-master\icons\flag-icon-css\flags\rs.svg" />
+    <Content Include="Content\ElaAdmin-master\ElaAdmin-master\icons\flag-icon-css\flags\ru.svg" />
+    <Content Include="Content\ElaAdmin-master\ElaAdmin-master\icons\flag-icon-css\flags\rw.svg" />
+    <Content Include="Content\ElaAdmin-master\ElaAdmin-master\icons\flag-icon-css\flags\sa.svg" />
+    <Content Include="Content\ElaAdmin-master\ElaAdmin-master\icons\flag-icon-css\flags\sb.svg" />
+    <Content Include="Content\ElaAdmin-master\ElaAdmin-master\icons\flag-icon-css\flags\sc.svg" />
+    <Content Include="Content\ElaAdmin-master\ElaAdmin-master\icons\flag-icon-css\flags\sd.svg" />
+    <Content Include="Content\ElaAdmin-master\ElaAdmin-master\icons\flag-icon-css\flags\se.svg" />
+    <Content Include="Content\ElaAdmin-master\ElaAdmin-master\icons\flag-icon-css\flags\sg.svg" />
+    <Content Include="Content\ElaAdmin-master\ElaAdmin-master\icons\flag-icon-css\flags\sh.svg" />
+    <Content Include="Content\ElaAdmin-master\ElaAdmin-master\icons\flag-icon-css\flags\si.svg" />
+    <Content Include="Content\ElaAdmin-master\ElaAdmin-master\icons\flag-icon-css\flags\sj.svg" />
+    <Content Include="Content\ElaAdmin-master\ElaAdmin-master\icons\flag-icon-css\flags\sk.svg" />
+    <Content Include="Content\ElaAdmin-master\ElaAdmin-master\icons\flag-icon-css\flags\sl.svg" />
+    <Content Include="Content\ElaAdmin-master\ElaAdmin-master\icons\flag-icon-css\flags\sm.svg" />
+    <Content Include="Content\ElaAdmin-master\ElaAdmin-master\icons\flag-icon-css\flags\sn.svg" />
+    <Content Include="Content\ElaAdmin-master\ElaAdmin-master\icons\flag-icon-css\flags\so.svg" />
+    <Content Include="Content\ElaAdmin-master\ElaAdmin-master\icons\flag-icon-css\flags\sr.svg" />
+    <Content Include="Content\ElaAdmin-master\ElaAdmin-master\icons\flag-icon-css\flags\ss.svg" />
+    <Content Include="Content\ElaAdmin-master\ElaAdmin-master\icons\flag-icon-css\flags\st.svg" />
+    <Content Include="Content\ElaAdmin-master\ElaAdmin-master\icons\flag-icon-css\flags\sv.svg" />
+    <Content Include="Content\ElaAdmin-master\ElaAdmin-master\icons\flag-icon-css\flags\sx.svg" />
+    <Content Include="Content\ElaAdmin-master\ElaAdmin-master\icons\flag-icon-css\flags\sy.svg" />
+    <Content Include="Content\ElaAdmin-master\ElaAdmin-master\icons\flag-icon-css\flags\sz.svg" />
+    <Content Include="Content\ElaAdmin-master\ElaAdmin-master\icons\flag-icon-css\flags\tc.svg" />
+    <Content Include="Content\ElaAdmin-master\ElaAdmin-master\icons\flag-icon-css\flags\td.svg" />
+    <Content Include="Content\ElaAdmin-master\ElaAdmin-master\icons\flag-icon-css\flags\tf.svg" />
+    <Content Include="Content\ElaAdmin-master\ElaAdmin-master\icons\flag-icon-css\flags\tg.svg" />
+    <Content Include="Content\ElaAdmin-master\ElaAdmin-master\icons\flag-icon-css\flags\th.svg" />
+    <Content Include="Content\ElaAdmin-master\ElaAdmin-master\icons\flag-icon-css\flags\tj.svg" />
+    <Content Include="Content\ElaAdmin-master\ElaAdmin-master\icons\flag-icon-css\flags\tk.svg" />
+    <Content Include="Content\ElaAdmin-master\ElaAdmin-master\icons\flag-icon-css\flags\tl.svg" />
+    <Content Include="Content\ElaAdmin-master\ElaAdmin-master\icons\flag-icon-css\flags\tm.svg" />
+    <Content Include="Content\ElaAdmin-master\ElaAdmin-master\icons\flag-icon-css\flags\tn.svg" />
+    <Content Include="Content\ElaAdmin-master\ElaAdmin-master\icons\flag-icon-css\flags\to.svg" />
+    <Content Include="Content\ElaAdmin-master\ElaAdmin-master\icons\flag-icon-css\flags\tr.svg" />
+    <Content Include="Content\ElaAdmin-master\ElaAdmin-master\icons\flag-icon-css\flags\tt.svg" />
+    <Content Include="Content\ElaAdmin-master\ElaAdmin-master\icons\flag-icon-css\flags\tv.svg" />
+    <Content Include="Content\ElaAdmin-master\ElaAdmin-master\icons\flag-icon-css\flags\tw.svg" />
+    <Content Include="Content\ElaAdmin-master\ElaAdmin-master\icons\flag-icon-css\flags\tz.svg" />
+    <Content Include="Content\ElaAdmin-master\ElaAdmin-master\icons\flag-icon-css\flags\ua.svg" />
+    <Content Include="Content\ElaAdmin-master\ElaAdmin-master\icons\flag-icon-css\flags\ug.svg" />
+    <Content Include="Content\ElaAdmin-master\ElaAdmin-master\icons\flag-icon-css\flags\um.svg" />
+    <Content Include="Content\ElaAdmin-master\ElaAdmin-master\icons\flag-icon-css\flags\us.svg" />
+    <Content Include="Content\ElaAdmin-master\ElaAdmin-master\icons\flag-icon-css\flags\uy.svg" />
+    <Content Include="Content\ElaAdmin-master\ElaAdmin-master\icons\flag-icon-css\flags\uz.svg" />
+    <Content Include="Content\ElaAdmin-master\ElaAdmin-master\icons\flag-icon-css\flags\va.svg" />
+    <Content Include="Content\ElaAdmin-master\ElaAdmin-master\icons\flag-icon-css\flags\vc.svg" />
+    <Content Include="Content\ElaAdmin-master\ElaAdmin-master\icons\flag-icon-css\flags\ve.svg" />
+    <Content Include="Content\ElaAdmin-master\ElaAdmin-master\icons\flag-icon-css\flags\vg.svg" />
+    <Content Include="Content\ElaAdmin-master\ElaAdmin-master\icons\flag-icon-css\flags\vi.svg" />
+    <Content Include="Content\ElaAdmin-master\ElaAdmin-master\icons\flag-icon-css\flags\vn.svg" />
+    <Content Include="Content\ElaAdmin-master\ElaAdmin-master\icons\flag-icon-css\flags\vu.svg" />
+    <Content Include="Content\ElaAdmin-master\ElaAdmin-master\icons\flag-icon-css\flags\wf.svg" />
+    <Content Include="Content\ElaAdmin-master\ElaAdmin-master\icons\flag-icon-css\flags\ws.svg" />
+    <Content Include="Content\ElaAdmin-master\ElaAdmin-master\icons\flag-icon-css\flags\ye.svg" />
+    <Content Include="Content\ElaAdmin-master\ElaAdmin-master\icons\flag-icon-css\flags\yt.svg" />
+    <Content Include="Content\ElaAdmin-master\ElaAdmin-master\icons\flag-icon-css\flags\za.svg" />
+    <Content Include="Content\ElaAdmin-master\ElaAdmin-master\icons\flag-icon-css\flags\zm.svg" />
+    <Content Include="Content\ElaAdmin-master\ElaAdmin-master\icons\flag-icon-css\flags\zw.svg" />
+    <Content Include="Content\ElaAdmin-master\ElaAdmin-master\icons\font-awesome\css\font-awesome.min.css" />
+    <Content Include="Content\ElaAdmin-master\ElaAdmin-master\icons\font-awesome\fonts\fontawesome-webfont3e6e.svg" />
+    <Content Include="Content\ElaAdmin-master\ElaAdmin-master\icons\linea-icons\fonts\linea-arrows-10.svg" />
+    <Content Include="Content\ElaAdmin-master\ElaAdmin-master\icons\linea-icons\fonts\linea-basic-10.svg" />
+    <Content Include="Content\ElaAdmin-master\ElaAdmin-master\icons\linea-icons\fonts\linea-basic-elaboration-10.svg" />
+    <Content Include="Content\ElaAdmin-master\ElaAdmin-master\icons\linea-icons\fonts\linea-ecommerce-10.svg" />
+    <Content Include="Content\ElaAdmin-master\ElaAdmin-master\icons\linea-icons\fonts\linea-music-10.svg" />
+    <Content Include="Content\ElaAdmin-master\ElaAdmin-master\icons\linea-icons\fonts\linea-software-10.svg" />
+    <Content Include="Content\ElaAdmin-master\ElaAdmin-master\icons\linea-icons\fonts\linea-weather-10.svg" />
+    <Content Include="Content\ElaAdmin-master\ElaAdmin-master\icons\linea-icons\linea.css" />
+    <Content Include="Content\ElaAdmin-master\ElaAdmin-master\icons\material-design-iconic-font\css\materialdesignicons.min.css" />
+    <Content Include="Content\ElaAdmin-master\ElaAdmin-master\icons\material-design-iconic-font\fonts\materialdesignicons-webfontdc99.svg" />
+    <Content Include="Content\ElaAdmin-master\ElaAdmin-master\icons\simple-line-icons\css\simple-line-icons.css" />
+    <Content Include="Content\ElaAdmin-master\ElaAdmin-master\icons\simple-line-icons\fonts\Simple-Line-Icons4c82.svg" />
+    <Content Include="Content\ElaAdmin-master\ElaAdmin-master\icons\themify-icons\fonts\themify9f24.svg" />
+    <Content Include="Content\ElaAdmin-master\ElaAdmin-master\icons\themify-icons\themify-icons.css" />
+    <Content Include="Content\ElaAdmin-master\ElaAdmin-master\icons\weather-icons\css\weather-icons.min.css" />
+    <Content Include="Content\ElaAdmin-master\ElaAdmin-master\icons\weather-icons\fonts\weathericons-regular-webfont.svg" />
+    <Content Include="Content\ElaAdmin-master\ElaAdmin-master\images\1.png" />
+    <Content Include="Content\ElaAdmin-master\ElaAdmin-master\images\2.png" />
+    <Content Include="Content\ElaAdmin-master\ElaAdmin-master\images\3.jpg" />
+    <Content Include="Content\ElaAdmin-master\ElaAdmin-master\images\3.png" />
+    <Content Include="Content\ElaAdmin-master\ElaAdmin-master\images\4.jpg" />
+    <Content Include="Content\ElaAdmin-master\ElaAdmin-master\images\8.png" />
+    <Content Include="Content\ElaAdmin-master\ElaAdmin-master\images\alert\alert.png" />
+    <Content Include="Content\ElaAdmin-master\ElaAdmin-master\images\alert\alert2.png" />
+    <Content Include="Content\ElaAdmin-master\ElaAdmin-master\images\alert\alert3.png" />
+    <Content Include="Content\ElaAdmin-master\ElaAdmin-master\images\alert\alert4.png" />
+    <Content Include="Content\ElaAdmin-master\ElaAdmin-master\images\alert\alert5.png" />
+    <Content Include="Content\ElaAdmin-master\ElaAdmin-master\images\alert\alert6.png" />
+    <Content Include="Content\ElaAdmin-master\ElaAdmin-master\images\alert\alert7.png" />
+    <Content Include="Content\ElaAdmin-master\ElaAdmin-master\images\alert\model.png" />
+    <Content Include="Content\ElaAdmin-master\ElaAdmin-master\images\alert\model2.png" />
+    <Content Include="Content\ElaAdmin-master\ElaAdmin-master\images\alert\model3.png" />
+    <Content Include="Content\ElaAdmin-master\ElaAdmin-master\images\attached-files\img-1.jpg" />
+    <Content Include="Content\ElaAdmin-master\ElaAdmin-master\images\attached-files\img-2.jpg" />
+    <Content Include="Content\ElaAdmin-master\ElaAdmin-master\images\attached-files\img-3.jpg" />
+    <Content Include="Content\ElaAdmin-master\ElaAdmin-master\images\avatar.png" />
+    <Content Include="Content\ElaAdmin-master\ElaAdmin-master\images\avatar\1.jpg" />
+    <Content Include="Content\ElaAdmin-master\ElaAdmin-master\images\avatar\2.jpg" />
+    <Content Include="Content\ElaAdmin-master\ElaAdmin-master\images\avatar\3.jpg" />
+    <Content Include="Content\ElaAdmin-master\ElaAdmin-master\images\avatar\4.jpg" />
+    <Content Include="Content\ElaAdmin-master\ElaAdmin-master\images\avatar\5.jpg" />
+    <Content Include="Content\ElaAdmin-master\ElaAdmin-master\images\avatar\6.jpg" />
+    <Content Include="Content\ElaAdmin-master\ElaAdmin-master\images\avatar\7.jpg" />
+    <Content Include="Content\ElaAdmin-master\ElaAdmin-master\images\avatar\8.jpg" />
+    <Content Include="Content\ElaAdmin-master\ElaAdmin-master\images\avatar\usa-flag.png" />
+    <Content Include="Content\ElaAdmin-master\ElaAdmin-master\images\background\error-bg.jpg" />
+    <Content Include="Content\ElaAdmin-master\ElaAdmin-master\images\background\login-register.jpg" />
+    <Content Include="Content\ElaAdmin-master\ElaAdmin-master\images\background\profile-bg.jpg" />
+    <Content Include="Content\ElaAdmin-master\ElaAdmin-master\images\background\socialbg.jpg" />
+    <Content Include="Content\ElaAdmin-master\ElaAdmin-master\images\background\user-bg.jpg" />
+    <Content Include="Content\ElaAdmin-master\ElaAdmin-master\images\background\user-info.jpg" />
+    <Content Include="Content\ElaAdmin-master\ElaAdmin-master\images\bg.jpg" />
+    <Content Include="Content\ElaAdmin-master\ElaAdmin-master\images\big\img1.jpg" />
+    <Content Include="Content\ElaAdmin-master\ElaAdmin-master\images\big\img2.jpg" />
+    <Content Include="Content\ElaAdmin-master\ElaAdmin-master\images\big\img3.jpg" />
+    <Content Include="Content\ElaAdmin-master\ElaAdmin-master\images\big\img4.jpg" />
+    <Content Include="Content\ElaAdmin-master\ElaAdmin-master\images\big\img5.jpg" />
+    <Content Include="Content\ElaAdmin-master\ElaAdmin-master\images\big\img6.jpg" />
+    <Content Include="Content\ElaAdmin-master\ElaAdmin-master\images\bookingSystem\1.png" />
+    <Content Include="Content\ElaAdmin-master\ElaAdmin-master\images\bookingSystem\2.png" />
+    <Content Include="Content\ElaAdmin-master\ElaAdmin-master\images\bookingSystem\3.png" />
+    <Content Include="Content\ElaAdmin-master\ElaAdmin-master\images\bookingSystem\4.png" />
+    <Content Include="Content\ElaAdmin-master\ElaAdmin-master\images\bookingSystem\5.png" />
+    <Content Include="Content\ElaAdmin-master\ElaAdmin-master\images\bookingSystem\6.png" />
+    <Content Include="Content\ElaAdmin-master\ElaAdmin-master\images\bookingSystem\7.png" />
+    <Content Include="Content\ElaAdmin-master\ElaAdmin-master\images\bookingSystem\8.png" />
+    <Content Include="Content\ElaAdmin-master\ElaAdmin-master\images\browser\chrome-logo.png" />
+    <Content Include="Content\ElaAdmin-master\ElaAdmin-master\images\browser\firefox-logo.png" />
+    <Content Include="Content\ElaAdmin-master\ElaAdmin-master\images\browser\internet-logo.png" />
+    <Content Include="Content\ElaAdmin-master\ElaAdmin-master\images\browser\opera-logo.png" />
+    <Content Include="Content\ElaAdmin-master\ElaAdmin-master\images\browser\safari-logo.png" />
+    <Content Include="Content\ElaAdmin-master\ElaAdmin-master\images\c1.jpg" />
+    <Content Include="Content\ElaAdmin-master\ElaAdmin-master\images\c2.jpg" />
+    <Content Include="Content\ElaAdmin-master\ElaAdmin-master\images\c3.jpg" />
+    <Content Include="Content\ElaAdmin-master\ElaAdmin-master\images\card\c1.jpg" />
+    <Content Include="Content\ElaAdmin-master\ElaAdmin-master\images\card\c2.jpg" />
+    <Content Include="Content\ElaAdmin-master\ElaAdmin-master\images\card\c3.jpg" />
+    <Content Include="Content\ElaAdmin-master\ElaAdmin-master\images\card\c4.jpg" />
+    <Content Include="Content\ElaAdmin-master\ElaAdmin-master\images\chat-person-add.png" />
+    <Content Include="Content\ElaAdmin-master\ElaAdmin-master\images\close.png" />
+    <Content Include="Content\ElaAdmin-master\ElaAdmin-master\images\custom-select.png" />
+    <Content Include="Content\ElaAdmin-master\ElaAdmin-master\images\favicon.png" />
+    <Content Include="Content\ElaAdmin-master\ElaAdmin-master\images\fjords.jpg" />
+    <Content Include="Content\ElaAdmin-master\ElaAdmin-master\images\gallery\chair.jpg" />
+    <Content Include="Content\ElaAdmin-master\ElaAdmin-master\images\gallery\chair2.jpg" />
+    <Content Include="Content\ElaAdmin-master\ElaAdmin-master\images\gallery\chair3.jpg" />
+    <Content Include="Content\ElaAdmin-master\ElaAdmin-master\images\gallery\chair4.jpg" />
+    <Content Include="Content\ElaAdmin-master\ElaAdmin-master\images\hand.jpg" />
+    <Content Include="Content\ElaAdmin-master\ElaAdmin-master\images\lights.jpg" />
+    <Content Include="Content\ElaAdmin-master\ElaAdmin-master\images\logo-text.png" />
+    <Content Include="Content\ElaAdmin-master\ElaAdmin-master\images\logo.png" />
+    <Content Include="Content\ElaAdmin-master\ElaAdmin-master\images\maximize.png" />
+    <Content Include="Content\ElaAdmin-master\ElaAdmin-master\images\minimize.png" />
+    <Content Include="Content\ElaAdmin-master\ElaAdmin-master\images\nature.jpg" />
+    <Content Include="Content\ElaAdmin-master\ElaAdmin-master\images\newyork.jpg" />
+    <Content Include="Content\ElaAdmin-master\ElaAdmin-master\images\paris.jpg" />
+    <Content Include="Content\ElaAdmin-master\ElaAdmin-master\images\paypal.png" />
+    <Content Include="Content\ElaAdmin-master\ElaAdmin-master\images\picture.png" />
+    <Content Include="Content\ElaAdmin-master\ElaAdmin-master\images\preview1.png" />
+    <Content Include="Content\ElaAdmin-master\ElaAdmin-master\images\product-2.jpg" />
+    <Content Include="Content\ElaAdmin-master\ElaAdmin-master\images\product.jpg" />
+    <Content Include="Content\ElaAdmin-master\ElaAdmin-master\images\product_1\1.jpg" />
+    <Content Include="Content\ElaAdmin-master\ElaAdmin-master\images\product_1\2.jpg" />
+    <Content Include="Content\ElaAdmin-master\ElaAdmin-master\images\product_1\3.jpg" />
+    <Content Include="Content\ElaAdmin-master\ElaAdmin-master\images\product_1\burger.jpg" />
+    <Content Include="Content\ElaAdmin-master\ElaAdmin-master\images\product_1\download.jpg" />
+    <Content Include="Content\ElaAdmin-master\ElaAdmin-master\images\product_1\image-10.jpg" />
+    <Content Include="Content\ElaAdmin-master\ElaAdmin-master\images\product_1\image-8-226x223.jpg" />
+    <Content Include="Content\ElaAdmin-master\ElaAdmin-master\images\product_1\image-9.jpg" />
+    <Content Include="Content\ElaAdmin-master\ElaAdmin-master\images\product_1\images.jpg" />
+    <Content Include="Content\ElaAdmin-master\ElaAdmin-master\images\product_1\pizza2.jpg" />
+    <Content Include="Content\ElaAdmin-master\ElaAdmin-master\images\profile-bg.jpg" />
+    <Content Include="Content\ElaAdmin-master\ElaAdmin-master\images\rangeSliderimg\sprite-skin-flat.png" />
+    <Content Include="Content\ElaAdmin-master\ElaAdmin-master\images\rangeSliderimg\sprite-skin-modern.png" />
+    <Content Include="Content\ElaAdmin-master\ElaAdmin-master\images\rangeSliderimg\sprite-skin-nice.png" />
+    <Content Include="Content\ElaAdmin-master\ElaAdmin-master\images\rangeSliderimg\sprite-skin-simple.png" />
+    <Content Include="Content\ElaAdmin-master\ElaAdmin-master\images\sanfran.jpg" />
+    <Content Include="Content\ElaAdmin-master\ElaAdmin-master\images\scrollable\view-1-1200x800.jpg" />
+    <Content Include="Content\ElaAdmin-master\ElaAdmin-master\images\smile.png" />
+    <Content Include="Content\ElaAdmin-master\ElaAdmin-master\images\tooltip\Euclid.png" />
+    <Content Include="Content\ElaAdmin-master\ElaAdmin-master\images\user-1.png" />
+    <Content Include="Content\ElaAdmin-master\ElaAdmin-master\images\user-bg.jpg" />
+    <Content Include="Content\ElaAdmin-master\ElaAdmin-master\images\user-female.png" />
+    <Content Include="Content\ElaAdmin-master\ElaAdmin-master\images\user-profile.jpg" />
+    <Content Include="Content\ElaAdmin-master\ElaAdmin-master\images\user.jpg" />
+    <Content Include="Content\ElaAdmin-master\ElaAdmin-master\images\users\1.jpg" />
+    <Content Include="Content\ElaAdmin-master\ElaAdmin-master\images\users\2.jpg" />
+    <Content Include="Content\ElaAdmin-master\ElaAdmin-master\images\users\3.jpg" />
+    <Content Include="Content\ElaAdmin-master\ElaAdmin-master\images\users\4.jpg" />
+    <Content Include="Content\ElaAdmin-master\ElaAdmin-master\images\users\5.jpg" />
+    <Content Include="Content\ElaAdmin-master\ElaAdmin-master\images\users\6.jpg" />
+    <Content Include="Content\ElaAdmin-master\ElaAdmin-master\images\users\7.jpg" />
+    <Content Include="Content\ElaAdmin-master\ElaAdmin-master\images\users\8.jpg" />
+    <Content Include="Content\ElaAdmin-master\ElaAdmin-master\images\users\avatar-1.jpg" />
+    <Content Include="Content\ElaAdmin-master\ElaAdmin-master\images\users\avatar-2.jpg" />
+    <Content Include="Content\ElaAdmin-master\ElaAdmin-master\images\users\avatar-3.jpg" />
+    <Content Include="Content\ElaAdmin-master\ElaAdmin-master\images\users\avatar-4.jpg" />
+    <Content Include="Content\ElaAdmin-master\ElaAdmin-master\images\users\avatar-5.jpg" />
+    <Content Include="Content\ElaAdmin-master\ElaAdmin-master\images\users\avatar-6.jpg" />
+    <Content Include="Content\ElaAdmin-master\ElaAdmin-master\images\users\avatar-7.jpg" />
+    <Content Include="Content\ElaAdmin-master\ElaAdmin-master\images\users\avatar-8.jpg" />
+    <Content Include="Content\ElaAdmin-master\ElaAdmin-master\images\users\avatar-9.jpg" />
+    <Content Include="Content\ElaAdmin-master\ElaAdmin-master\images\users\profile.png" />
+    <Content Include="Content\ElaAdmin-master\ElaAdmin-master\images\video-cam.png" />
+    <Content Include="Content\ElaAdmin-master\ElaAdmin-master\images\watch.jpg" />
+    <Content Include="Content\ElaAdmin-master\ElaAdmin-master\js\custom.min.js" />
+    <Content Include="Content\ElaAdmin-master\ElaAdmin-master\js\jquery.slimscroll.js" />
+    <Content Include="Content\ElaAdmin-master\ElaAdmin-master\js\lib\barRating\barRating.init.js" />
+    <Content Include="Content\ElaAdmin-master\ElaAdmin-master\js\lib\barRating\jquery.barrating.js" />
+    <Content Include="Content\ElaAdmin-master\ElaAdmin-master\js\lib\bootstrap\css\bootstrap.min.css" />
+    <Content Include="Content\ElaAdmin-master\ElaAdmin-master\js\lib\bootstrap\js\bootstrap.min.js" />
+    <Content Include="Content\ElaAdmin-master\ElaAdmin-master\js\lib\bootstrap\js\popper.min.js" />
+    <Content Include="Content\ElaAdmin-master\ElaAdmin-master\js\lib\c3\c3-init.js" />
+    <Content Include="Content\ElaAdmin-master\ElaAdmin-master\js\lib\c3\c3.min.js" />
+    <Content Include="Content\ElaAdmin-master\ElaAdmin-master\js\lib\c3\d3.min.js" />
+    <Content Include="Content\ElaAdmin-master\ElaAdmin-master\js\lib\calendar-2\moment.latest.min.js" />
+    <Content Include="Content\ElaAdmin-master\ElaAdmin-master\js\lib\calendar-2\pignose.calendar.min.js" />
+    <Content Include="Content\ElaAdmin-master\ElaAdmin-master\js\lib\calendar-2\pignose.init.js" />
+    <Content Include="Content\ElaAdmin-master\ElaAdmin-master\js\lib\calendar-2\prism.min.js" />
+    <Content Include="Content\ElaAdmin-master\ElaAdmin-master\js\lib\calendar-2\semantic.ui.min.js" />
+    <Content Include="Content\ElaAdmin-master\ElaAdmin-master\js\lib\calendar\fullcalendar-init.js" />
+    <Content Include="Content\ElaAdmin-master\ElaAdmin-master\js\lib\calendar\fullcalendar.min.js" />
+    <Content Include="Content\ElaAdmin-master\ElaAdmin-master\js\lib\chart-amchart\amchart-init.js" />
+    <Content Include="Content\ElaAdmin-master\ElaAdmin-master\js\lib\chart-amchart\amcharts.js" />
+    <Content Include="Content\ElaAdmin-master\ElaAdmin-master\js\lib\chart-amchart\ammap.js" />
+    <Content Include="Content\ElaAdmin-master\ElaAdmin-master\js\lib\chart-amchart\amstock.js" />
+    <Content Include="Content\ElaAdmin-master\ElaAdmin-master\js\lib\chart-amchart\export.min.js" />
+    <Content Include="Content\ElaAdmin-master\ElaAdmin-master\js\lib\chart-amchart\light.js" />
+    <Content Include="Content\ElaAdmin-master\ElaAdmin-master\js\lib\chart-amchart\pie.js" />
+    <Content Include="Content\ElaAdmin-master\ElaAdmin-master\js\lib\chart-amchart\serial.js" />
+    <Content Include="Content\ElaAdmin-master\ElaAdmin-master\js\lib\chart-amchart\worldLow.js" />
+    <Content Include="Content\ElaAdmin-master\ElaAdmin-master\js\lib\chart-js\Chart.bundle.js" />
+    <Content Include="Content\ElaAdmin-master\ElaAdmin-master\js\lib\chart-js\chartjs-init.js" />
+    <Content Include="Content\ElaAdmin-master\ElaAdmin-master\js\lib\chartist\chartist-init.js" />
+    <Content Include="Content\ElaAdmin-master\ElaAdmin-master\js\lib\chartist\chartist-plugin-tooltip.min.js" />
+    <Content Include="Content\ElaAdmin-master\ElaAdmin-master\js\lib\chartist\chartist.min.js" />
+    <Content Include="Content\ElaAdmin-master\ElaAdmin-master\js\lib\chat-widget\chat-widget-init.js" />
+    <Content Include="Content\ElaAdmin-master\ElaAdmin-master\js\lib\circle-progress\circle-progress-init.js" />
+    <Content Include="Content\ElaAdmin-master\ElaAdmin-master\js\lib\circle-progress\circle-progress.min.js" />
+    <Content Include="Content\ElaAdmin-master\ElaAdmin-master\js\lib\datamap\d3.min.js" />
+    <Content Include="Content\ElaAdmin-master\ElaAdmin-master\js\lib\datamap\datamap-init.js" />
+    <Content Include="Content\ElaAdmin-master\ElaAdmin-master\js\lib\datamap\datamaps.world.min.js" />
+    <Content Include="Content\ElaAdmin-master\ElaAdmin-master\js\lib\datamap\topojson.js" />
+    <Content Include="Content\ElaAdmin-master\ElaAdmin-master\js\lib\datatables\cdn.datatables.net\buttons\1.2.2\js\buttons.flash.min.js" />
+    <Content Include="Content\ElaAdmin-master\ElaAdmin-master\js\lib\datatables\cdn.datatables.net\buttons\1.2.2\js\buttons.html5.min.js" />
+    <Content Include="Content\ElaAdmin-master\ElaAdmin-master\js\lib\datatables\cdn.datatables.net\buttons\1.2.2\js\buttons.print.min.js" />
+    <Content Include="Content\ElaAdmin-master\ElaAdmin-master\js\lib\datatables\cdn.datatables.net\buttons\1.2.2\js\dataTables.buttons.min.js" />
+    <Content Include="Content\ElaAdmin-master\ElaAdmin-master\js\lib\datatables\cdn.rawgit.com\bpampuch\pdfmake\0.1.18\build\pdfmake.min.js" />
+    <Content Include="Content\ElaAdmin-master\ElaAdmin-master\js\lib\datatables\cdn.rawgit.com\bpampuch\pdfmake\0.1.18\build\vfs_fonts.js" />
+    <Content Include="Content\ElaAdmin-master\ElaAdmin-master\js\lib\datatables\cdn.rawgit.com\google\code-prettify\master\loader\run_prettify2102.js" />
+    <Content Include="Content\ElaAdmin-master\ElaAdmin-master\js\lib\datatables\cdnjs.cloudflare.com\ajax\libs\jqueryui-touch-punch\0.2.3\jquery.ui.touch-punch.min.js" />
+    <Content Include="Content\ElaAdmin-master\ElaAdmin-master\js\lib\datatables\cdnjs.cloudflare.com\ajax\libs\jszip\2.5.0\jszip.min.js" />
+    <Content Include="Content\ElaAdmin-master\ElaAdmin-master\js\lib\datatables\datatables-init.js" />
+    <Content Include="Content\ElaAdmin-master\ElaAdmin-master\js\lib\datatables\datatables.min.js" />
+    <Content Include="Content\ElaAdmin-master\ElaAdmin-master\js\lib\datepicker\bootstrap-datepicker.min.js" />
+    <Content Include="Content\ElaAdmin-master\ElaAdmin-master\js\lib\dropzone\dropzone.js" />
+    <Content Include="Content\ElaAdmin-master\ElaAdmin-master\js\lib\easing\jquery.easing.min.js" />
+    <Content Include="Content\ElaAdmin-master\ElaAdmin-master\js\lib\easing\stepup-form-init.js" />
+    <Content Include="Content\ElaAdmin-master\ElaAdmin-master\js\lib\echart\dashboard1-init.js" />
+    <Content Include="Content\ElaAdmin-master\ElaAdmin-master\js\lib\echart\echarts-init.js" />
+    <Content Include="Content\ElaAdmin-master\ElaAdmin-master\js\lib\echart\echarts.js" />
+    <Content Include="Content\ElaAdmin-master\ElaAdmin-master\js\lib\flot-chart\curvedLines.js" />
+    <Content Include="Content\ElaAdmin-master\ElaAdmin-master\js\lib\flot-chart\excanvas.min.js" />
+    <Content Include="Content\ElaAdmin-master\ElaAdmin-master\js\lib\flot-chart\flot-chart-init.js" />
+    <Content Include="Content\ElaAdmin-master\ElaAdmin-master\js\lib\flot-chart\flot-tooltip\jquery.flot.tooltip.min.js" />
+    <Content Include="Content\ElaAdmin-master\ElaAdmin-master\js\lib\flot-chart\jquery.flot.categories.js" />
+    <Content Include="Content\ElaAdmin-master\ElaAdmin-master\js\lib\flot-chart\jquery.flot.crosshair.js" />
+    <Content Include="Content\ElaAdmin-master\ElaAdmin-master\js\lib\flot-chart\jquery.flot.js" />
+    <Content Include="Content\ElaAdmin-master\ElaAdmin-master\js\lib\flot-chart\jquery.flot.pie.js" />
+    <Content Include="Content\ElaAdmin-master\ElaAdmin-master\js\lib\flot-chart\jquery.flot.resize.js" />
+    <Content Include="Content\ElaAdmin-master\ElaAdmin-master\js\lib\flot-chart\jquery.flot.stack.js" />
+    <Content Include="Content\ElaAdmin-master\ElaAdmin-master\js\lib\flot-chart\jquery.flot.threshold.js" />
+    <Content Include="Content\ElaAdmin-master\ElaAdmin-master\js\lib\flot-chart\jquery.flot.time.js" />
+    <Content Include="Content\ElaAdmin-master\ElaAdmin-master\js\lib\form-validation\jquery.validate-init.js" />
+    <Content Include="Content\ElaAdmin-master\ElaAdmin-master\js\lib\form-validation\jquery.validate.min.js" />
+    <Content Include="Content\ElaAdmin-master\ElaAdmin-master\js\lib\gmap\gmap.init.js" />
+    <Content Include="Content\ElaAdmin-master\ElaAdmin-master\js\lib\gmap\gmapApi.js" />
+    <Content Include="Content\ElaAdmin-master\ElaAdmin-master\js\lib\gmap\gmaps.js" />
+    <Content Include="Content\ElaAdmin-master\ElaAdmin-master\js\lib\google-chart\google-charts.init.js" />
+    <Content Include="Content\ElaAdmin-master\ElaAdmin-master\js\lib\google-chart\google-jsapi.js" />
+    <Content Include="Content\ElaAdmin-master\ElaAdmin-master\js\lib\granim\granim-init.js" />
+    <Content Include="Content\ElaAdmin-master\ElaAdmin-master\js\lib\granim\granim.min.js" />
+    <Content Include="Content\ElaAdmin-master\ElaAdmin-master\js\lib\highchart\highcharts-init.js" />
+    <Content Include="Content\ElaAdmin-master\ElaAdmin-master\js\lib\highchart\highcharts-modules-exporting.js" />
+    <Content Include="Content\ElaAdmin-master\ElaAdmin-master\js\lib\highchart\highcharts-more.js" />
+    <Content Include="Content\ElaAdmin-master\ElaAdmin-master\js\lib\highchart\highcharts.js" />
+    <Content Include="Content\ElaAdmin-master\ElaAdmin-master\js\lib\html5-editor\bootstrap-wysihtml5.js" />
+    <Content Include="Content\ElaAdmin-master\ElaAdmin-master\js\lib\html5-editor\wysihtml5-0.3.0.js" />
+    <Content Include="Content\ElaAdmin-master\ElaAdmin-master\js\lib\html5-editor\wysihtml5-init.js" />
+    <Content Include="Content\ElaAdmin-master\ElaAdmin-master\js\lib\jquery-ui\jquery-ui.min.js" />
+    <Content Include="Content\ElaAdmin-master\ElaAdmin-master\js\lib\jquery-ui\jquery.ui.touch-punch.min.js" />
+    <Content Include="Content\ElaAdmin-master\ElaAdmin-master\js\lib\jquery\jquery.min.js" />
+    <Content Include="Content\ElaAdmin-master\ElaAdmin-master\js\lib\jsgrid\db.js" />
+    <Content Include="Content\ElaAdmin-master\ElaAdmin-master\js\lib\jsgrid\fields\jsgrid.field.checkbox.js" />
+    <Content Include="Content\ElaAdmin-master\ElaAdmin-master\js\lib\jsgrid\fields\jsgrid.field.control.js" />
+    <Content Include="Content\ElaAdmin-master\ElaAdmin-master\js\lib\jsgrid\fields\jsgrid.field.number.js" />
+    <Content Include="Content\ElaAdmin-master\ElaAdmin-master\js\lib\jsgrid\fields\jsgrid.field.select.js" />
+    <Content Include="Content\ElaAdmin-master\ElaAdmin-master\js\lib\jsgrid\fields\jsgrid.field.text.js" />
+    <Content Include="Content\ElaAdmin-master\ElaAdmin-master\js\lib\jsgrid\fields\jsgrid.field.textarea.js" />
+    <Content Include="Content\ElaAdmin-master\ElaAdmin-master\js\lib\jsgrid\jsgrid-init.js" />
+    <Content Include="Content\ElaAdmin-master\ElaAdmin-master\js\lib\jsgrid\jsgrid.core.js" />
+    <Content Include="Content\ElaAdmin-master\ElaAdmin-master\js\lib\jsgrid\jsgrid.field.js" />
+    <Content Include="Content\ElaAdmin-master\ElaAdmin-master\js\lib\jsgrid\jsgrid.load-indicator.js" />
+    <Content Include="Content\ElaAdmin-master\ElaAdmin-master\js\lib\jsgrid\jsgrid.load-strategies.js" />
+    <Content Include="Content\ElaAdmin-master\ElaAdmin-master\js\lib\jsgrid\jsgrid.sort-strategies.js" />
+    <Content Include="Content\ElaAdmin-master\ElaAdmin-master\js\lib\jsgrid\jsgrid.validation.js" />
+    <Content Include="Content\ElaAdmin-master\ElaAdmin-master\js\lib\justgage\justgage.init.js" />
+    <Content Include="Content\ElaAdmin-master\ElaAdmin-master\js\lib\justgage\justgage.js" />
+    <Content Include="Content\ElaAdmin-master\ElaAdmin-master\js\lib\justgage\raphael-min.js" />
+    <Content Include="Content\ElaAdmin-master\ElaAdmin-master\js\lib\knob\jquery.knob.min.js" />
+    <Content Include="Content\ElaAdmin-master\ElaAdmin-master\js\lib\knob\knob.init.js" />
+    <Content Include="Content\ElaAdmin-master\ElaAdmin-master\js\lib\line-progress\jquery.lineProgressbar.js" />
+    <Content Include="Content\ElaAdmin-master\ElaAdmin-master\js\lib\line-progress\line-progress-init.js" />
+    <Content Include="Content\ElaAdmin-master\ElaAdmin-master\js\lib\menubar\sidebar.js" />
+    <Content Include="Content\ElaAdmin-master\ElaAdmin-master\js\lib\metismenu\jquery.slimscroll.js" />
+    <Content Include="Content\ElaAdmin-master\ElaAdmin-master\js\lib\metismenu\metismenu.init.js" />
+    <Content Include="Content\ElaAdmin-master\ElaAdmin-master\js\lib\metismenu\metismenu.min.js" />
+    <Content Include="Content\ElaAdmin-master\ElaAdmin-master\js\lib\moment\moment.js" />
+    <Content Include="Content\ElaAdmin-master\ElaAdmin-master\js\lib\morris-chart\dashboard1-init.js" />
+    <Content Include="Content\ElaAdmin-master\ElaAdmin-master\js\lib\morris-chart\morris-init.js" />
+    <Content Include="Content\ElaAdmin-master\ElaAdmin-master\js\lib\morris-chart\morris.js" />
+    <Content Include="Content\ElaAdmin-master\ElaAdmin-master\js\lib\morris-chart\raphael-min.js" />
+    <Content Include="Content\ElaAdmin-master\ElaAdmin-master\js\lib\nestable\jquery.nestable.js" />
+    <Content Include="Content\ElaAdmin-master\ElaAdmin-master\js\lib\nestable\nestable.init.js" />
+    <Content Include="Content\ElaAdmin-master\ElaAdmin-master\js\lib\owl-carousel\owl.carousel-init.js" />
+    <Content Include="Content\ElaAdmin-master\ElaAdmin-master\js\lib\owl-carousel\owl.carousel.min.js" />
+    <Content Include="Content\ElaAdmin-master\ElaAdmin-master\js\lib\peitychart\jquery.peity.min.js" />
+    <Content Include="Content\ElaAdmin-master\ElaAdmin-master\js\lib\peitychart\peitychart.init.js" />
+    <Content Include="Content\ElaAdmin-master\ElaAdmin-master\js\lib\portlets\portlets-init.js" />
+    <Content Include="Content\ElaAdmin-master\ElaAdmin-master\js\lib\portlets\portlets.js" />
+    <Content Include="Content\ElaAdmin-master\ElaAdmin-master\js\lib\preloader\pace.min.js" />
+    <Content Include="Content\ElaAdmin-master\ElaAdmin-master\js\lib\rangeSlider\ion.rangeSlider.min.js" />
+    <Content Include="Content\ElaAdmin-master\ElaAdmin-master\js\lib\rangeSlider\moment-with-locales.js" />
+    <Content Include="Content\ElaAdmin-master\ElaAdmin-master\js\lib\rangeSlider\moment.js" />
+    <Content Include="Content\ElaAdmin-master\ElaAdmin-master\js\lib\rangeSlider\rangeslider.init.js" />
+    <Content Include="Content\ElaAdmin-master\ElaAdmin-master\js\lib\rating1\jRate.init.js" />
+    <Content Include="Content\ElaAdmin-master\ElaAdmin-master\js\lib\rating1\jRate.min.js" />
+    <Content Include="Content\ElaAdmin-master\ElaAdmin-master\js\lib\rickshaw\d3.layout.min.js" />
+    <Content Include="Content\ElaAdmin-master\ElaAdmin-master\js\lib\rickshaw\d3.min.js" />
+    <Content Include="Content\ElaAdmin-master\ElaAdmin-master\js\lib\rickshaw\rickshaw-init.js" />
+    <Content Include="Content\ElaAdmin-master\ElaAdmin-master\js\lib\rickshaw\rickshaw.min.js" />
+    <Content Include="Content\ElaAdmin-master\ElaAdmin-master\js\lib\scrollable\holder.js" />
+    <Content Include="Content\ElaAdmin-master\ElaAdmin-master\js\lib\scrollable\jquery-asScrollable.min.js" />
+    <Content Include="Content\ElaAdmin-master\ElaAdmin-master\js\lib\scrollable\jquery-asScrollbar.js" />
+    <Content Include="Content\ElaAdmin-master\ElaAdmin-master\js\lib\scrollable\scrollable.init.js" />
+    <Content Include="Content\ElaAdmin-master\ElaAdmin-master\js\lib\select2\select2.full.min.js" />
+    <Content Include="Content\ElaAdmin-master\ElaAdmin-master\js\lib\sparklinechart\jquery.sparkline.min.js" />
+    <Content Include="Content\ElaAdmin-master\ElaAdmin-master\js\lib\sparklinechart\sparkline.init.js" />
+    <Content Include="Content\ElaAdmin-master\ElaAdmin-master\js\lib\sticky-kit-master\dist\sticky-kit.min.js" />
+    <Content Include="Content\ElaAdmin-master\ElaAdmin-master\js\lib\sweetalert\sweetalert.init.js" />
+    <Content Include="Content\ElaAdmin-master\ElaAdmin-master\js\lib\sweetalert\sweetalert.min.js" />
+    <Content Include="Content\ElaAdmin-master\ElaAdmin-master\js\lib\toastr\toastr.init.js" />
+    <Content Include="Content\ElaAdmin-master\ElaAdmin-master\js\lib\toastr\toastr.min.js" />
+    <Content Include="Content\ElaAdmin-master\ElaAdmin-master\js\lib\vector-map\country\jquery.vmap.algeria.js" />
+    <Content Include="Content\ElaAdmin-master\ElaAdmin-master\js\lib\vector-map\country\jquery.vmap.argentina.js" />
+    <Content Include="Content\ElaAdmin-master\ElaAdmin-master\js\lib\vector-map\country\jquery.vmap.brazil.js" />
+    <Content Include="Content\ElaAdmin-master\ElaAdmin-master\js\lib\vector-map\country\jquery.vmap.europe.js" />
+    <Content Include="Content\ElaAdmin-master\ElaAdmin-master\js\lib\vector-map\country\jquery.vmap.france.js" />
+    <Content Include="Content\ElaAdmin-master\ElaAdmin-master\js\lib\vector-map\country\jquery.vmap.germany.js" />
+    <Content Include="Content\ElaAdmin-master\ElaAdmin-master\js\lib\vector-map\country\jquery.vmap.greece.js" />
+    <Content Include="Content\ElaAdmin-master\ElaAdmin-master\js\lib\vector-map\country\jquery.vmap.iran.js" />
+    <Content Include="Content\ElaAdmin-master\ElaAdmin-master\js\lib\vector-map\country\jquery.vmap.iraq.js" />
+    <Content Include="Content\ElaAdmin-master\ElaAdmin-master\js\lib\vector-map\country\jquery.vmap.russia.js" />
+    <Content Include="Content\ElaAdmin-master\ElaAdmin-master\js\lib\vector-map\country\jquery.vmap.tunisia.js" />
+    <Content Include="Content\ElaAdmin-master\ElaAdmin-master\js\lib\vector-map\country\jquery.vmap.turkey.js" />
+    <Content Include="Content\ElaAdmin-master\ElaAdmin-master\js\lib\vector-map\country\jquery.vmap.usa.js" />
+    <Content Include="Content\ElaAdmin-master\ElaAdmin-master\js\lib\vector-map\country\jquery.vmap.world.js" />
+    <Content Include="Content\ElaAdmin-master\ElaAdmin-master\js\lib\vector-map\jquery.vmap.js" />
+    <Content Include="Content\ElaAdmin-master\ElaAdmin-master\js\lib\vector-map\jquery.vmap.min.js" />
+    <Content Include="Content\ElaAdmin-master\ElaAdmin-master\js\lib\vector-map\jquery.vmap.sampledata.js" />
+    <Content Include="Content\ElaAdmin-master\ElaAdmin-master\js\lib\vector-map\vector.init.js" />
+    <Content Include="Content\ElaAdmin-master\ElaAdmin-master\js\lib\weather\jquery.simpleWeather.min.js" />
+    <Content Include="Content\ElaAdmin-master\ElaAdmin-master\js\lib\weather\weather-init.js" />
+    <Content Include="Content\ElaAdmin-master\ElaAdmin-master\js\scripts.js" />
+    <Content Include="Content\ElaAdmin-master\ElaAdmin-master\js\sidebarmenu.js" />
+    <Content Include="Content\HTML.com\404.html" />
+    <Content Include="Content\HTML.com\Add.html" />
+    <Content Include="Content\HTML.com\Addbron.html" />
+    <Content Include="Content\HTML.com\Addgold.html" />
+    <Content Include="Content\HTML.com\Addsilver.html" />
+    <Content Include="Content\HTML.com\appliances.html" />
+    <Content Include="Content\HTML.com\assets\css\main.css" />
+    <Content Include="Content\HTML.com\assets\css\plugins.css" />
+    <Content Include="Content\HTML.com\assets\css\realocation.css" />
+    <Content Include="Content\HTML.com\assets\css\strap.css" />
+    <Content Include="Content\HTML.com\assets\css\themes.css" />
+    <Content Include="Content\HTML.com\assets\css\variants\blue.css" />
+    <Content Include="Content\HTML.com\assets\css\variants\brown.css" />
+    <Content Include="Content\HTML.com\assets\css\variants\cyan.css" />
+    <Content Include="Content\HTML.com\assets\css\variants\green.css" />
+    <Content Include="Content\HTML.com\assets\css\variants\orange.css" />
+    <Content Include="Content\HTML.com\assets\css\variants\pink.css" />
+    <Content Include="Content\HTML.com\assets\css\variants\purple.css" />
+    <Content Include="Content\HTML.com\assets\css\variants\red.css" />
+    <Content Include="Content\HTML.com\assets\img\clusterer-transparent.png" />
+    <Content Include="Content\HTML.com\assets\img\hex.png" />
+    <Content Include="Content\HTML.com\assets\img\icons\apartment.png" />
+    <Content Include="Content\HTML.com\assets\img\icons\building-area.png" />
+    <Content Include="Content\HTML.com\assets\img\icons\condo.png" />
+    <Content Include="Content\HTML.com\assets\img\icons\cottage.png" />
+    <Content Include="Content\HTML.com\assets\img\icons\family-house.png" />
+    <Content Include="Content\HTML.com\assets\img\icons\flatblocks.png" />
+    <Content Include="Content\HTML.com\assets\img\icons\flatblocks2.png" />
+    <Content Include="Content\HTML.com\assets\img\icons\house.png" />
+    <Content Include="Content\HTML.com\assets\img\icons\single-home.png" />
+    <Content Include="Content\HTML.com\assets\img\icons\villa.png" />
+    <Content Include="Content\HTML.com\assets\img\logo-ft.png" />
+    <Content Include="Content\HTML.com\assets\img\map.gif" />
+    <Content Include="Content\HTML.com\assets\img\map.png" />
+    <Content Include="Content\HTML.com\assets\img\map1.png" />
+    <Content Include="Content\HTML.com\assets\img\mapru.gif" />
+    <Content Include="Content\HTML.com\assets\img\marker-transparent.png" />
+    <Content Include="Content\HTML.com\assets\img\pattern-dots.png" />
+    <Content Include="Content\HTML.com\assets\img\patterns\large\cloth-alike%402x.png" />
+    <Content Include="Content\HTML.com\assets\img\patterns\large\cloth-alike-dark%402x.png" />
+    <Content Include="Content\HTML.com\assets\img\patterns\large\cloth-alike-dark.png" />
+    <Content Include="Content\HTML.com\assets\img\patterns\large\cloth-alike.png" />
+    <Content Include="Content\HTML.com\assets\img\patterns\large\corrugation%402x.png" />
+    <Content Include="Content\HTML.com\assets\img\patterns\large\corrugation-dark%402x.png" />
+    <Content Include="Content\HTML.com\assets\img\patterns\large\corrugation-dark.png" />
+    <Content Include="Content\HTML.com\assets\img\patterns\large\corrugation.png" />
+    <Content Include="Content\HTML.com\assets\img\patterns\large\diagonal-noise%402x.png" />
+    <Content Include="Content\HTML.com\assets\img\patterns\large\diagonal-noise-dark%402x.png" />
+    <Content Include="Content\HTML.com\assets\img\patterns\large\diagonal-noise-dark.png" />
+    <Content Include="Content\HTML.com\assets\img\patterns\large\diagonal-noise.png" />
+    <Content Include="Content\HTML.com\assets\img\patterns\large\dust%402x.png" />
+    <Content Include="Content\HTML.com\assets\img\patterns\large\dust-dark%402x.png" />
+    <Content Include="Content\HTML.com\assets\img\patterns\large\dust-dark.png" />
+    <Content Include="Content\HTML.com\assets\img\patterns\large\dust.png" />
+    <Content Include="Content\HTML.com\assets\img\patterns\large\fabric-plaid%402x.png" />
+    <Content Include="Content\HTML.com\assets\img\patterns\large\fabric-plaid-dark%402x.png" />
+    <Content Include="Content\HTML.com\assets\img\patterns\large\fabric-plaid-dark.png" />
+    <Content Include="Content\HTML.com\assets\img\patterns\large\fabric-plaid.png" />
+    <Content Include="Content\HTML.com\assets\img\patterns\large\farmer%402x.png" />
+    <Content Include="Content\HTML.com\assets\img\patterns\large\farmer-dark%402x.png" />
+    <Content Include="Content\HTML.com\assets\img\patterns\large\farmer-dark.png" />
+    <Content Include="Content\HTML.com\assets\img\patterns\large\farmer.png" />
+    <Content Include="Content\HTML.com\assets\img\patterns\large\grid-noise%402x.png" />
+    <Content Include="Content\HTML.com\assets\img\patterns\large\grid-noise-dark%402x.png" />
+    <Content Include="Content\HTML.com\assets\img\patterns\large\grid-noise-dark.png" />
+    <Content Include="Content\HTML.com\assets\img\patterns\large\grid-noise.png" />
+    <Content Include="Content\HTML.com\assets\img\patterns\large\lghtmesh%402x.png" />
+    <Content Include="Content\HTML.com\assets\img\patterns\large\lghtmesh-dark%402x.png" />
+    <Content Include="Content\HTML.com\assets\img\patterns\large\lghtmesh-dark.png" />
+    <Content Include="Content\HTML.com\assets\img\patterns\large\lghtmesh.png" />
+    <Content Include="Content\HTML.com\assets\img\patterns\large\lightpaperfibers%402x.png" />
+    <Content Include="Content\HTML.com\assets\img\patterns\large\lightpaperfibers-dark%402x.png" />
+    <Content Include="Content\HTML.com\assets\img\patterns\large\lightpaperfibers-dark.png" />
+    <Content Include="Content\HTML.com\assets\img\patterns\large\lightpaperfibers.png" />
+    <Content Include="Content\HTML.com\assets\img\patterns\large\pw-maze-dark.png" />
+    <Content Include="Content\HTML.com\assets\img\patterns\large\pw-maze-white%402x.png" />
+    <Content Include="Content\HTML.com\assets\img\patterns\large\pw-maze-white-dark%402x.png" />
+    <Content Include="Content\HTML.com\assets\img\patterns\large\pw-maze-white.png" />
+    <Content Include="Content\HTML.com\assets\img\patterns\large\retina-wood%402x.png" />
+    <Content Include="Content\HTML.com\assets\img\patterns\large\retina-wood.png" />
+    <Content Include="Content\HTML.com\assets\img\patterns\small\cloth-alike%402x.png" />
+    <Content Include="Content\HTML.com\assets\img\patterns\small\cloth-alike-dark%402x.png" />
+    <Content Include="Content\HTML.com\assets\img\patterns\small\cloth-alike-dark.png" />
+    <Content Include="Content\HTML.com\assets\img\patterns\small\cloth-alike.png" />
+    <Content Include="Content\HTML.com\assets\img\patterns\small\corrugation%402x.png" />
+    <Content Include="Content\HTML.com\assets\img\patterns\small\corrugation-dark%402x.png" />
+    <Content Include="Content\HTML.com\assets\img\patterns\small\corrugation-dark.png" />
+    <Content Include="Content\HTML.com\assets\img\patterns\small\corrugation.png" />
+    <Content Include="Content\HTML.com\assets\img\patterns\small\diagonal-noise copy.png" />
+    <Content Include="Content\HTML.com\assets\img\patterns\small\diagonal-noise%402x.png" />
+    <Content Include="Content\HTML.com\assets\img\patterns\small\diagonal-noise-dark%402x.png" />
+    <Content Include="Content\HTML.com\assets\img\patterns\small\diagonal-noise-dark.png" />
+    <Content Include="Content\HTML.com\assets\img\patterns\small\diagonal-noise.png" />
+    <Content Include="Content\HTML.com\assets\img\patterns\small\dust%402x.png" />
+    <Content Include="Content\HTML.com\assets\img\patterns\small\dust-dark%402x.png" />
+    <Content Include="Content\HTML.com\assets\img\patterns\small\dust-dark.png" />
+    <Content Include="Content\HTML.com\assets\img\patterns\small\dust.png" />
+    <Content Include="Content\HTML.com\assets\img\patterns\small\fabric-plaid%402x.png" />
+    <Content Include="Content\HTML.com\assets\img\patterns\small\fabric-plaid-dark%402x.png" />
+    <Content Include="Content\HTML.com\assets\img\patterns\small\fabric-plaid-dark.png" />
+    <Content Include="Content\HTML.com\assets\img\patterns\small\fabric-plaid.png" />
+    <Content Include="Content\HTML.com\assets\img\patterns\small\farmer%402x.png" />
+    <Content Include="Content\HTML.com\assets\img\patterns\small\farmer-dark%402x.png" />
+    <Content Include="Content\HTML.com\assets\img\patterns\small\farmer-dark.png" />
+    <Content Include="Content\HTML.com\assets\img\patterns\small\farmer.png" />
+    <Content Include="Content\HTML.com\assets\img\patterns\small\grid-noise%402x.png" />
+    <Content Include="Content\HTML.com\assets\img\patterns\small\grid-noise-dark%402x.png" />
+    <Content Include="Content\HTML.com\assets\img\patterns\small\grid-noise-dark.png" />
+    <Content Include="Content\HTML.com\assets\img\patterns\small\grid-noise.png" />
+    <Content Include="Content\HTML.com\assets\img\patterns\small\lghtmesh%402x.png" />
+    <Content Include="Content\HTML.com\assets\img\patterns\small\lghtmesh-dark%402x.png" />
+    <Content Include="Content\HTML.com\assets\img\patterns\small\lghtmesh-dark.png" />
+    <Content Include="Content\HTML.com\assets\img\patterns\small\lghtmesh.png" />
+    <Content Include="Content\HTML.com\assets\img\patterns\small\lightpaperfibers%402x.png" />
+    <Content Include="Content\HTML.com\assets\img\patterns\small\lightpaperfibers-dark%402x.png" />
+    <Content Include="Content\HTML.com\assets\img\patterns\small\lightpaperfibers-dark.png" />
+    <Content Include="Content\HTML.com\assets\img\patterns\small\lightpaperfibers.png" />
+    <Content Include="Content\HTML.com\assets\img\patterns\small\no-pattern%402x.png" />
+    <Content Include="Content\HTML.com\assets\img\patterns\small\no-pattern-dark%402x.png" />
+    <Content Include="Content\HTML.com\assets\img\patterns\small\no-pattern-dark.png" />
+    <Content Include="Content\HTML.com\assets\img\patterns\small\no-pattern.png" />
+    <Content Include="Content\HTML.com\assets\img\patterns\small\pw-maze-white%402x.png" />
+    <Content Include="Content\HTML.com\assets\img\patterns\small\pw-maze-white-dark%402x.png" />
+    <Content Include="Content\HTML.com\assets\img\patterns\small\pw-maze-white-dark.png" />
+    <Content Include="Content\HTML.com\assets\img\patterns\small\pw-maze-white.png" />
+    <Content Include="Content\HTML.com\assets\img\patterns\small\retina-wood%402x.png" />
+    <Content Include="Content\HTML.com\assets\img\patterns\small\retina-wood.png" />
+    <Content Include="Content\HTML.com\assets\img\reklama.gif" />
+    <Content Include="Content\HTML.com\assets\img\reklama.png" />
+    <Content Include="Content\HTML.com\assets\img\reklama1.gif" />
+    <Content Include="Content\HTML.com\assets\img\reklamauz.gif" />
+    <Content Include="Content\HTML.com\assets\img\tmp\agents\medium\1.jpg" />
+    <Content Include="Content\HTML.com\assets\img\tmp\agents\medium\2.jpg" />
+    <Content Include="Content\HTML.com\assets\img\tmp\agents\medium\3.jpg" />
+    <Content Include="Content\HTML.com\assets\img\tmp\agents\medium\4.jpg" />
+    <Content Include="Content\HTML.com\assets\img\tmp\properties\large\1.jpg" />
+    <Content Include="Content\HTML.com\assets\img\tmp\properties\large\10.jpg" />
+    <Content Include="Content\HTML.com\assets\img\tmp\properties\large\11.jpg" />
+    <Content Include="Content\HTML.com\assets\img\tmp\properties\large\12.jpg" />
+    <Content Include="Content\HTML.com\assets\img\tmp\properties\large\13.jpg" />
+    <Content Include="Content\HTML.com\assets\img\tmp\properties\large\2.jpg" />
+    <Content Include="Content\HTML.com\assets\img\tmp\properties\large\3.jpg" />
+    <Content Include="Content\HTML.com\assets\img\tmp\properties\large\4.jpg" />
+    <Content Include="Content\HTML.com\assets\img\tmp\properties\large\5.jpg" />
+    <Content Include="Content\HTML.com\assets\img\tmp\properties\large\5xxl.jpg" />
+    <Content Include="Content\HTML.com\assets\img\tmp\properties\large\6.jpg" />
+    <Content Include="Content\HTML.com\assets\img\tmp\properties\large\7.jpg" />
+    <Content Include="Content\HTML.com\assets\img\tmp\properties\large\8.jpg" />
+    <Content Include="Content\HTML.com\assets\img\tmp\properties\large\9.jpg" />
+    <Content Include="Content\HTML.com\assets\img\tmp\properties\medium\1.jpg" />
+    <Content Include="Content\HTML.com\assets\img\tmp\properties\medium\10.jpg" />
+    <Content Include="Content\HTML.com\assets\img\tmp\properties\medium\11.jpg" />
+    <Content Include="Content\HTML.com\assets\img\tmp\properties\medium\12.jpg" />
+    <Content Include="Content\HTML.com\assets\img\tmp\properties\medium\13.jpg" />
+    <Content Include="Content\HTML.com\assets\img\tmp\properties\medium\2.jpg" />
+    <Content Include="Content\HTML.com\assets\img\tmp\properties\medium\3.jpg" />
+    <Content Include="Content\HTML.com\assets\img\tmp\properties\medium\4.jpg" />
+    <Content Include="Content\HTML.com\assets\img\tmp\properties\medium\5.jpg" />
+    <Content Include="Content\HTML.com\assets\img\tmp\properties\medium\6.jpg" />
+    <Content Include="Content\HTML.com\assets\img\tmp\properties\medium\7.jpg" />
+    <Content Include="Content\HTML.com\assets\img\tmp\properties\medium\8.jpg" />
+    <Content Include="Content\HTML.com\assets\img\tmp\properties\medium\9.jpg" />
+    <Content Include="Content\HTML.com\assets\img\tmp\properties\small\1.jpg" />
+    <Content Include="Content\HTML.com\assets\img\tmp\properties\small\10.jpg" />
+    <Content Include="Content\HTML.com\assets\img\tmp\properties\small\11.jpg" />
+    <Content Include="Content\HTML.com\assets\img\tmp\properties\small\12.jpg" />
+    <Content Include="Content\HTML.com\assets\img\tmp\properties\small\13.jpg" />
+    <Content Include="Content\HTML.com\assets\img\tmp\properties\small\2.jpg" />
+    <Content Include="Content\HTML.com\assets\img\tmp\properties\small\3.jpg" />
+    <Content Include="Content\HTML.com\assets\img\tmp\properties\small\4.jpg" />
+    <Content Include="Content\HTML.com\assets\img\tmp\properties\small\5.jpg" />
+    <Content Include="Content\HTML.com\assets\img\tmp\properties\small\6.jpg" />
+    <Content Include="Content\HTML.com\assets\img\tmp\properties\small\7.jpg" />
+    <Content Include="Content\HTML.com\assets\img\tmp\properties\small\8.jpg" />
+    <Content Include="Content\HTML.com\assets\img\tmp\properties\small\9.jpg" />
+    <Content Include="Content\HTML.com\assets\img\tmp\sliders\1.jpg" />
+    <Content Include="Content\HTML.com\assets\img\turlar.png" />
+    <Content Include="Content\HTML.com\assets\img\turlar1.png" />
+    <Content Include="Content\HTML.com\assets\img\turlar2.png" />
+    <Content Include="Content\HTML.com\assets\img\turlar3.png" />
+    <Content Include="Content\HTML.com\assets\js\bootstrap.min.js" />
+    <Content Include="Content\HTML.com\assets\js\ckeditor.js" />
+    <Content Include="Content\HTML.com\assets\js\gmap3.clusterer.js" />
+    <Content Include="Content\HTML.com\assets\js\gmap3.infobox.js" />
+    <Content Include="Content\HTML.com\assets\js\jquery-1.11.1.min.js" />
+    <Content Include="Content\HTML.com\assets\js\jquery.chained.min.js" />
+    <Content Include="Content\HTML.com\assets\js\jquery.js" />
+    <Content Include="Content\HTML.com\assets\js\main.js" />
+    <Content Include="Content\HTML.com\assets\js\map.js" />
+    <Content Include="Content\HTML.com\assets\js\modernizr-respond.min.js" />
+    <Content Include="Content\HTML.com\assets\js\plugins.js" />
+    <Content Include="Content\HTML.com\assets\js\realocation.js" />
+    <Content Include="Content\HTML.com\assets\libraries\bootstrap-sass\test\dummy\app\assets\javascripts\application.js" />
+    <Content Include="Content\HTML.com\assets\libraries\bootstrap-sass\test\dummy\public\404.html" />
+    <Content Include="Content\HTML.com\assets\libraries\bootstrap-sass\test\dummy\public\422.html" />
+    <Content Include="Content\HTML.com\assets\libraries\bootstrap-sass\test\dummy\public\500.html" />
+    <Content Include="Content\HTML.com\assets\libraries\bootstrap-sass\test\dummy\public\favicon.ico" />
+    <Content Include="Content\HTML.com\assets\libraries\bootstrap-sass\vendor\assets\fonts\bootstrap\glyphicons-halflings-regular.svg" />
+    <Content Include="Content\HTML.com\assets\libraries\bootstrap-sass\vendor\assets\javascripts\bootstrap.js" />
+    <Content Include="Content\HTML.com\assets\libraries\bootstrap-sass\vendor\assets\javascripts\bootstrap\affix.js" />
+    <Content Include="Content\HTML.com\assets\libraries\bootstrap-sass\vendor\assets\javascripts\bootstrap\alert.js" />
+    <Content Include="Content\HTML.com\assets\libraries\bootstrap-sass\vendor\assets\javascripts\bootstrap\button.js" />
+    <Content Include="Content\HTML.com\assets\libraries\bootstrap-sass\vendor\assets\javascripts\bootstrap\carousel.js" />
+    <Content Include="Content\HTML.com\assets\libraries\bootstrap-sass\vendor\assets\javascripts\bootstrap\collapse.js" />
+    <Content Include="Content\HTML.com\assets\libraries\bootstrap-sass\vendor\assets\javascripts\bootstrap\dropdown.js" />
+    <Content Include="Content\HTML.com\assets\libraries\bootstrap-sass\vendor\assets\javascripts\bootstrap\modal.js" />
+    <Content Include="Content\HTML.com\assets\libraries\bootstrap-sass\vendor\assets\javascripts\bootstrap\popover.js" />
+    <Content Include="Content\HTML.com\assets\libraries\bootstrap-sass\vendor\assets\javascripts\bootstrap\scrollspy.js" />
+    <Content Include="Content\HTML.com\assets\libraries\bootstrap-sass\vendor\assets\javascripts\bootstrap\tab.js" />
+    <Content Include="Content\HTML.com\assets\libraries\bootstrap-sass\vendor\assets\javascripts\bootstrap\tooltip.js" />
+    <Content Include="Content\HTML.com\assets\libraries\bootstrap-sass\vendor\assets\javascripts\bootstrap\transition.js" />
+    <Content Include="Content\HTML.com\assets\libraries\flexslider\changelog.txt" />
+    <Content Include="Content\HTML.com\assets\libraries\flexslider\demo\basic-carousel.html" />
+    <Content Include="Content\HTML.com\assets\libraries\flexslider\demo\carousel-min-max.html" />
+    <Content Include="Content\HTML.com\assets\libraries\flexslider\demo\css\demo.css" />
+    <Content Include="Content\HTML.com\assets\libraries\flexslider\demo\dynamic-carousel-min-max.html" />
+    <Content Include="Content\HTML.com\assets\libraries\flexslider\demo\fonts\webfonts\geo-medium\svg\1110FC_0.svg" />
+    <Content Include="Content\HTML.com\assets\libraries\flexslider\demo\fonts\webfonts\geo-medium\svg\svg_test.html" />
+    <Content Include="Content\HTML.com\assets\libraries\flexslider\demo\fonts\webfonts\geo-regular\svg\11014B_0.svg" />
+    <Content Include="Content\HTML.com\assets\libraries\flexslider\demo\fonts\webfonts\geo-regular\svg\svg_test.html" />
+    <Content Include="Content\HTML.com\assets\libraries\flexslider\demo\fonts\webfonts\geo-semibold\svg\index.html" />
+    <Content Include="Content\HTML.com\assets\libraries\flexslider\demo\fonts\webfonts\geo-semibold\svg\style_169898.svg" />
+    <Content Include="Content\HTML.com\assets\libraries\flexslider\demo\images\kitchen_adventurer_caramel.jpg" />
+    <Content Include="Content\HTML.com\assets\libraries\flexslider\demo\images\kitchen_adventurer_cheesecake_brownie.jpg" />
+    <Content Include="Content\HTML.com\assets\libraries\flexslider\demo\images\kitchen_adventurer_donut.jpg" />
+    <Content Include="Content\HTML.com\assets\libraries\flexslider\demo\images\kitchen_adventurer_lemon.jpg" />
+    <Content Include="Content\HTML.com\assets\libraries\flexslider\demo\images\logo.png" />
+    <Content Include="Content\HTML.com\assets\libraries\flexslider\demo\index.html" />
+    <Content Include="Content\HTML.com\assets\libraries\flexslider\demo\js\demo.js" />
+    <Content Include="Content\HTML.com\assets\libraries\flexslider\demo\js\froogaloop.js" />
+    <Content Include="Content\HTML.com\assets\libraries\flexslider\demo\js\jquery.easing.js" />
+    <Content Include="Content\HTML.com\assets\libraries\flexslider\demo\js\jquery.fitvid.js" />
+    <Content Include="Content\HTML.com\assets\libraries\flexslider\demo\js\jquery.mousewheel.js" />
+    <Content Include="Content\HTML.com\assets\libraries\flexslider\demo\js\modernizr.js" />
+    <Content Include="Content\HTML.com\assets\libraries\flexslider\demo\js\shBrushCss.js" />
+    <Content Include="Content\HTML.com\assets\libraries\flexslider\demo\js\shBrushJScript.js" />
+    <Content Include="Content\HTML.com\assets\libraries\flexslider\demo\js\shBrushXml.js" />
+    <Content Include="Content\HTML.com\assets\libraries\flexslider\demo\js\shCore.js" />
+    <Content Include="Content\HTML.com\assets\libraries\flexslider\demo\thumbnail-controlnav.html" />
+    <Content Include="Content\HTML.com\assets\libraries\flexslider\demo\thumbnail-slider.html" />
+    <Content Include="Content\HTML.com\assets\libraries\flexslider\demo\video-wistia.html" />
+    <Content Include="Content\HTML.com\assets\libraries\flexslider\demo\video.html" />
+    <Content Include="Content\HTML.com\assets\libraries\flexslider\flexslider.css" />
+    <Content Include="Content\HTML.com\assets\libraries\flexslider\fonts\flexslider-icon.svg" />
+    <Content Include="Content\HTML.com\assets\libraries\flexslider\images\bg_play_pause.png" />
+    <Content Include="Content\HTML.com\assets\libraries\flexslider\jquery.flexslider-min.js" />
+    <Content Include="Content\HTML.com\assets\libraries\flexslider\jquery.flexslider.js" />
+    <Content Include="Content\HTML.com\assets\libraries\font-awesome\css\font-awesome.css" />
+    <Content Include="Content\HTML.com\assets\libraries\font-awesome\css\font-awesome.min.css" />
+    <Content Include="Content\HTML.com\assets\libraries\font-awesome\fonts\fontawesome-webfont.svg" />
+    <Content Include="Content\HTML.com\assets\libraries\isotope\.gitignore" />
+    <Content Include="Content\HTML.com\assets\libraries\isotope\css\style.css" />
+    <Content Include="Content\HTML.com\assets\libraries\isotope\index.html" />
+    <Content Include="Content\HTML.com\assets\libraries\isotope\jquery.isotope.js" />
+    <Content Include="Content\HTML.com\assets\libraries\isotope\jquery.isotope.min.js" />
+    <Content Include="Content\HTML.com\assets\libraries\isotope\js\fake-element.js" />
+    <Content Include="Content\HTML.com\assets\libraries\isotope\js\jquery-1.7.1.min.js" />
+    <Content Include="Content\HTML.com\assets\libraries\isotope\js\jquery.ba-bbq.min.js" />
+    <Content Include="Content\HTML.com\assets\libraries\isotope\js\jquery.infinitescroll.min.js" />
+    <Content Include="Content\HTML.com\assets\libraries\isotope\js\make-big-graph-projects.js" />
+    <Content Include="Content\HTML.com\assets\libraries\isotope\_includes\add-buttons.js" />
+    <Content Include="Content\HTML.com\assets\libraries\isotope\_includes\change-sizes.js" />
+    <Content Include="Content\HTML.com\assets\libraries\isotope\_includes\developer-buy-button.html" />
+    <Content Include="Content\HTML.com\assets\libraries\isotope\_includes\element-partial.html" />
+    <Content Include="Content\HTML.com\assets\libraries\isotope\_includes\elements-demo-foot.html" />
+    <Content Include="Content\HTML.com\assets\libraries\isotope\_includes\elements-demo-head.html" />
+    <Content Include="Content\HTML.com\assets\libraries\isotope\_includes\filter-buttons.html" />
+    <Content Include="Content\HTML.com\assets\libraries\isotope\_includes\inf-scroll-page.html" />
+    <Content Include="Content\HTML.com\assets\libraries\isotope\_includes\layout-change.js" />
+    <Content Include="Content\HTML.com\assets\libraries\isotope\_includes\layout-options.html" />
+    <Content Include="Content\HTML.com\assets\libraries\isotope\_includes\option-set-buttons.js" />
+    <Content Include="Content\HTML.com\assets\libraries\isotope\_includes\org-buy-button.html" />
+    <Content Include="Content\HTML.com\assets\libraries\isotope\_includes\random-sizes.js" />
+    <Content Include="Content\HTML.com\assets\libraries\isotope\_includes\sort-buttons.html" />
+    <Content Include="Content\HTML.com\assets\libraries\isotope\_layouts\default.html" />
+    <Content Include="Content\HTML.com\assets\libraries\isotope\_posts\custom-layout-modes\2011-05-18-centered-masonry.html" />
+    <Content Include="Content\HTML.com\assets\libraries\isotope\_posts\custom-layout-modes\2011-05-22-category-rows.html" />
+    <Content Include="Content\HTML.com\assets\libraries\isotope\_posts\custom-layout-modes\2011-07-07-masonry-corner-stamp.html" />
+    <Content Include="Content\HTML.com\assets\libraries\isotope\_posts\custom-layout-modes\2011-07-14-masonry-gutters.html" />
+    <Content Include="Content\HTML.com\assets\libraries\isotope\_posts\custom-layout-modes\2011-10-18-spine-align.html" />
+    <Content Include="Content\HTML.com\assets\libraries\isotope\_posts\custom-layout-modes\2011-12-05-big-graph.html" />
+    <Content Include="Content\HTML.com\assets\libraries\isotope\_posts\custom-layout-modes\2012-01-03-masonry-column-shift.html" />
+    <Content Include="Content\HTML.com\assets\libraries\isotope\_posts\demos\2010-12-12-basic.html" />
+    <Content Include="Content\HTML.com\assets\libraries\isotope\_posts\demos\2010-12-13-elements-complete.html" />
+    <Content Include="Content\HTML.com\assets\libraries\isotope\_posts\demos\2010-12-16-elements-partial.html" />
+    <Content Include="Content\HTML.com\assets\libraries\isotope\_posts\demos\2010-12-29-layout-modes.html" />
+    <Content Include="Content\HTML.com\assets\libraries\isotope\_posts\demos\2010-12-30-filtering.html" />
+    <Content Include="Content\HTML.com\assets\libraries\isotope\_posts\demos\2010-12-30-sorting.html" />
+    <Content Include="Content\HTML.com\assets\libraries\isotope\_posts\demos\2010-12-31-relayout.html" />
+    <Content Include="Content\HTML.com\assets\libraries\isotope\_posts\demos\2011-01-02-adding-items.html" />
+    <Content Include="Content\HTML.com\assets\libraries\isotope\_posts\demos\2011-01-02-infinite-scroll.html" />
+    <Content Include="Content\HTML.com\assets\libraries\isotope\_posts\demos\2011-01-11-images.html" />
+    <Content Include="Content\HTML.com\assets\libraries\isotope\_posts\demos\2011-03-29-combination-filters.html" />
+    <Content Include="Content\HTML.com\assets\libraries\isotope\_posts\demos\2011-06-13-hash-history.html" />
+    <Content Include="Content\HTML.com\assets\libraries\isotope\_posts\demos\2011-09-30-fluid-responsive.html" />
+    <Content Include="Content\HTML.com\assets\libraries\isotope\_posts\demos\2011-12-22-removing.html" />
+    <Content Include="Content\HTML.com\assets\libraries\isotope\_posts\pages\2011-01-01-2.html" />
+    <Content Include="Content\HTML.com\assets\libraries\isotope\_posts\pages\2011-01-01-3.html" />
+    <Content Include="Content\HTML.com\assets\libraries\isotope\_posts\pages\2011-01-01-4.html" />
+    <Content Include="Content\HTML.com\assets\libraries\isotope\_posts\pages\2011-01-01-5.html" />
+    <Content Include="Content\HTML.com\assets\libraries\isotope\_posts\pages\2011-01-01-6.html" />
+    <Content Include="Content\HTML.com\assets\libraries\isotope\_posts\tests\2010-01-01-index.html" />
+    <Content Include="Content\HTML.com\assets\libraries\isotope\_posts\tests\2011-03-27-destroy.html" />
+    <Content Include="Content\HTML.com\assets\libraries\isotope\_posts\tests\2011-03-27-flash.html" />
+    <Content Include="Content\HTML.com\assets\libraries\isotope\_posts\tests\2011-03-27-no-items.html" />
+    <Content Include="Content\HTML.com\assets\libraries\isotope\_posts\tests\2011-04-26-item-position-data.html" />
+    <Content Include="Content\HTML.com\assets\libraries\isotope\_posts\tests\2011-05-13-jquery-animation.html" />
+    <Content Include="Content\HTML.com\assets\libraries\isotope\_posts\tests\2011-05-24-elements-complete-test.html" />
+    <Content Include="Content\HTML.com\assets\libraries\isotope\_posts\tests\2011-05-31-tiny-text.html" />
+    <Content Include="Content\HTML.com\assets\libraries\isotope\_posts\tests\2011-08-19-right-to-left.html" />
+    <Content Include="Content\HTML.com\assets\libraries\isotope\_posts\tests\2011-08-23-unclickable-filtered.html" />
+    <Content Include="Content\HTML.com\assets\libraries\isotope\_posts\tests\2011-10-19-callbacks.html" />
+    <Content Include="Content\HTML.com\assets\libraries\isotope\_posts\tests\2012-02-07-onlayout.html" />
+    <Content Include="Content\HTML.com\assets\libraries\isotope\_posts\tests\2012-08-11-combo-sort-history.html" />
+    <Content Include="Content\HTML.com\assets\libraries\jquery-bxslider\images\bx_loader.gif" />
+    <Content Include="Content\HTML.com\assets\libraries\jquery-bxslider\images\controls.png" />
+    <Content Include="Content\HTML.com\assets\libraries\jquery-bxslider\jquery.bxslider.css" />
+    <Content Include="Content\HTML.com\assets\libraries\jquery-bxslider\jquery.bxslider.js" />
+    <Content Include="Content\HTML.com\assets\libraries\jquery-bxslider\jquery.bxslider.min.js" />
+    <Content Include="Content\HTML.com\assets\libraries\jquery-bxslider\plugins\jquery.easing.1.3.js" />
+    <Content Include="Content\HTML.com\assets\libraries\jquery-bxslider\plugins\jquery.fitvids.js" />
+    <Content Include="Content\HTML.com\building.html" />
+    <Content Include="Content\HTML.com\change-password.html" />
+    <Content Include="Content\HTML.com\child.html" />
+    <Content Include="Content\HTML.com\corn.html" />
+    <Content Include="Content\HTML.com\dress.html" />
+    <Content Include="Content\HTML.com\driedfruits.html" />
+    <Content Include="Content\HTML.com\eggs.html" />
+    <Content Include="Content\HTML.com\equipment.html" />
+    <Content Include="Content\HTML.com\estate.html" />
+    <Content Include="Content\HTML.com\flour.html" />
+    <Content Include="Content\HTML.com\food — копия.html" />
+    <Content Include="Content\HTML.com\food.html" />
+    <Content Include="Content\HTML.com\fruits.html" />
+    <Content Include="Content\HTML.com\games.html" />
+    <Content Include="Content\HTML.com\index.html" />
+    <Content Include="Content\HTML.com\indexru.html" />
+    <Content Include="Content\HTML.com\kitchenappliances.html" />
+    <Content Include="Content\HTML.com\login.html" />
+    <Content Include="Content\HTML.com\loginru.html" />
+    <Content Include="Content\HTML.com\man.html" />
+    <Content Include="Content\HTML.com\meat.html" />
+    <Content Include="Content\HTML.com\milk.html" />
+    <Content Include="Content\HTML.com\my-properties.html" />
+    <Content Include="Content\HTML.com\notebook.html" />
+    <Content Include="Content\HTML.com\other.html" />
+    <Content Include="Content\HTML.com\phone.html" />
+    <Content Include="Content\HTML.com\photo.html" />
+    <Content Include="Content\HTML.com\premium.html" />
+    <Content Include="Content\HTML.com\pricing.html" />
+    <Content Include="Content\HTML.com\property-detail.html" />
+    <Content Include="Content\HTML.com\property-detailavto.html" />
+    <Content Include="Content\HTML.com\property-detailnedvijimost.html" />
+    <Content Include="Content\HTML.com\register.html" />
+    <Content Include="Content\HTML.com\renew-password.html" />
+    <Content Include="Content\HTML.com\serach.html" />
+    <Content Include="Content\HTML.com\service.html" />
+    <Content Include="Content\HTML.com\texno.html" />
+    <Content Include="Content\HTML.com\tv.html" />
+    <Content Include="Content\HTML.com\vegetableoil.html" />
+    <Content Include="Content\HTML.com\vegetables.html" />
+    <Content Include="Content\HTML.com\woman.html" />
+    <Content Include="favicon.ico" />
+    <Content Include="fonts\glyphicons-halflings-regular.svg" />
+    <Content Include="Global.asax" />
+    <Content Include="Content\Site.css" />
+    <Content Include="Models\Model.Context.tt">
+      <Generator>TextTemplatingFileGenerator</Generator>
+      <DependentUpon>Model.edmx</DependentUpon>
+      <LastGenOutput>Model.Context.cs</LastGenOutput>
+    </Content>
+    <Content Include="Models\Model.tt">
+      <Generator>TextTemplatingFileGenerator</Generator>
+      <DependentUpon>Model.edmx</DependentUpon>
+      <LastGenOutput>Model.cs</LastGenOutput>
+    </Content>
+    <Content Include="Scripts\bootstrap.js" />
+    <Content Include="Scripts\bootstrap.min.js" />
+    <Content Include="Content\HTML.com\assets\config.rb" />
+    <Content Include="Content\HTML.com\assets\libraries\bootstrap-sass\bootstrap-sass.gemspec" />
+    <Content Include="Content\HTML.com\assets\libraries\bootstrap-sass\bower.json" />
+    <Content Include="Content\HTML.com\assets\libraries\bootstrap-sass\CHANGELOG.md" />
+    <Content Include="Content\HTML.com\assets\libraries\bootstrap-sass\composer.json" />
+    <Content Include="Content\HTML.com\assets\libraries\bootstrap-sass\CONTRIBUTING.md" />
+    <Content Include="Content\HTML.com\assets\libraries\bootstrap-sass\Gemfile" />
+    <Content Include="Content\HTML.com\assets\libraries\bootstrap-sass\lib\bootstrap-sass.rb" />
+    <Content Include="Content\HTML.com\assets\libraries\bootstrap-sass\lib\bootstrap-sass\engine.rb" />
+    <Content Include="Content\HTML.com\assets\libraries\bootstrap-sass\lib\bootstrap-sass\sass_functions.rb" />
+    <Content Include="Content\HTML.com\assets\libraries\bootstrap-sass\lib\bootstrap-sass\version.rb" />
+    <Content Include="Content\HTML.com\assets\libraries\bootstrap-sass\LICENSE" />
+    <Content Include="Content\HTML.com\assets\libraries\bootstrap-sass\Rakefile" />
+    <Content Include="Content\HTML.com\assets\libraries\bootstrap-sass\README.md" />
+    <Content Include="Content\HTML.com\assets\libraries\bootstrap-sass\tasks\converter.rb" />
+    <Content Include="Content\HTML.com\assets\libraries\bootstrap-sass\tasks\converter\char_string_scanner.rb" />
+    <Content Include="Content\HTML.com\assets\libraries\bootstrap-sass\tasks\converter\fonts_conversion.rb" />
+    <Content Include="Content\HTML.com\assets\libraries\bootstrap-sass\tasks\converter\js_conversion.rb" />
+    <Content Include="Content\HTML.com\assets\libraries\bootstrap-sass\tasks\converter\less_conversion.rb" />
+    <Content Include="Content\HTML.com\assets\libraries\bootstrap-sass\tasks\converter\logger.rb" />
+    <Content Include="Content\HTML.com\assets\libraries\bootstrap-sass\tasks\converter\network.rb" />
+    <Content Include="Content\HTML.com\assets\libraries\bootstrap-sass\templates\project\manifest.rb" />
+    <Content Include="Content\HTML.com\assets\libraries\bootstrap-sass\templates\project\styles.scss" />
+    <Content Include="Content\HTML.com\assets\libraries\bootstrap-sass\templates\project\_variables.scss.erb" />
+    <Content Include="Content\HTML.com\assets\libraries\bootstrap-sass\test\compass_test.rb" />
+    <Content Include="Content\HTML.com\assets\libraries\bootstrap-sass\test\compilation_test.rb" />
+    <Content Include="Content\HTML.com\assets\libraries\bootstrap-sass\test\dummy\app\assets\images\.keep" />
+    <Content Include="Content\HTML.com\assets\libraries\bootstrap-sass\test\dummy\app\assets\stylesheets\application.css.sass" />
+    <Content Include="Content\HTML.com\assets\libraries\bootstrap-sass\test\dummy\app\controllers\application_controller.rb" />
+    <Content Include="Content\HTML.com\assets\libraries\bootstrap-sass\test\dummy\app\controllers\pages_controller.rb" />
+    <Content Include="Content\HTML.com\assets\libraries\bootstrap-sass\test\dummy\app\helpers\application_helper.rb" />
+    <Content Include="Content\HTML.com\assets\libraries\bootstrap-sass\test\dummy\app\views\layouts\application.html.erb" />
+    <Content Include="Content\HTML.com\assets\libraries\bootstrap-sass\test\dummy\app\views\pages\root.html.slim" />
+    <Content Include="Content\HTML.com\assets\libraries\bootstrap-sass\test\dummy\bin\bundle" />
+    <Content Include="Content\HTML.com\assets\libraries\bootstrap-sass\test\dummy\bin\rails" />
+    <Content Include="Content\HTML.com\assets\libraries\bootstrap-sass\test\dummy\bin\rake" />
+    <Content Include="Content\HTML.com\assets\libraries\bootstrap-sass\test\dummy\config.ru" />
+    <Content Include="Content\HTML.com\assets\libraries\bootstrap-sass\test\dummy\config\application.rb" />
+    <Content Include="Content\HTML.com\assets\libraries\bootstrap-sass\test\dummy\config\boot.rb" />
+    <Content Include="Content\HTML.com\assets\libraries\bootstrap-sass\test\dummy\config\environment.rb" />
+    <Content Include="Content\HTML.com\assets\libraries\bootstrap-sass\test\dummy\config\environments\development.rb" />
+    <Content Include="Content\HTML.com\assets\libraries\bootstrap-sass\test\dummy\config\environments\production.rb" />
+    <Content Include="Content\HTML.com\assets\libraries\bootstrap-sass\test\dummy\config\environments\test.rb" />
+    <Content Include="Content\HTML.com\assets\libraries\bootstrap-sass\test\dummy\config\initializers\backtrace_silencers.rb" />
+    <Content Include="Content\HTML.com\assets\libraries\bootstrap-sass\test\dummy\config\initializers\filter_parameter_logging.rb" />
+    <Content Include="Content\HTML.com\assets\libraries\bootstrap-sass\test\dummy\config\initializers\inflections.rb" />
+    <Content Include="Content\HTML.com\assets\libraries\bootstrap-sass\test\dummy\config\initializers\mime_types.rb" />
+    <Content Include="Content\HTML.com\assets\libraries\bootstrap-sass\test\dummy\config\initializers\secret_token.rb" />
+    <Content Include="Content\HTML.com\assets\libraries\bootstrap-sass\test\dummy\config\initializers\session_store.rb" />
+    <Content Include="Content\HTML.com\assets\libraries\bootstrap-sass\test\dummy\config\initializers\wrap_parameters.rb" />
+    <Content Include="Content\HTML.com\assets\libraries\bootstrap-sass\test\dummy\config\locales\en.yml" />
+    <Content Include="Content\HTML.com\assets\libraries\bootstrap-sass\test\dummy\config\locales\es.yml" />
+    <Content Include="Content\HTML.com\assets\libraries\bootstrap-sass\test\dummy\config\routes.rb" />
+    <Content Include="Content\HTML.com\assets\libraries\bootstrap-sass\test\dummy\db\test.sqlite3" />
+    <Content Include="Content\HTML.com\assets\libraries\bootstrap-sass\test\dummy\lib\assets\.keep" />
+    <Content Include="Content\HTML.com\assets\libraries\bootstrap-sass\test\dummy\log\.keep" />
+    <Content Include="Content\HTML.com\assets\libraries\bootstrap-sass\test\dummy\log\development.log" />
+    <Content Include="Content\HTML.com\assets\libraries\bootstrap-sass\test\dummy\Rakefile" />
+    <Content Include="Content\HTML.com\assets\libraries\bootstrap-sass\test\dummy\README.rdoc" />
+    <Content Include="Content\HTML.com\assets\libraries\bootstrap-sass\test\dummy_sass_only\compile.rb" />
+    <Content Include="Content\HTML.com\assets\libraries\bootstrap-sass\test\dummy_sass_only\Gemfile" />
+    <Content Include="Content\HTML.com\assets\libraries\bootstrap-sass\test\dummy_sass_only\import_all.sass" />
+    <Content Include="Content\HTML.com\assets\libraries\bootstrap-sass\test\gemfiles\sass_3_2.gemfile" />
+    <Content Include="Content\HTML.com\assets\libraries\bootstrap-sass\test\gemfiles\sass_head.gemfile" />
+    <Content Include="Content\HTML.com\assets\libraries\bootstrap-sass\test\pages_test.rb" />
+    <Content Include="Content\HTML.com\assets\libraries\bootstrap-sass\test\sass_test.rb" />
+    <Content Include="Content\HTML.com\assets\libraries\bootstrap-sass\test\sprockets_rails_test.rb" />
+    <Content Include="Content\HTML.com\assets\libraries\bootstrap-sass\test\support\integration_test.rb" />
+    <Content Include="Content\HTML.com\assets\libraries\bootstrap-sass\test\test_helper.rb" />
+    <Content Include="Content\HTML.com\assets\libraries\bootstrap-sass\vendor\assets\fonts\bootstrap\glyphicons-halflings-regular.eot" />
+    <Content Include="Content\HTML.com\assets\libraries\bootstrap-sass\vendor\assets\fonts\bootstrap\glyphicons-halflings-regular.ttf" />
+    <Content Include="Content\HTML.com\assets\libraries\bootstrap-sass\vendor\assets\fonts\bootstrap\glyphicons-halflings-regular.woff" />
+    <Content Include="Content\HTML.com\assets\libraries\bootstrap-sass\vendor\assets\stylesheets\bootstrap.scss" />
+    <Content Include="Content\HTML.com\assets\libraries\bootstrap-sass\vendor\assets\stylesheets\bootstrap\bootstrap.scss" />
+    <Content Include="Content\HTML.com\assets\libraries\bootstrap-sass\vendor\assets\stylesheets\bootstrap\_alerts.scss" />
+    <Content Include="Content\HTML.com\assets\libraries\bootstrap-sass\vendor\assets\stylesheets\bootstrap\_badges.scss" />
+    <Content Include="Content\HTML.com\assets\libraries\bootstrap-sass\vendor\assets\stylesheets\bootstrap\_breadcrumbs.scss" />
+    <Content Include="Content\HTML.com\assets\libraries\bootstrap-sass\vendor\assets\stylesheets\bootstrap\_button-groups.scss" />
+    <Content Include="Content\HTML.com\assets\libraries\bootstrap-sass\vendor\assets\stylesheets\bootstrap\_buttons.scss" />
+    <Content Include="Content\HTML.com\assets\libraries\bootstrap-sass\vendor\assets\stylesheets\bootstrap\_carousel.scss" />
+    <Content Include="Content\HTML.com\assets\libraries\bootstrap-sass\vendor\assets\stylesheets\bootstrap\_close.scss" />
+    <Content Include="Content\HTML.com\assets\libraries\bootstrap-sass\vendor\assets\stylesheets\bootstrap\_code.scss" />
+    <Content Include="Content\HTML.com\assets\libraries\bootstrap-sass\vendor\assets\stylesheets\bootstrap\_component-animations.scss" />
+    <Content Include="Content\HTML.com\assets\libraries\bootstrap-sass\vendor\assets\stylesheets\bootstrap\_dropdowns.scss" />
+    <Content Include="Content\HTML.com\assets\libraries\bootstrap-sass\vendor\assets\stylesheets\bootstrap\_forms.scss" />
+    <Content Include="Content\HTML.com\assets\libraries\bootstrap-sass\vendor\assets\stylesheets\bootstrap\_glyphicons.scss" />
+    <Content Include="Content\HTML.com\assets\libraries\bootstrap-sass\vendor\assets\stylesheets\bootstrap\_grid.scss" />
+    <Content Include="Content\HTML.com\assets\libraries\bootstrap-sass\vendor\assets\stylesheets\bootstrap\_input-groups.scss" />
+    <Content Include="Content\HTML.com\assets\libraries\bootstrap-sass\vendor\assets\stylesheets\bootstrap\_jumbotron.scss" />
+    <Content Include="Content\HTML.com\assets\libraries\bootstrap-sass\vendor\assets\stylesheets\bootstrap\_labels.scss" />
+    <Content Include="Content\HTML.com\assets\libraries\bootstrap-sass\vendor\assets\stylesheets\bootstrap\_list-group.scss" />
+    <Content Include="Content\HTML.com\assets\libraries\bootstrap-sass\vendor\assets\stylesheets\bootstrap\_media.scss" />
+    <Content Include="Content\HTML.com\assets\libraries\bootstrap-sass\vendor\assets\stylesheets\bootstrap\_mixins.scss" />
+    <Content Include="Content\HTML.com\assets\libraries\bootstrap-sass\vendor\assets\stylesheets\bootstrap\_modals.scss" />
+    <Content Include="Content\HTML.com\assets\libraries\bootstrap-sass\vendor\assets\stylesheets\bootstrap\_navbar.scss" />
+    <Content Include="Content\HTML.com\assets\libraries\bootstrap-sass\vendor\assets\stylesheets\bootstrap\_navs.scss" />
+    <Content Include="Content\HTML.com\assets\libraries\bootstrap-sass\vendor\assets\stylesheets\bootstrap\_normalize.scss" />
+    <Content Include="Content\HTML.com\assets\libraries\bootstrap-sass\vendor\assets\stylesheets\bootstrap\_pager.scss" />
+    <Content Include="Content\HTML.com\assets\libraries\bootstrap-sass\vendor\assets\stylesheets\bootstrap\_pagination.scss" />
+    <Content Include="Content\HTML.com\assets\libraries\bootstrap-sass\vendor\assets\stylesheets\bootstrap\_panels.scss" />
+    <Content Include="Content\HTML.com\assets\libraries\bootstrap-sass\vendor\assets\stylesheets\bootstrap\_popovers.scss" />
+    <Content Include="Content\HTML.com\assets\libraries\bootstrap-sass\vendor\assets\stylesheets\bootstrap\_print.scss" />
+    <Content Include="Content\HTML.com\assets\libraries\bootstrap-sass\vendor\assets\stylesheets\bootstrap\_progress-bars.scss" />
+    <Content Include="Content\HTML.com\assets\libraries\bootstrap-sass\vendor\assets\stylesheets\bootstrap\_responsive-utilities.scss" />
+    <Content Include="Content\HTML.com\assets\libraries\bootstrap-sass\vendor\assets\stylesheets\bootstrap\_scaffolding.scss" />
+    <Content Include="Content\HTML.com\assets\libraries\bootstrap-sass\vendor\assets\stylesheets\bootstrap\_tables.scss" />
+    <Content Include="Content\HTML.com\assets\libraries\bootstrap-sass\vendor\assets\stylesheets\bootstrap\_theme.scss" />
+    <Content Include="Content\HTML.com\assets\libraries\bootstrap-sass\vendor\assets\stylesheets\bootstrap\_thumbnails.scss" />
+    <Content Include="Content\HTML.com\assets\libraries\bootstrap-sass\vendor\assets\stylesheets\bootstrap\_tooltip.scss" />
+    <Content Include="Content\HTML.com\assets\libraries\bootstrap-sass\vendor\assets\stylesheets\bootstrap\_type.scss" />
+    <Content Include="Content\HTML.com\assets\libraries\bootstrap-sass\vendor\assets\stylesheets\bootstrap\_utilities.scss" />
+    <Content Include="Content\HTML.com\assets\libraries\bootstrap-sass\vendor\assets\stylesheets\bootstrap\_variables.scss" />
+    <Content Include="Content\HTML.com\assets\libraries\bootstrap-sass\vendor\assets\stylesheets\bootstrap\_wells.scss" />
+    <Content Include="Content\HTML.com\assets\libraries\flexslider\demo\fonts\webfonts\geo-medium\eot\1110FC_0.eot" />
+    <Content Include="Content\HTML.com\assets\libraries\flexslider\demo\fonts\webfonts\geo-medium\ttf\1110FC_0.ttf" />
+    <Content Include="Content\HTML.com\assets\libraries\flexslider\demo\fonts\webfonts\geo-medium\woff\1110FC_0.woff" />
+    <Content Include="Content\HTML.com\assets\libraries\flexslider\demo\fonts\webfonts\geo-regular\eot\11014B_0.eot" />
+    <Content Include="Content\HTML.com\assets\libraries\flexslider\demo\fonts\webfonts\geo-regular\ttf\11014B_0.ttf" />
+    <Content Include="Content\HTML.com\assets\libraries\flexslider\demo\fonts\webfonts\geo-regular\woff\11014B_0.woff" />
+    <Content Include="Content\HTML.com\assets\libraries\flexslider\demo\fonts\webfonts\geo-semibold\eot\style_169898.eot" />
+    <Content Include="Content\HTML.com\assets\libraries\flexslider\demo\fonts\webfonts\geo-semibold\ttf\style_169898.ttf" />
+    <Content Include="Content\HTML.com\assets\libraries\flexslider\demo\fonts\webfonts\geo-semibold\woff\style_169898.woff" />
+    <Content Include="Content\HTML.com\assets\libraries\flexslider\fonts\flexslider-icon.eot" />
+    <Content Include="Content\HTML.com\assets\libraries\flexslider\fonts\flexslider-icon.ttf" />
+    <Content Include="Content\HTML.com\assets\libraries\flexslider\fonts\flexslider-icon.woff" />
+    <Content Include="Content\HTML.com\assets\libraries\flexslider\README.mdown" />
+    <Content Include="Content\HTML.com\assets\libraries\font-awesome\fonts\fontawesome-webfont.eot" />
+    <Content Include="Content\HTML.com\assets\libraries\font-awesome\fonts\fontawesome-webfont.ttf" />
+    <Content Include="Content\HTML.com\assets\libraries\font-awesome\fonts\fontawesome-webfont.woff" />
+    <Content Include="Content\HTML.com\assets\libraries\font-awesome\fonts\FontAwesome.otf" />
+    <Content Include="Content\HTML.com\assets\libraries\font-awesome\less\bordered-pulled.less" />
+    <Content Include="Content\HTML.com\assets\libraries\font-awesome\less\core.less" />
+    <Content Include="Content\HTML.com\assets\libraries\font-awesome\less\fixed-width.less" />
+    <Content Include="Content\HTML.com\assets\libraries\font-awesome\less\font-awesome.less" />
+    <Content Include="Content\HTML.com\assets\libraries\font-awesome\less\icons.less" />
+    <Content Include="Content\HTML.com\assets\libraries\font-awesome\less\larger.less" />
+    <Content Include="Content\HTML.com\assets\libraries\font-awesome\less\list.less" />
+    <Content Include="Content\HTML.com\assets\libraries\font-awesome\less\mixins.less" />
+    <Content Include="Content\HTML.com\assets\libraries\font-awesome\less\path.less" />
+    <Content Include="Content\HTML.com\assets\libraries\font-awesome\less\rotated-flipped.less" />
+    <Content Include="Content\HTML.com\assets\libraries\font-awesome\less\spinning.less" />
+    <Content Include="Content\HTML.com\assets\libraries\font-awesome\less\stacked.less" />
+    <Content Include="Content\HTML.com\assets\libraries\font-awesome\less\variables.less" />
+    <Content Include="Content\HTML.com\assets\libraries\font-awesome\scss\font-awesome.scss" />
+    <Content Include="Content\HTML.com\assets\libraries\font-awesome\scss\_bordered-pulled.scss" />
+    <Content Include="Content\HTML.com\assets\libraries\font-awesome\scss\_core.scss" />
+    <Content Include="Content\HTML.com\assets\libraries\font-awesome\scss\_fixed-width.scss" />
+    <Content Include="Content\HTML.com\assets\libraries\font-awesome\scss\_icons.scss" />
+    <Content Include="Content\HTML.com\assets\libraries\font-awesome\scss\_larger.scss" />
+    <Content Include="Content\HTML.com\assets\libraries\font-awesome\scss\_list.scss" />
+    <Content Include="Content\HTML.com\assets\libraries\font-awesome\scss\_mixins.scss" />
+    <Content Include="Content\HTML.com\assets\libraries\font-awesome\scss\_path.scss" />
+    <Content Include="Content\HTML.com\assets\libraries\font-awesome\scss\_rotated-flipped.scss" />
+    <Content Include="Content\HTML.com\assets\libraries\font-awesome\scss\_spinning.scss" />
+    <Content Include="Content\HTML.com\assets\libraries\font-awesome\scss\_stacked.scss" />
+    <Content Include="Content\HTML.com\assets\libraries\font-awesome\scss\_variables.scss" />
+    <Content Include="Content\HTML.com\assets\libraries\isotope\.tm_properties" />
+    <Content Include="Content\HTML.com\assets\libraries\isotope\CONTRIBUTING.mdown" />
+    <Content Include="Content\HTML.com\assets\libraries\isotope\minify.sh" />
+    <Content Include="Content\HTML.com\assets\libraries\isotope\README.mdown" />
+    <Content Include="Content\HTML.com\assets\libraries\isotope\_config.yml" />
+    <Content Include="Content\HTML.com\assets\libraries\isotope\_posts\docs\2010-12-01-introduction.md" />
+    <Content Include="Content\HTML.com\assets\libraries\isotope\_posts\docs\2010-12-03-options.md" />
+    <Content Include="Content\HTML.com\assets\libraries\isotope\_posts\docs\2010-12-04-methods.md" />
+    <Content Include="Content\HTML.com\assets\libraries\isotope\_posts\docs\2010-12-05-layout-modes.md" />
+    <Content Include="Content\HTML.com\assets\libraries\isotope\_posts\docs\2010-12-06-filtering.md" />
+    <Content Include="Content\HTML.com\assets\libraries\isotope\_posts\docs\2010-12-07-sorting.md" />
+    <Content Include="Content\HTML.com\assets\libraries\isotope\_posts\docs\2010-12-09-animating.md" />
+    <Content Include="Content\HTML.com\assets\libraries\isotope\_posts\docs\2010-12-10-adding-items.md" />
+    <Content Include="Content\HTML.com\assets\libraries\isotope\_posts\docs\2011-05-25-extending-isotope.md" />
+    <Content Include="Content\HTML.com\assets\libraries\isotope\_posts\docs\2011-06-16-hash-history-jquery-bbq.md" />
+    <Content Include="Content\HTML.com\assets\libraries\isotope\_posts\docs\2011-12-11-help.md" />
+    <Content Include="Content\HTML.com\assets\libraries\isotope\_posts\docs\2011-12-20-license.md" />
+    <Content Include="Content\HTML.com\assets\libraries\jquery-bxslider\readme.md" />
+    <Content Include="Content\HTML.com\assets\scss\helpers\_buttons.scss" />
+    <Content Include="Content\HTML.com\assets\scss\helpers\_colors.scss" />
+    <Content Include="Content\HTML.com\assets\scss\helpers\_commons.scss" />
+    <Content Include="Content\HTML.com\assets\scss\helpers\_elements.scss" />
+    <Content Include="Content\HTML.com\assets\scss\helpers\_footer.scss" />
+    <Content Include="Content\HTML.com\assets\scss\helpers\_forms.scss" />
+    <Content Include="Content\HTML.com\assets\scss\helpers\_header.scss" />
+    <Content Include="Content\HTML.com\assets\scss\helpers\_pagination.scss" />
+    <Content Include="Content\HTML.com\assets\scss\helpers\_panels.scss" />
+    <Content Include="Content\HTML.com\assets\scss\helpers\_patterns.scss" />
+    <Content Include="Content\HTML.com\assets\scss\helpers\_responsive.scss" />
+    <Content Include="Content\HTML.com\assets\scss\helpers\_structure.scss" />
+    <Content Include="Content\HTML.com\assets\scss\helpers\_tables.scss" />
+    <Content Include="Content\HTML.com\assets\scss\helpers\_widgets.scss" />
+    <Content Include="Content\HTML.com\assets\scss\modules\_agency_detail.scss" />
+    <Content Include="Content\HTML.com\assets\scss\modules\_agency_row.scss" />
+    <Content Include="Content\HTML.com\assets\scss\modules\_agent_box.scss" />
+    <Content Include="Content\HTML.com\assets\scss\modules\_agent_detail.scss" />
+    <Content Include="Content\HTML.com\assets\scss\modules\_agent_row.scss" />
+    <Content Include="Content\HTML.com\assets\scss\modules\_agent_small.scss" />
+    <Content Include="Content\HTML.com\assets\scss\modules\_features.scss" />
+    <Content Include="Content\HTML.com\assets\scss\modules\_invoice.scss" />
+    <Content Include="Content\HTML.com\assets\scss\modules\_map.scss" />
+    <Content Include="Content\HTML.com\assets\scss\modules\_marker.scss" />
+    <Content Include="Content\HTML.com\assets\scss\modules\_palette.scss" />
+    <Content Include="Content\HTML.com\assets\scss\modules\_post.scss" />
+    <Content Include="Content\HTML.com\assets\scss\modules\_pricing.scss" />
+    <Content Include="Content\HTML.com\assets\scss\modules\_property_box.scss" />
+    <Content Include="Content\HTML.com\assets\scss\modules\_property_detail.scss" />
+    <Content Include="Content\HTML.com\assets\scss\modules\_property_row.scss" />
+    <Content Include="Content\HTML.com\assets\scss\modules\_property_small.scss" />
+    <Content Include="Content\HTML.com\assets\scss\modules\_property_submit.scss" />
+    <Content Include="Content\HTML.com\assets\scss\modules\_social.scss" />
+    <Content Include="Content\HTML.com\assets\scss\modules\_static_image.scss" />
+    <Content Include="Content\HTML.com\assets\scss\realocation.scss" />
+    <Content Include="Content\HTML.com\assets\scss\variants\blue.scss" />
+    <Content Include="Content\HTML.com\assets\scss\variants\brown.scss" />
+    <Content Include="Content\HTML.com\assets\scss\variants\cyan.scss" />
+    <Content Include="Content\HTML.com\assets\scss\variants\green.scss" />
+    <Content Include="Content\HTML.com\assets\scss\variants\orange.scss" />
+    <Content Include="Content\HTML.com\assets\scss\variants\pink.scss" />
+    <Content Include="Content\HTML.com\assets\scss\variants\purple.scss" />
+    <Content Include="Content\HTML.com\assets\scss\variants\red.scss" />
+    <Content Include="Content\HTML.com\assets\scss\vendors\_bxslider.scss" />
+    <Content Include="Content\HTML.com\assets\scss\vendors\_flexslider.scss" />
+    <Content Include="Content\HTML.com\assets\scss\vendors\_isotope.scss" />
+    <Content Include="Content\HTML.com\assets\scss\_bootstrap.scss" />
+    <Content Include="Content\HTML.com\assets\scss\_init.scss" />
+    <EntityDeploy Include="Models\Model.edmx">
+      <Generator>EntityModelCodeGenerator</Generator>
+      <LastGenOutput>Model.Designer.cs</LastGenOutput>
+    </EntityDeploy>
+    <Content Include="Models\Model.edmx.diagram">
+      <DependentUpon>Model.edmx</DependentUpon>
+    </Content>
+    <Content Include="Content\ElaAdmin-master\ElaAdmin-master\css\less\advance-widget.less" />
+    <Content Include="Content\ElaAdmin-master\ElaAdmin-master\css\less\amchart.less" />
+    <Content Include="Content\ElaAdmin-master\ElaAdmin-master\css\less\badge.less" />
+    <Content Include="Content\ElaAdmin-master\ElaAdmin-master\css\less\booking-system.less" />
+    <Content Include="Content\ElaAdmin-master\ElaAdmin-master\css\less\breadcrumb.less" />
+    <Content Include="Content\ElaAdmin-master\ElaAdmin-master\css\less\button.less" />
+    <Content Include="Content\ElaAdmin-master\ElaAdmin-master\css\less\calendar.less" />
+    <Content Include="Content\ElaAdmin-master\ElaAdmin-master\css\less\card.less" />
+    <Content Include="Content\ElaAdmin-master\ElaAdmin-master\css\less\carousel.less" />
+    <Content Include="Content\ElaAdmin-master\ElaAdmin-master\css\less\chart.less" />
+    <Content Include="Content\ElaAdmin-master\ElaAdmin-master\css\less\chartist.less" />
+    <Content Include="Content\ElaAdmin-master\ElaAdmin-master\css\less\chat.less" />
+    <Content Include="Content\ElaAdmin-master\ElaAdmin-master\css\less\compose-email.less" />
+    <Content Include="Content\ElaAdmin-master\ElaAdmin-master\css\less\data-table.less" />
+    <Content Include="Content\ElaAdmin-master\ElaAdmin-master\css\less\datamap.less" />
+    <Content Include="Content\ElaAdmin-master\ElaAdmin-master\css\less\error.less" />
+    <Content Include="Content\ElaAdmin-master\ElaAdmin-master\css\less\favourite_menu.less" />
+    <Content Include="Content\ElaAdmin-master\ElaAdmin-master\css\less\flot-chart.less" />
+    <Content Include="Content\ElaAdmin-master\ElaAdmin-master\css\less\font.less" />
+    <Content Include="Content\ElaAdmin-master\ElaAdmin-master\css\less\fonts.less" />
+    <Content Include="Content\ElaAdmin-master\ElaAdmin-master\css\less\footer.less" />
+    <Content Include="Content\ElaAdmin-master\ElaAdmin-master\css\less\form-validation.less" />
+    <Content Include="Content\ElaAdmin-master\ElaAdmin-master\css\less\forms.less" />
+    <Content Include="Content\ElaAdmin-master\ElaAdmin-master\css\less\global.less" />
+    <Content Include="Content\ElaAdmin-master\ElaAdmin-master\css\less\gmap.less" />
+    <Content Include="Content\ElaAdmin-master\ElaAdmin-master\css\less\header.less" />
+    <Content Include="Content\ElaAdmin-master\ElaAdmin-master\css\less\invoice-edit.less" />
+    <Content Include="Content\ElaAdmin-master\ElaAdmin-master\css\less\invoice.less" />
+    <Content Include="Content\ElaAdmin-master\ElaAdmin-master\css\less\knob.less" />
+    <Content Include="Content\ElaAdmin-master\ElaAdmin-master\css\less\login.less" />
+    <Content Include="Content\ElaAdmin-master\ElaAdmin-master\css\less\menu-upload.less" />
+    <Content Include="Content\ElaAdmin-master\ElaAdmin-master\css\less\mixins.less" />
+    <Content Include="Content\ElaAdmin-master\ElaAdmin-master\css\less\modal.less" />
+    <Content Include="Content\ElaAdmin-master\ElaAdmin-master\css\less\morris-chart.less" />
+    <Content Include="Content\ElaAdmin-master\ElaAdmin-master\css\less\nestable.less" />
+    <Content Include="Content\ElaAdmin-master\ElaAdmin-master\css\less\order-list.less" />
+    <Content Include="Content\ElaAdmin-master\ElaAdmin-master\css\less\order-progress.less" />
+    <Content Include="Content\ElaAdmin-master\ElaAdmin-master\css\less\pagination.less" />
+    <Content Include="Content\ElaAdmin-master\ElaAdmin-master\css\less\panel.less" />
+    <Content Include="Content\ElaAdmin-master\ElaAdmin-master\css\less\preloader.less" />
+    <Content Include="Content\ElaAdmin-master\ElaAdmin-master\css\less\products_1.less" />
+    <Content Include="Content\ElaAdmin-master\ElaAdmin-master\css\less\products_2.less" />
+    <Content Include="Content\ElaAdmin-master\ElaAdmin-master\css\less\products_3.less" />
+    <Content Include="Content\ElaAdmin-master\ElaAdmin-master\css\less\profile-widget.less" />
+    <Content Include="Content\ElaAdmin-master\ElaAdmin-master\css\less\profile.less" />
+    <Content Include="Content\ElaAdmin-master\ElaAdmin-master\css\less\progress-bar.less" />
+    <Content Include="Content\ElaAdmin-master\ElaAdmin-master\css\less\recent-comments.less" />
+    <Content Include="Content\ElaAdmin-master\ElaAdmin-master\css\less\recent-message.less" />
+    <Content Include="Content\ElaAdmin-master\ElaAdmin-master\css\less\responsive.less" />
+    <Content Include="Content\ElaAdmin-master\ElaAdmin-master\css\less\scrollable.less" />
+    <Content Include="Content\ElaAdmin-master\ElaAdmin-master\css\less\search.less" />
+    <Content Include="Content\ElaAdmin-master\ElaAdmin-master\css\less\sidebar.less" />
+    <Content Include="Content\ElaAdmin-master\ElaAdmin-master\css\less\social-media-stats.less" />
+    <Content Include="Content\ElaAdmin-master\ElaAdmin-master\css\less\style.less" />
+    <Content Include="Content\ElaAdmin-master\ElaAdmin-master\css\less\tab.less" />
+    <Content Include="Content\ElaAdmin-master\ElaAdmin-master\css\less\table-export.less" />
+    <Content Include="Content\ElaAdmin-master\ElaAdmin-master\css\less\table.less" />
+    <Content Include="Content\ElaAdmin-master\ElaAdmin-master\css\less\timeline.less" />
+    <Content Include="Content\ElaAdmin-master\ElaAdmin-master\css\less\todo-list.less" />
+    <Content Include="Content\ElaAdmin-master\ElaAdmin-master\css\less\ui-block-quote.less" />
+    <Content Include="Content\ElaAdmin-master\ElaAdmin-master\css\less\ui-element-basic.less" />
+    <Content Include="Content\ElaAdmin-master\ElaAdmin-master\css\less\ui-user-card.less" />
+    <Content Include="Content\ElaAdmin-master\ElaAdmin-master\css\less\variable.less" />
+    <Content Include="Content\ElaAdmin-master\ElaAdmin-master\css\less\vector-map.less" />
+    <Content Include="Content\ElaAdmin-master\ElaAdmin-master\css\less\vertical-carousel.less" />
+    <Content Include="Content\ElaAdmin-master\ElaAdmin-master\css\less\weather.less" />
+    <Content Include="Content\ElaAdmin-master\ElaAdmin-master\css\less\widget-stat.less" />
+    <Content Include="Content\ElaAdmin-master\ElaAdmin-master\icons\font-awesome\fonts\fontawesome-webfont3e6e.eot" />
+    <Content Include="Content\ElaAdmin-master\ElaAdmin-master\icons\font-awesome\fonts\fontawesome-webfont3e6e.ttf" />
+    <Content Include="Content\ElaAdmin-master\ElaAdmin-master\icons\font-awesome\fonts\fontawesome-webfont3e6e.woff" />
+    <Content Include="Content\ElaAdmin-master\ElaAdmin-master\icons\font-awesome\fonts\fontawesome-webfont3e6e.woff2" />
+    <Content Include="Content\ElaAdmin-master\ElaAdmin-master\icons\font-awesome\fonts\fontawesome-webfontd41d.eot" />
+    <Content Include="Content\ElaAdmin-master\ElaAdmin-master\icons\linea-icons\fonts\linea-arrows-10.eot" />
+    <Content Include="Content\ElaAdmin-master\ElaAdmin-master\icons\linea-icons\fonts\linea-arrows-10.ttf" />
+    <Content Include="Content\ElaAdmin-master\ElaAdmin-master\icons\linea-icons\fonts\linea-arrows-10.woff" />
+    <Content Include="Content\ElaAdmin-master\ElaAdmin-master\icons\linea-icons\fonts\linea-arrows-10d41d.eot" />
+    <Content Include="Content\ElaAdmin-master\ElaAdmin-master\icons\linea-icons\fonts\linea-basic-10.eot" />
+    <Content Include="Content\ElaAdmin-master\ElaAdmin-master\icons\linea-icons\fonts\linea-basic-10.ttf" />
+    <Content Include="Content\ElaAdmin-master\ElaAdmin-master\icons\linea-icons\fonts\linea-basic-10.woff" />
+    <Content Include="Content\ElaAdmin-master\ElaAdmin-master\icons\linea-icons\fonts\linea-basic-10d41d.eot" />
+    <Content Include="Content\ElaAdmin-master\ElaAdmin-master\icons\linea-icons\fonts\linea-basic-elaboration-10.eot" />
+    <Content Include="Content\ElaAdmin-master\ElaAdmin-master\icons\linea-icons\fonts\linea-basic-elaboration-10.ttf" />
+    <Content Include="Content\ElaAdmin-master\ElaAdmin-master\icons\linea-icons\fonts\linea-basic-elaboration-10.woff" />
+    <Content Include="Content\ElaAdmin-master\ElaAdmin-master\icons\linea-icons\fonts\linea-basic-elaboration-10d41d.eot" />
+    <Content Include="Content\ElaAdmin-master\ElaAdmin-master\icons\linea-icons\fonts\linea-ecommerce-10.eot" />
+    <Content Include="Content\ElaAdmin-master\ElaAdmin-master\icons\linea-icons\fonts\linea-ecommerce-10.ttf" />
+    <Content Include="Content\ElaAdmin-master\ElaAdmin-master\icons\linea-icons\fonts\linea-ecommerce-10.woff" />
+    <Content Include="Content\ElaAdmin-master\ElaAdmin-master\icons\linea-icons\fonts\linea-ecommerce-10d41d.eot" />
+    <Content Include="Content\ElaAdmin-master\ElaAdmin-master\icons\linea-icons\fonts\linea-music-10.eot" />
+    <Content Include="Content\ElaAdmin-master\ElaAdmin-master\icons\linea-icons\fonts\linea-music-10.ttf" />
+    <Content Include="Content\ElaAdmin-master\ElaAdmin-master\icons\linea-icons\fonts\linea-music-10.woff" />
+    <Content Include="Content\ElaAdmin-master\ElaAdmin-master\icons\linea-icons\fonts\linea-music-10d41d.eot" />
+    <Content Include="Content\ElaAdmin-master\ElaAdmin-master\icons\linea-icons\fonts\linea-software-10.eot" />
+    <Content Include="Content\ElaAdmin-master\ElaAdmin-master\icons\linea-icons\fonts\linea-software-10.ttf" />
+    <Content Include="Content\ElaAdmin-master\ElaAdmin-master\icons\linea-icons\fonts\linea-software-10.woff" />
+    <Content Include="Content\ElaAdmin-master\ElaAdmin-master\icons\linea-icons\fonts\linea-software-10d41d.eot" />
+    <Content Include="Content\ElaAdmin-master\ElaAdmin-master\icons\linea-icons\fonts\linea-weather-10.eot" />
+    <Content Include="Content\ElaAdmin-master\ElaAdmin-master\icons\linea-icons\fonts\linea-weather-10.ttf" />
+    <Content Include="Content\ElaAdmin-master\ElaAdmin-master\icons\linea-icons\fonts\linea-weather-10.woff" />
+    <Content Include="Content\ElaAdmin-master\ElaAdmin-master\icons\linea-icons\fonts\linea-weather-10d41d.eot" />
+    <Content Include="Content\ElaAdmin-master\ElaAdmin-master\icons\material-design-iconic-font\fonts\materialdesignicons-webfontd41d.eot" />
+    <Content Include="Content\ElaAdmin-master\ElaAdmin-master\icons\material-design-iconic-font\fonts\materialdesignicons-webfontdc99.eot" />
+    <Content Include="Content\ElaAdmin-master\ElaAdmin-master\icons\material-design-iconic-font\fonts\materialdesignicons-webfontdc99.ttf" />
+    <Content Include="Content\ElaAdmin-master\ElaAdmin-master\icons\material-design-iconic-font\fonts\materialdesignicons-webfontdc99.woff" />
+    <Content Include="Content\ElaAdmin-master\ElaAdmin-master\icons\material-design-iconic-font\fonts\materialdesignicons-webfontdc99.woff2" />
+    <Content Include="Content\ElaAdmin-master\ElaAdmin-master\icons\simple-line-icons\fonts\Simple-Line-Icons4c82.eot" />
+    <Content Include="Content\ElaAdmin-master\ElaAdmin-master\icons\simple-line-icons\fonts\Simple-Line-Icons4c82.ttf" />
+    <Content Include="Content\ElaAdmin-master\ElaAdmin-master\icons\simple-line-icons\fonts\Simple-Line-Icons4c82.woff" />
+    <Content Include="Content\ElaAdmin-master\ElaAdmin-master\icons\simple-line-icons\fonts\Simple-Line-Icons4c82.woff2" />
+    <Content Include="Content\ElaAdmin-master\ElaAdmin-master\icons\simple-line-icons\fonts\Simple-Line-Iconsd41d.eot" />
+    <Content Include="Content\ElaAdmin-master\ElaAdmin-master\icons\themify-icons\fonts\themify.ttf" />
+    <Content Include="Content\ElaAdmin-master\ElaAdmin-master\icons\themify-icons\fonts\themify.woff" />
+    <Content Include="Content\ElaAdmin-master\ElaAdmin-master\icons\themify-icons\fonts\themify9f24.eot" />
+    <Content Include="Content\ElaAdmin-master\ElaAdmin-master\icons\themify-icons\fonts\themifyd41d.eot" />
+    <Content Include="Content\ElaAdmin-master\ElaAdmin-master\icons\weather-icons\fonts\weathericons-regular-webfont.eot" />
+    <Content Include="Content\ElaAdmin-master\ElaAdmin-master\icons\weather-icons\fonts\weathericons-regular-webfont.ttf" />
+    <Content Include="Content\ElaAdmin-master\ElaAdmin-master\icons\weather-icons\fonts\weathericons-regular-webfont.woff" />
+    <Content Include="Content\ElaAdmin-master\ElaAdmin-master\icons\weather-icons\fonts\weathericons-regular-webfont.woff2" />
+    <None Include="Scripts\jquery-1.10.2.intellisense.js" />
+    <Content Include="Scripts\jquery-1.10.2.js" />
+    <Content Include="Scripts\jquery-1.10.2.min.js" />
+    <None Include="Scripts\jquery.validate-vsdoc.js" />
+    <Content Include="Scripts\jquery.validate.js" />
+    <Content Include="Scripts\jquery.validate.min.js" />
+    <Content Include="Scripts\jquery.validate.unobtrusive.js" />
+    <Content Include="Scripts\jquery.validate.unobtrusive.min.js" />
+    <Content Include="Scripts\modernizr-2.6.2.js" />
+    <Content Include="Scripts\respond.js" />
+    <Content Include="Scripts\respond.min.js" />
+    <Content Include="Scripts\_references.js" />
+    <Content Include="Web.config" />
+    <Content Include="Web.Debug.config">
+      <DependentUpon>Web.config</DependentUpon>
+    </Content>
+    <Content Include="Web.Release.config">
+      <DependentUpon>Web.config</DependentUpon>
+    </Content>
+    <Content Include="Views\Web.config" />
+    <Content Include="Views\_ViewStart.cshtml" />
+    <Content Include="Views\Shared\Error.cshtml" />
+    <Content Include="Views\Shared\_Layout.cshtml" />
+    <Content Include="Views\Home\About.cshtml" />
+    <Content Include="Views\Home\Contact.cshtml" />
+    <Content Include="Views\Home\Index.cshtml" />
+    <Content Include="Views\Account\_ExternalLoginsListPartial.cshtml" />
+    <Content Include="Views\Account\ConfirmEmail.cshtml" />
+    <Content Include="Views\Account\ExternalLoginConfirmation.cshtml" />
+    <Content Include="Views\Account\ExternalLoginFailure.cshtml" />
+    <Content Include="Views\Account\ForgotPassword.cshtml" />
+    <Content Include="Views\Account\ForgotPasswordConfirmation.cshtml" />
+    <Content Include="Views\Account\Login.cshtml" />
+    <Content Include="Views\Account\Register.cshtml" />
+    <Content Include="Views\Account\ResetPassword.cshtml" />
+    <Content Include="Views\Account\ResetPasswordConfirmation.cshtml" />
+    <Content Include="Views\Account\SendCode.cshtml" />
+    <Content Include="Views\Account\VerifyCode.cshtml" />
+    <Content Include="Views\Manage\AddPhoneNumber.cshtml" />
+    <Content Include="Views\Manage\ChangePassword.cshtml" />
+    <Content Include="Views\Manage\Index.cshtml" />
+    <Content Include="Views\Manage\ManageLogins.cshtml" />
+    <Content Include="Views\Manage\SetPassword.cshtml" />
+    <Content Include="Views\Manage\VerifyPhoneNumber.cshtml" />
+    <Content Include="Views\Shared\Lockout.cshtml" />
+    <Content Include="Views\Shared\_LoginPartial.cshtml" />
+    <Content Include="Views\Home\Food.cshtml" />
+    <Content Include="Views\Home\Login.cshtml" />
+    <Content Include="Views\Home\Register.cshtml" />
+    <Content Include="Views\Admin\Index.cshtml" />
+    <Content Include="Views\Shared\Layout_Admin.cshtml" />
+    <Content Include="Views\Home\Add.cshtml" />
+    <Content Include="Views\Admin\AddProduct.cshtml" />
+    <Content Include="Views\Admin\ProductList.cshtml" />
+    <Content Include="Views\Admin\Users.cshtml" />
+    <Content Include="Views\Admin\Admins.cshtml" />
+    <Content Include="Views\Home\Pruducts.cshtml" />
+    <Content Include="Views\Admin\EditUserOrAdmin.cshtml" />
+    <Content Include="Views\Admin\DeleteUserOrAdmin.cshtml" />
+    <Content Include="Views\Admin\AddAdmin.cshtml" />
+    <Content Include="Views\Home\ProductList.cshtml" />
+    <Content Include="Views\Admin\ProductEdit.cshtml" />
+    <Content Include="Views\Admin\ProductDetails.cshtml" />
+    <Content Include="Views\Home\ProductDetails.cshtml" />
+    <Content Include="Views\Home\ProductEditorDelete.cshtml" />
+    <Content Include="Views\Admin\ProductDelete.cshtml" />
+    <Content Include="Views\Admin\Proba.cshtml" />
+    <Content Include="Views\Admin\AddRubricVsTypeProduct.cshtml" />
+    <Content Include="Views\Home\SendMessage.cshtml" />
+    <Content Include="Views\Home\Pricing.cshtml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="App_Data\" />
+    <Folder Include="Content\img\" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="fonts\glyphicons-halflings-regular.woff" />
+    <Content Include="fonts\glyphicons-halflings-regular.ttf" />
+    <Content Include="fonts\glyphicons-halflings-regular.eot" />
+    <Content Include="packages.config" />
+    <None Include="Project_Readme.html" />
+    <Content Include="Scripts\jquery-1.10.2.min.map" />
+  </ItemGroup>
+  <ItemGroup>
+    <Service Include="{508349B6-6B84-4DF5-91F0-309BEEBAD82D}" />
+  </ItemGroup>
+  <PropertyGroup>
+    <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>
+    <VSToolsPath Condition="'$(VSToolsPath)' == ''">$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)</VSToolsPath>
+  </PropertyGroup>
+  <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
+  <Import Project="$(VSToolsPath)\WebApplications\Microsoft.WebApplication.targets" Condition="'$(VSToolsPath)' != ''" />
+  <Import Project="$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v10.0\WebApplications\Microsoft.WebApplication.targets" Condition="false" />
+  <Target Name="MvcBuildViews" AfterTargets="AfterBuild" Condition="'$(MvcBuildViews)'=='true'">
+    <AspNetCompiler VirtualPath="temp" PhysicalPath="$(WebProjectOutputDir)" />
+  </Target>
+  <ProjectExtensions>
+    <VisualStudio>
+      <FlavorProperties GUID="{349c5851-65df-11da-9384-00065b846f21}">
+        <WebProjectProperties>
+          <UseIIS>True</UseIIS>
+          <AutoAssignPort>True</AutoAssignPort>
+          <DevelopmentServerPort>10901</DevelopmentServerPort>
+          <DevelopmentServerVPath>/</DevelopmentServerVPath>
+          <IISUrl>http://localhost:10901/</IISUrl>
+          <NTLMAuthentication>False</NTLMAuthentication>
+          <UseCustomServer>False</UseCustomServer>
+          <CustomServerUrl>
+          </CustomServerUrl>
+          <SaveServerSettingsInUserFile>False</SaveServerSettingsInUserFile>
+        </WebProjectProperties>
+      </FlavorProperties>
+    </VisualStudio>
+  </ProjectExtensions>
+  <Target Name="EnsureNuGetPackageBuildImports" BeforeTargets="PrepareForBuild">
+    <PropertyGroup>
+      <ErrorText>Данный проект ссылается на пакеты NuGet, отсутствующие на этом компьютере. Используйте восстановление пакетов NuGet, чтобы скачать их.  Дополнительную информацию см. по адресу: http://go.microsoft.com/fwlink/?LinkID=322105. Отсутствует следующий файл: {0}.</ErrorText>
+    </PropertyGroup>
+    <Error Condition="!Exists('..\packages\Microsoft.Net.Compilers.1.0.0\build\Microsoft.Net.Compilers.props')" Text="$([System.String]::Format('$(ErrorText)', '..\packages\Microsoft.Net.Compilers.1.0.0\build\Microsoft.Net.Compilers.props'))" />
+    <Error Condition="!Exists('..\packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.1.0.0\build\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.props')" Text="$([System.String]::Format('$(ErrorText)', '..\packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.1.0.0\build\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.props'))" />
+  </Target>
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it.
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target> -->
+</Project>
