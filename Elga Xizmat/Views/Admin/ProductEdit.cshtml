@@ -44,7 +44,7 @@
                                     @Html.LabelFor(m => m.TypeProduct_Id, new { @class = "control-label col-md-4" })
                                     <div class="col-md-12">
                                         @Html.DropDownListFor(m => m.TypeProduct_Id,
-                                           new SelectList(ViewBag.maxsulotList, "Id", "Name_Uz"),
+                                           new SelectList(Enumerable.Empty<SelectListItem>(), "Id", "Name_Uz"),
                                                   "Mahsulot turini tanlang",
                                                   new { @class = "form-control" })
                                         @Html.ValidationMessageFor(m => m.TypeProduct_Id, "", new { @class = "text-danger" })
@@ -75,7 +75,7 @@
                                     @Html.LabelFor(m => m.Area_Id, new { @class = "control-label col-md-2" })
                                     <div class="col-md-10">
                                         @Html.DropDownListFor(m => m.Area_Id,
-                                           new SelectList(ViewBag.AreaList, "Id", "AreaNameUzb"),
+                                           new SelectList(Enumerable.Empty<SelectListItem>(), "Id", "AreaNameUzb"),
                                                   "Tumanni tanlang",
                                                   new { @class = "form-control" })
                                         @Html.ValidationMessageFor(m => m.Area_Id, "", new { @class = "text-danger" })
@@ -89,15 +89,10 @@
                                     </label>
                                     <div class="col-md-6 col-sm-6 col-xs-12">
                                         <div>
-
-                                            <img  src="@Url.Content(Model.Picture)" 
-                                                 
-                                                 id="user_img"
+                                            <img id="user_img"
                                                  height="160"
                                                  width="210"
-                                                 style="border:solid" 
-                                                  
-                                                 />
+                                                 style="border:solid" />
                                         </div>
                                         <br />
 

@@ -223,6 +223,9 @@
     <Compile Include="Models\TypeAdses.cs">
       <DependentUpon>Model.tt</DependentUpon>
     </Compile>
+    <Compile Include="Models\TypeMessage.cs">
+      <DependentUpon>Model.tt</DependentUpon>
+    </Compile>
     <Compile Include="Models\Type_Product.cs">
       <DependentUpon>Model.tt</DependentUpon>
     </Compile>
