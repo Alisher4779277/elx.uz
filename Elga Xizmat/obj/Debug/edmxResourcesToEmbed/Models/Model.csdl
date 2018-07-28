@@ -22,6 +22,8 @@
     <EntitySet Name="StateProduct" EntityType="ELX_DBModel.StateProduct" />
     <EntitySet Name="Message" EntityType="ELX_DBModel.Message" />
     <EntitySet Name="TypeAdses" EntityType="ELX_DBModel.TypeAdses" />
+    <EntitySet Name="Adverts" EntityType="ELX_DBModel.Advert" />
+    <EntitySet Name="States" EntityType="ELX_DBModel.State" />
   </EntityContainer>
   <EntityType Name="Adses">
     <Key>
@@ -98,5 +100,25 @@
     <Property Name="ID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
     <Property Name="TypeAdsesUz" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
     <Property Name="TypeAdsesRu" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+  </EntityType>
+  <EntityType Name="Advert">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="UserID" Type="Int32" />
+    <Property Name="Status" Type="Int32" />
+    <Property Name="Date" Type="DateTime" Precision="3" />
+    <Property Name="NeedCountView" Type="Int32" />
+    <Property Name="NeedDayCount" Type="Int32" />
+    <Property Name="StateID" Type="Int32" />
+    <Property Name="FilePath" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+  </EntityType>
+  <EntityType Name="State">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="Name" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
   </EntityType>
 </Schema>

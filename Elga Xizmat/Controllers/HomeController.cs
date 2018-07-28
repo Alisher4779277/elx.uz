@@ -17,6 +17,43 @@ namespace Elga_Xizmat.Controllers
 
         public ActionResult Index()
         {
+            ViewBag.reklama = db.Adverts.FirstOrDefault(x=>x.Status==1);
+
+            
+             
+
+           foreach (var item in db.Adverts.Where(x=>x.Status==1))
+            {
+
+                if (item.NeedCountView!=null)
+                {
+                     if (item.NeedCountView > 0)
+                      {
+                          item.NeedCountView--;
+                      }
+                    else
+                    {
+
+                        item.NeedCountView = null;
+                        item.Status = 0;
+                    }
+                }
+
+                else if(item.NeedDayCount != null)
+                {
+
+                    if( (item.Date.Value.Day-DateTime.Now.Day) == item.NeedDayCount)
+                    {
+                        item.NeedDayCount = null;
+                        item.Status = 0;
+                    }
+
+                }
+                
+            }
+                       
+            db.SaveChanges();
+                        
             return View(db.Adses);
         }
         public ActionResult Pruducts(int id)

@@ -21,7 +21,7 @@
         <div class="card">
             <div class="card-body">
                 <div class="basic-elements">
-                    <form method="post" enctype = "multipart/form-data">
+                    <form method="post" enctype="multipart/form-data">
                         <div class="row">
                             <div class="col-lg-6">
                                 <div class="form-group">
@@ -101,21 +101,21 @@
 
                                 </div>
                                 <script type="text/javascript">
-   function show(input) {
-      if (input.files && input.files[0]) {
-      var filerdr = new FileReader();
-      filerdr.onload = function (e) {
-         $('#user_img').attr('src', e.target.result);
-      }
-      filerdr.readAsDataURL(input.files[0]);
-   }
-}
-                                </script> 
+                                    function show(input) {
+                                        if (input.files && input.files[0]) {
+                                            var filerdr = new FileReader();
+                                            filerdr.onload = function (e) {
+                                                $('#user_img').attr('src', e.target.result);
+                                            }
+                                            filerdr.readAsDataURL(input.files[0]);
+                                        }
+                                    }
+                                </script>
 
                             </div>
 
                             <div class="sweetalert m-t-15">
-                                <button class="btn btn-success btn sweet-success" >Qo`shish</button>
+                                <button class="btn btn-success btn sweet-success">Qo`shish</button>
                             </div>
                         </div>
                     </form>
@@ -126,39 +126,39 @@
 </div>
 @section Scripts {
     <script>
-  function FillCity() {
-      var regionId = $('#Region_Id').val();
-    $.ajax({
-        url: '/Admin/FillCity',
-        type: "GET",
-        dataType: "JSON",
-        data: { Region_Id: regionId },
-        success: function (areas) {
-            $("#Area_Id").html(""); // clear before appending new list
-            $.each(areas, function (i, area) {
-                $("#Area_Id").append(
-                    $('<option></option>').val(area.Id).html(area.AreaNameUzb));
+        function FillCity() {
+            var regionId = $('#Region_Id').val();
+            $.ajax({
+                url: '/Admin/FillCity',
+                type: "GET",
+                dataType: "JSON",
+                data: { Region_Id: regionId },
+                success: function (areas) {
+                    $("#Area_Id").html(""); // clear before appending new list
+                    $.each(areas, function (i, area) {
+                        $("#Area_Id").append(
+                            $('<option></option>').val(area.Id).html(area.AreaNameUzb));
+                    });
+                }
             });
         }
-    });
-  }
     </script>
-<script>
-    function FillRubric() {
-      var rubricId = $('#Rubric_Id').val();
-    $.ajax({
-        url: '/Admin/FillRubric',
-        type: "GET",
-        dataType: "JSON",
-        data: { Rubric_Id: rubricId },
-        success: function (typeProducts) {
-            $("#TypeProduct_Id").html(""); // clear before appending new list
-            $.each(typeProducts, function (i, typeProduct) {
-                $("#TypeProduct_Id").append(
-                    $('<option></option>').val(typeProduct.Id).html(typeProduct.Name_Uz));
+    <script>
+        function FillRubric() {
+            var rubricId = $('#Rubric_Id').val();
+            $.ajax({
+                url: '/Admin/FillRubric',
+                type: "GET",
+                dataType: "JSON",
+                data: { Rubric_Id: rubricId },
+                success: function (typeProducts) {
+                    $("#TypeProduct_Id").html(""); // clear before appending new list
+                    $.each(typeProducts, function (i, typeProduct) {
+                        $("#TypeProduct_Id").append(
+                            $('<option></option>').val(typeProduct.Id).html(typeProduct.Name_Uz));
+                    });
+                }
             });
         }
-    });
-  }
-</script>
+    </script>
 } 

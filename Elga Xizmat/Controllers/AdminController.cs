@@ -151,6 +151,34 @@ namespace Elga_Xizmat.Controllers
         }
 
 
+        public ActionResult addAdvertisement()
+        {
+            ViewBag.UserList = db.Users;
+            ViewBag.StateList = db.States;
+
+            return View();
+        }
+    [HttpPost]
+        public ActionResult addAdvertisement(Advert adv,HttpPostedFileBase file)
+        {
+            string path = Path.Combine(Server.MapPath("~/Content/img/"), Path.GetFileName(file.FileName));
+            file.SaveAs(path);
+
+            path = Path.Combine(Server.MapPath("~/Content/img/"), Path.GetFileName(file.FileName));
+            file.SaveAs(path);
+
+            adv.FilePath = "/Content/img/" + file.FileName;
+
+            adv.Date = DateTime.Now;
+            adv.Status = 1;
+
+
+            db.Adverts.Add(adv);
+            db.SaveChanges();
+
+            return RedirectToAction("Index","Admin");
+        }
+
 
         public ActionResult ProductDelete(int id)
         {

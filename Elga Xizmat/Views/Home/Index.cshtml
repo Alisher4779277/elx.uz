@@ -8,9 +8,39 @@
                     <!-- MAP -->
                     <div class="container">
                         <!-- SLOGAN -->
-                        <div class="block-content background-primary background-map block-content-small-padding fullwidth">
+                       
+                    @{
+                        if (ViewBag.reklama != null)
+                        {
+                            if (ViewBag.reklama.StateID == 1)
+                            {
+                                <div>
+                                    <img src="@Url.Content(ViewBag.reklama.FilePath)" />
 
-                        </div><!-- /.block-content-->                <!-- ISOTOPE GRID -->
+                                </div>
+                            }
+
+                            else
+                            {
+                                <div class="block-content background-primary background-map block-content-small-padding fullwidth">
+
+                                </div>
+                            }
+
+                        }
+
+                        else
+                        {
+                            <div class="block-content background-primary background-map block-content-small-padding fullwidth">
+
+                            </div>
+                        }
+
+                    }
+
+                      
+                    
+                    <!-- /.block-content-->                <!-- ISOTOPE GRID -->
                         <div class="block-content block-content-small-padding">
                             <div class="block-content-inner">
 
@@ -21,7 +51,7 @@
                                 <!-- /.property-filter -->
                                 <div class="properties-items">
                                     <div class="row">
-                                        @foreach(var item in Model) { 
+                                        @foreach (var item in Model) {
                                         <div class="property-item property-featured col-sm-6 col-md-3">
                                             <div class="agent-box">
                                                 <div class="row">
@@ -46,9 +76,34 @@
                                         }
                                     </div>
                                 </div>
-                                <div class="block-content background-primary background-map block-content-small-padding fullwidth">
+                                @{
+                                    if (ViewBag.reklama != null)
+                                    {
+                                        if (ViewBag.reklama.StateID == 2)
+                                        {
+                                            <div>
+                                                <img src="@Url.Content(ViewBag.reklama.FilePath)" />
 
-                                </div><!-- /.block-content-->
+                                            </div>
+                                        }
+
+                                        else
+                                        {
+                                            <div class="block-content background-primary background-map block-content-small-padding fullwidth">
+
+                                            </div>
+                                        }
+
+                                    }
+
+                                    else
+                                    {
+                                        <div class="block-content background-primary background-map block-content-small-padding fullwidth">
+
+                                        </div>
+                                    }
+
+                                }
                                 <div class="center">
                                     <ul class="pagination">
 

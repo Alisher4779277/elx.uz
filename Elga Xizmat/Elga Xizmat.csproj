@@ -180,6 +180,9 @@
     <Compile Include="Models\Adses.cs">
       <DependentUpon>Model.tt</DependentUpon>
     </Compile>
+    <Compile Include="Models\Advert.cs">
+      <DependentUpon>Model.tt</DependentUpon>
+    </Compile>
     <Compile Include="Models\Areas.cs">
       <DependentUpon>Model.tt</DependentUpon>
     </Compile>
@@ -209,6 +212,9 @@
       <DependentUpon>Model.tt</DependentUpon>
     </Compile>
     <Compile Include="Models\Rubric.cs">
+      <DependentUpon>Model.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\State.cs">
       <DependentUpon>Model.tt</DependentUpon>
     </Compile>
     <Compile Include="Models\StateProduct.cs">
@@ -1633,6 +1639,7 @@
     <Content Include="Views\Admin\AddRubricVsTypeProduct.cshtml" />
     <Content Include="Views\Home\SendMessage.cshtml" />
     <Content Include="Views\Home\Pricing.cshtml" />
+    <Content Include="Views\Admin\addAdvertisement.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
