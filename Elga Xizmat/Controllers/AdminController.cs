@@ -6,6 +6,7 @@ using System.Web.Mvc;
 using Elga_Xizmat.Models;
 using Elga_Xizmat.Models.Class;
 using System.IO;
+using System.Data.Entity;
 
 namespace Elga_Xizmat.Controllers
 {
@@ -71,23 +72,86 @@ namespace Elga_Xizmat.Controllers
         }
         public ActionResult ProductEdit(int id)
         {
+            Adses ads = db.Adses.Find(id);
             ViewBag.StateList = db.Regions;
             ViewBag.RubricList = db.Rubric;
+          
+            var list = new List<Areas>();
+            foreach (var item in db.Areas)
+            {
+                if (item.Region_Id == ads.Region_Id)
+                {
+                    list.Add(item);
+                }
+            }
+
+            ViewBag.AreaList = list;
+
+          
+
+            var list2 = new List<Type_Product>();
+            foreach (var item in db.Type_Product)
+            {
+                if (item.Rubric_Id == ads.Rubric_Id)
+                {
+                    list2.Add(item);
+                }
+            }
+
+            ViewBag.maxsulotList = list2;
+
+
 
             return View(db.Adses.Find(id));
         }
 
         [HttpPost]
-        public ActionResult ProductEdit(Adses ads)
+        public ActionResult ProductEdit(Adses ads, HttpPostedFileBase file)
         {
-            Adses ad = db.Adses.FirstOrDefault(x => x.Id == ads.Id);
 
-            ad = ads;
-            db.Entry(ad);
-            db.SaveChangesAsync();
+            string path = Path.Combine(Server.MapPath("~/Content/img/"), Path.GetFileName(file.FileName));
+            file.SaveAs(path);
 
-            return RedirectToAction("ProductList", "Admin");
+            path = Path.Combine(Server.MapPath("~/Content/img/"), Path.GetFileName(file.FileName));
+            file.SaveAs(path);
+
+
+            foreach (var std in db.Adses)
+            {
+                if(std.Id == ads.Id)
+                {
+                    std.Picture = file.FileName == null ? std.Picture : "/Content/img/" + file.FileName; 
+                    std.Price = ads.Price == null ? std.Price : ads.Price;
+                    std.Region_Id = ads.Region_Id == null ? std.Region_Id : ads.Region_Id;
+                    std.Rubric_Id = ads.Rubric_Id == null ? std.Rubric_Id : ads.Rubric_Id;
+                    std.Short_text = ads.Short_text == null ? std.Short_text : ads.Short_text;
+                    std.State_ID = ads.State_ID == null ? std.State_ID : ads.State_ID;
+                    std.Title = ads.Title == null ? std.Title : ads.Title;
+                    std.TypeAdses = ads.TypeAdses == null ? std.TypeAdses : ads.TypeAdses;
+                    std.TypeProduct_Id = ads.TypeProduct_Id == null ? std.TypeProduct_Id : ads.TypeProduct_Id;
+                    std.User_ID = ads.User_ID == null ? std.User_ID : ads.User_ID;
+                    std.Area_Id = ads.Area_Id == null ? std.Area_Id : ads.Area_Id;
+                    std.CountView = ads.CountView == null ? std.CountView : ads.CountView;
+                    std.Date = ads.Date == null ? std.Date : ads.Date;
+                    
+                    
+                                        
+                }
+            }
+
+
+           
+
+      
+                db.SaveChanges();
+                
+                return RedirectToAction("ProductList", "Admin");
+         
+         
         }
+
+
+
         public ActionResult ProductDelete(int id)
         {
             ViewBag.StateList = db.Regions;
