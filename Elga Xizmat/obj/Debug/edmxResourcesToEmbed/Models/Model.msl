@@ -79,21 +79,29 @@
         </MappingFragment>
       </EntityTypeMapping>
     </EntitySetMapping>
+    <EntitySetMapping Name="TypeAdses">
+      <EntityTypeMapping TypeName="ELX_DBModel.TypeAdses">
+        <MappingFragment StoreEntitySet="TypeAdses">
+          <ScalarProperty Name="TypeAdsesRu" ColumnName="TypeAdsesRu" />
+          <ScalarProperty Name="TypeAdsesUz" ColumnName="TypeAdsesUz" />
+          <ScalarProperty Name="ID" ColumnName="ID" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="TypeMessage">
+      <EntityTypeMapping TypeName="ELX_DBModel.TypeMessage">
+        <MappingFragment StoreEntitySet="TypeMessage">
+          <ScalarProperty Name="Name" ColumnName="Name" />
+          <ScalarProperty Name="ID" ColumnName="ID" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
     <EntitySetMapping Name="Message">
       <EntityTypeMapping TypeName="ELX_DBModel.Message">
         <MappingFragment StoreEntitySet="Message">
           <ScalarProperty Name="User_ID" ColumnName="User_ID" />
           <ScalarProperty Name="Type_Message" ColumnName="Type_Message" />
           <ScalarProperty Name="Message1" ColumnName="Message" />
-          <ScalarProperty Name="ID" ColumnName="ID" />
-        </MappingFragment>
-      </EntityTypeMapping>
-    </EntitySetMapping>
-    <EntitySetMapping Name="TypeAdses">
-      <EntityTypeMapping TypeName="ELX_DBModel.TypeAdses">
-        <MappingFragment StoreEntitySet="TypeAdses">
-          <ScalarProperty Name="TypeAdsesRu" ColumnName="TypeAdsesRu" />
-          <ScalarProperty Name="TypeAdsesUz" ColumnName="TypeAdsesUz" />
           <ScalarProperty Name="ID" ColumnName="ID" />
         </MappingFragment>
       </EntityTypeMapping>

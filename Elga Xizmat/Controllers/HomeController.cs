@@ -31,12 +31,14 @@ namespace Elga_Xizmat.Controllers
         }
         public ActionResult Contact()
         {
-            ViewBag.Message = "Your contact page.";
+            ViewBag.TypesMessage = db.TypeMessage;
             return View();
         }
         [HttpPost]
         public ActionResult Contact(Message msg)
         {
+
+            msg.User_ID = Convert.ToInt32(Session["User"]);
             db.Message.Add(msg);
             db.SaveChanges();
 
@@ -86,26 +88,40 @@ namespace Elga_Xizmat.Controllers
             return View();
         }
 
-        //[HttpPost]
-        //[AllowAnonymous]
-        //[ValidateAntiForgeryToken]
-        //public ActionResult Register(string name, string phone, string email, string password, string confirm_password )
-        //{
-        //    if (password == confirm_password) { 
-        //    Users u = new Users();
-        //    u.User_Name = name;
-        //    u.Email = email;
-        //    u.Phone_number = Convert.ToDecimal(phone);
-        //    u.Password = password;
+        [HttpPost]
+        [ValidateAntiForgeryToken]
+        public ActionResult Register(string name, string phone, string email, string password, string confirm_password)
+        {
+            if (password == confirm_password)
+            {
+                Users u = new Users();
+                u.User_Name = name;
+                u.Email = email;
+                u.Phone_number = Convert.ToDecimal(phone);
+                u.Password = password;
 
-        //        db.Users.Add(u);
-        //        db.SaveChanges();
+                db.Users.Add(u);
+                db.SaveChanges();
 
-        //        return RedirectToAction("Index", "Admin");
-        //    }
+                return RedirectToAction("Index", "Admin");
+            }
 
-        //    return View();
-        //}
+            return View();
+        }
+
+        public JsonResult CheckUserNameAvailability(string userdata)
+        {
+            System.Threading.Thread.Sleep(200);
+            var SearchData = db.Users.Where(x => x.Email == userdata).SingleOrDefault();
+            if (SearchData != null)
+            {
+                return Json(1);
+            }
+            else
+            {
+                return Json(0);
+            }
+        }
         public ActionResult Add()
         {
             try
@@ -211,86 +227,16 @@ namespace Elga_Xizmat.Controllers
 
         public ActionResult SendMessage()
         {
-
             return View();
         }
-
         public ActionResult Pricing()
         {
             return View();
         }
-
-        [HttpPost]
-
-        public async Task<ActionResult> Register(Users model)
+        public ActionResult LogOut()
         {
-            if (ModelState.IsValid)
-            {
-                var user = new ApplicationUser() { UserName = model.User_Name };
-                user.Email = model.Email;
-                user.ConfirmedEmail = false;
-                //var result = await UserManager.CreateAsync(user, model.Password);
-                //if (result.Succeeded)
-                //{
-                // наш email с заголовком письма
-                MailAddress from = new MailAddress("somemail@yandex.ru", "Web Registration");
-                // кому отправляем
-                MailAddress to = new MailAddress(user.Email);
-                // создаем объект сообщения
-                MailMessage m = new MailMessage(from, to);
-                // тема письма
-                m.Subject = "Email confirmation";
-                // текст письма - включаем в него ссылку
-                m.Body = string.Format("Для завершения регистрации перейдите по ссылке:" +
-                                "<a href=\"{0}\" title=\"Подтвердить регистрацию\">{0}</a>",
-                    Url.Action("ConfirmEmail", "Account", new { Token = user.Id, Email = user.Email }, Request.Url.Scheme));
-                m.IsBodyHtml = true;
-                // адрес smtp-сервера, с которого мы и будем отправлять письмо
-                SmtpClient smtp = new System.Net.Mail.SmtpClient("smtp.yandex.ru", 25);
-                // логин и пароль
-                smtp.Credentials = new System.Net.NetworkCredential("somemail@yandex.ru", "password");
-                smtp.Send(m);
-                return RedirectToAction("Confirm", "Account", new { Email = user.Email });
-                //}
-                //else
-                //{
-                //    AddErrors(result);
-                //}
-            }
-            return View(model);
+            Session["Active"] = "0";
+            return RedirectToAction("Login", "Home");
         }
-
-        [AllowAnonymous]
-        public string Confirm(string Email)
-        {
-            return "На почтовый адрес " + Email + " Вам высланы дальнейшие" +
-                    "инструкции по завершению регистрации";
-        }
-
-        //[AllowAnonymous]
-        //public async Task<ActionResult> ConfirmEmail(string Token, string Email)
-        //{
-        //    ApplicationUser user = this.UserManager.FindById(Token);
-        //    if (user != null)
-        //    {
-        //        if (user.Email == Email)
-        //        {
-        //            user.ConfirmedEmail = true;
-        //            await UserManager.UpdateAsync(user);
-        //            await SignInAsync(user, isPersistent: false);
-        //            return RedirectToAction("Index", "Home", new { ConfirmedEmail = user.Email });
-        //        }
-        //        else
-        //        {
-        //            return RedirectToAction("Confirm", "Account", new { Email = user.Email });
-        //        }
-        //    }
-        //    else
-        //    {
-        //        return RedirectToAction("Confirm", "Account", new { Email = "" });
-        //    }
-        //}
-
-
     }
 }

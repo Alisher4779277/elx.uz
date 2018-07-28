@@ -20,8 +20,9 @@
     <EntitySet Name="Rubric" EntityType="ELX_DBModel.Rubric" />
     <EntitySet Name="Type_Product" EntityType="ELX_DBModel.Type_Product" />
     <EntitySet Name="StateProduct" EntityType="ELX_DBModel.StateProduct" />
-    <EntitySet Name="Message" EntityType="ELX_DBModel.Message" />
     <EntitySet Name="TypeAdses" EntityType="ELX_DBModel.TypeAdses" />
+    <EntitySet Name="TypeMessage" EntityType="ELX_DBModel.TypeMessage" />
+    <EntitySet Name="Message" EntityType="ELX_DBModel.Message" />
   </EntityContainer>
   <EntityType Name="Adses">
     <Key>
@@ -82,6 +83,21 @@
     <Property Name="ID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
     <Property Name="Name" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
   </EntityType>
+  <EntityType Name="TypeAdses">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="TypeAdsesUz" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="TypeAdsesRu" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+  </EntityType>
+  <EntityType Name="TypeMessage">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="Name" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+  </EntityType>
   <EntityType Name="Message">
     <Key>
       <PropertyRef Name="ID" />
@@ -90,13 +106,5 @@
     <Property Name="Message1" Type="String" MaxLength="1500" FixedLength="false" Unicode="true" />
     <Property Name="Type_Message" Type="Int32" />
     <Property Name="User_ID" Type="Int32" />
-  </EntityType>
-  <EntityType Name="TypeAdses">
-    <Key>
-      <PropertyRef Name="ID" />
-    </Key>
-    <Property Name="ID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
-    <Property Name="TypeAdsesUz" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
-    <Property Name="TypeAdsesRu" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
   </EntityType>
 </Schema>

@@ -80,10 +80,7 @@ namespace Elga_Xizmat.Controllers
         [HttpPost]
         public ActionResult ProductEdit(Adses ads)
         {
-            Adses ad = db.Adses.FirstOrDefault(x => x.Id == ads.Id);
-
-            ad = ads;
-            db.Entry(ad);
+            db.Entry(ads);
             db.SaveChangesAsync();
 
             return RedirectToAction("ProductList", "Admin");
@@ -123,6 +120,7 @@ namespace Elga_Xizmat.Controllers
         }
         public ActionResult LogOut()
         {
+            Session["Active"] = "0";
             return RedirectToAction("Login", "Home");
         }
         public ActionResult StateAdminOrUser(int id)

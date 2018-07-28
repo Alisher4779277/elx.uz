@@ -32,7 +32,8 @@ namespace Elga_Xizmat.Models
         public virtual DbSet<Rubric> Rubric { get; set; }
         public virtual DbSet<Type_Product> Type_Product { get; set; }
         public virtual DbSet<StateProduct> StateProduct { get; set; }
-        public virtual DbSet<Message> Message { get; set; }
         public virtual DbSet<TypeAdses> TypeAdses { get; set; }
+        public virtual DbSet<TypeMessage> TypeMessage { get; set; }
+        public virtual DbSet<Message> Message { get; set; }
     }
 }

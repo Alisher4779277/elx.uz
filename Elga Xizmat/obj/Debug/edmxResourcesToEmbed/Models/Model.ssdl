@@ -76,6 +76,13 @@
     <Property Name="TypeAdsesUz" Type="nvarchar" MaxLength="50" />
     <Property Name="TypeAdsesRu" Type="nvarchar" MaxLength="50" />
   </EntityType>
+  <EntityType Name="TypeMessage">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="Name" Type="nvarchar" MaxLength="50" />
+  </EntityType>
   <EntityType Name="Users">
     <Key>
       <PropertyRef Name="ID" />
@@ -97,6 +104,7 @@
     <EntitySet Name="StateProduct" EntityType="Self.StateProduct" Schema="dbo" store:Type="Tables" />
     <EntitySet Name="Type_Product" EntityType="Self.Type_Product" Schema="dbo" store:Type="Tables" />
     <EntitySet Name="TypeAdses" EntityType="Self.TypeAdses" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="TypeMessage" EntityType="Self.TypeMessage" Schema="dbo" store:Type="Tables" />
     <EntitySet Name="Users" EntityType="Self.Users" Schema="dbo" store:Type="Tables" />
   </EntityContainer>
 </Schema>

@@ -12,8 +12,9 @@
         <EntityTypeShape EntityType="ELX_DBModel.Rubric" Width="1.5" PointX="9.25" PointY="0.5" />
         <EntityTypeShape EntityType="ELX_DBModel.Type_Product" Width="1.5" PointX="5.125" PointY="0.5" />
         <EntityTypeShape EntityType="ELX_DBModel.StateProduct" Width="1.5" PointX="0.75" PointY="3.75" />
-        <EntityTypeShape EntityType="ELX_DBModel.Message" Width="1.5" PointX="3.375" PointY="5.75" />
         <EntityTypeShape EntityType="ELX_DBModel.TypeAdses" Width="1.5" PointX="5.375" PointY="5.75" />
+        <EntityTypeShape EntityType="ELX_DBModel.TypeMessage" Width="1.5" PointX="0.75" PointY="6.75" />
+        <EntityTypeShape EntityType="ELX_DBModel.Message" Width="1.5" PointX="7.375" PointY="5.75" />
       </Diagram>
     </edmx:Diagrams>
   </edmx:Designer>
