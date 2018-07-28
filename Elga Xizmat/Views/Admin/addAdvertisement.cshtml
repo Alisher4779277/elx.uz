@@ -1,0 +1,124 @@
+﻿@model Elga_Xizmat.Models.Advert
+
+@{
+    Layout = "~/Views/Shared/Layout_Admin.cshtml";
+    ViewBag.Title = "addAdvertisement";
+}
+<div class="page-wrapper">
+    <!-- Bread crumb -->
+    <div class="row page-titles">
+        <div class="col-md-5 align-self-center">
+            <h3 class="text-primary">O`zgartirish</h3>
+        </div>
+        <div class="col-md-7 align-self-center">
+            <ol class="breadcrumb">
+                <li class="breadcrumb-item"><a href="javascript:void(0)">Home</a></li>
+                <li class="breadcrumb-item active">Dashboard</li>
+            </ol>
+        </div>
+    </div>
+
+    <div class="col-lg-12">
+        <div class="card">
+            <div class="card-body">
+                <div class="basic-elements">
+
+
+                    <h2>Reklama qo'shish</h2>
+
+                  <form method="post" enctype="multipart/form-data">
+
+                        <div class="form-horizontal">
+                          
+                            <hr />
+                            @Html.ValidationSummary(true, "", new { @class = "text-danger" })
+
+
+
+                            <div class="form-group">
+                                @Html.LabelFor(model => model.UserID, htmlAttributes: new { @class = "control-label col-md-2" })
+                                <div class="col-md-12">
+                                    @Html.DropDownListFor(m => m.UserID,
+                                          new SelectList(ViewBag.UserList, "ID", "User_Name"),
+                                          "Mijozni tanlang",
+                                          new { @class = "form-control" })
+                                    @Html.ValidationMessageFor(m => m.UserID, "", new { @class = "text-danger" })
+                                </div>
+                            </div>
+
+
+                            <div class="form-group">
+                                @Html.Label("Necha marta korilishi kere? ", htmlAttributes: new { @class = "control-label col-md-2" })
+                                <div class="col-md-10">
+                                    @Html.EditorFor(model => model.NeedCountView, new { htmlAttributes = new { @class = "form-control" } })
+                                    @Html.ValidationMessageFor(model => model.NeedCountView, "", new { @class = "text-danger" })
+                                </div>
+                            </div>
+
+                            <div class="form-group">
+                                @Html.Label(" Necha kun turishi kere ?", htmlAttributes: new { @class = "control-label col-md-2" })
+                                <div class="col-md-10">
+                                    @Html.EditorFor(model => model.NeedDayCount, new { htmlAttributes = new { @class = "form-control" } })
+                                    @Html.ValidationMessageFor(model => model.NeedDayCount, "", new { @class = "text-danger" })
+                                </div>
+                            </div>
+
+                            <div class="form-group">
+                                @Html.LabelFor(model => model.StateID, htmlAttributes: new { @class = "control-label col-md-2" })
+                                <div class="col-md-12">
+                                    @Html.DropDownListFor(m => m.StateID,
+                                          new SelectList(ViewBag.StateList, "ID", "Name"),
+                                          "Mijozni tanlang",
+                                          new { @class = "form-control" })
+                                    @Html.ValidationMessageFor(m => m.StateID, "", new { @class = "text-danger" })
+                                </div>
+                            </div>
+
+                            <div class="form-group">
+                                <label for="middle-name" class="control-label col-md-3 col-sm-3 col-xs-12">
+                                    Изображение продукта
+                                    <span class="required">*</span>
+                                </label>
+                                <div class="col-md-6 col-sm-6 col-xs-12">
+                                    <div>
+                                        <img id="user_img"
+                                             height="160"
+                                             width="210"
+                                             style="border:solid" />
+                                    </div>
+                                    <br />
+
+                                    <input type="file" class="profile_img" id="file" name="file" onchange="show(this)" />
+
+                                </div>
+
+
+                            </div>
+                            <script type="text/javascript">
+                                    function show(input) {
+                                        if (input.files && input.files[0]) {
+                                            var filerdr = new FileReader();
+                                            filerdr.onload = function (e) {
+                                                $('#user_img').attr('src', e.target.result);
+                                            }
+                                            filerdr.readAsDataURL(input.files[0]);
+                                        }
+                                    }
+                            </script>
+
+
+                            <div class="sweetalert m-t-15">
+                                <button class="btn btn-success btn sweet-success">Qo`shish</button>
+                            </div>
+                        </div>
+
+                    </form>
+                 
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<div>
+    @Html.ActionLink("Back to List", "Index")
+</div>
